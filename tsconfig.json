@@ -24,7 +24,7 @@
         "libs/react-remote-components/src/index.ts"
       ],
       "@onecx/react-webcomponents": ["libs/react-webcomponents/src/index.ts"],
-      "@/themes/*": ["./apps/vite-webcomponent/themes/*"]
+      // "@/themes/*": ["./apps/test-webcomponent/themes/*"]
     }
   },
   "exclude": ["node_modules", "tmp"]
