@@ -1,26 +1,31 @@
 {
+  "compileOnSave": false,
   "compilerOptions": {
-    "target": "es5",
-    "lib": [
-      "dom",
-      "dom.iterable",
-      "esnext"
-    ],
-    "allowJs": true,
-    "skipLibCheck": true,
-    "esModuleInterop": true,
-    "allowSyntheticDefaultImports": true,
-    "strict": true,
-    "forceConsistentCasingInFileNames": true,
-    "noFallthroughCasesInSwitch": true,
-    "module": "esnext",
+    "rootDir": ".",
+    "sourceMap": true,
+    "declaration": false,
     "moduleResolution": "node",
-    "resolveJsonModule": true,
-    "isolatedModules": true,
-    "noEmit": true,
-    "jsx": "react-jsx"
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "importHelpers": true,
+    "target": "es2015",
+    "module": "esnext",
+    "lib": ["es2020", "dom"],
+    "skipLibCheck": true,
+    "skipDefaultLibCheck": true,
+    "jsx": "react-jsx",
+    "baseUrl": ".",
+    "paths": {
+      "@onecx/react-auth": ["libs/react-auth/src/index.ts"],
+      "@onecx/react-integration-interface": [
+        "libs/react-integration-interface/src/index.ts"
+      ],
+      "@onecx/react-remote-components": [
+        "libs/react-remote-components/src/index.ts"
+      ],
+      "@onecx/react-webcomponents": ["libs/react-webcomponents/src/index.ts"],
+      "@/themes/*": ["./apps/vite-webcomponent/themes/*"]
+    }
   },
-  "include": [
-    "src"
-  ]
+  "exclude": ["node_modules", "tmp"]
 }
