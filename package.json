@@ -46,6 +46,7 @@
     "rxjs": "^7.8.2",
     "styled-components": "5.3.11",
     "uuid": "9.0.1",
+    "vite-plugin-css-injected-by-js": "^3.5.2",
     "web-vitals": "2.1.4",
     "workbox-core": "6.6.0",
     "workbox-expiration": "6.6.0",
@@ -57,6 +58,9 @@
   "devDependencies": {
     "@testing-library/jest-dom": "6.8.0",
     "@testing-library/react": "12.1.5",
+    "@vitejs/plugin-react": "^4.7.0",
+    "@vitest/coverage-v8": "^2.0.0",
+    "@vitest/ui": "^2.0.0",
     "eslint": "8.57.1",
     "eslint-config-prettier": "9.1.2",
     "eslint-plugin-react": "7.37.5",
@@ -65,13 +69,16 @@
     "jest-sonar-reporter": "2.0.0",
     "prettier": "3.6.2",
     "sonar-scanner": "3.1.0",
-    "typescript": "5.5.4"
+    "typescript": "^5.5.4",
+    "vite": "6.3.5",
+    "vite-plugin-dts": "4.5.4",
+    "vite-plugin-static-copy": "^3.1.1",
+    "vitest": "^2.1.9"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "start": "craco start",
+    "build": "craco build",
+    "test": "craco test"
   },
   "eslintConfig": {
     "extends": [

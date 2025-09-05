@@ -33,7 +33,7 @@ export type SlotComponentConfiguration = {
 export interface SlotServiceInterface {
   remoteComponents$: RemoteComponentsTopic;
   getComponentsForSlot(
-    slotName: string
+    slotName: string,
   ): Observable<SlotComponentConfiguration[]>;
   isSomeComponentDefinedForSlot(slotName: string): Observable<boolean>;
   loadComponent(component: RemoteComponent): Promise<unknown> | undefined;
@@ -42,29 +42,29 @@ export interface SlotServiceInterface {
 const SlotContext = createContext<SlotServiceInterface | undefined>(undefined);
 const remoteComponents$ = new RemoteComponentsTopic();
 
-export const SlotProvider: FC<PropsWithChildren> = ({ children }) => {
+export const SlotProvider: FC<PropsWithChildren<{}>> = ({ children }) => {
   const permissionsService = usePermission();
 
   const getComponentsForSlot: SlotServiceInterface['getComponentsForSlot'] = (
-    slotName
+    slotName,
   ) => {
     return remoteComponents$.pipe(
       map((remoteComponentsInfo) =>
         (
           remoteComponentsInfo.slots?.find(
-            (slotMapping) => slotMapping.name === slotName
+            (slotMapping) => slotMapping.name === slotName,
           )?.components ?? []
         )
           .map((remoteComponentName) =>
             remoteComponentsInfo.components.find(
-              (rc) => rc.name === remoteComponentName
-            )
+              (rc) => rc.name === remoteComponentName,
+            ),
           )
           .filter(
             (remoteComponent): remoteComponent is RemoteComponent =>
-              !!remoteComponent
+              !!remoteComponent,
           )
-          .map((remoteComponent) => remoteComponent)
+          .map((remoteComponent) => remoteComponent),
       ),
       map((infos) =>
         infos.map((remoteComponent) => {
@@ -80,7 +80,7 @@ export const SlotProvider: FC<PropsWithChildren> = ({ children }) => {
                     : 'script',
               },
             ],
-            { force: true }
+            { force: true },
           );
 
           return {
@@ -88,12 +88,12 @@ export const SlotProvider: FC<PropsWithChildren> = ({ children }) => {
             remoteComponent,
             permissions: permissionsService.getPermissions(
               remoteComponent.appId,
-              remoteComponent.productName
+              remoteComponent.productName,
             ),
           };
-        })
+        }),
       ),
-      shareReplay()
+      shareReplay(),
     );
   };
 
@@ -103,14 +103,15 @@ export const SlotProvider: FC<PropsWithChildren> = ({ children }) => {
         map((remoteComponentsInfo) =>
           remoteComponentsInfo.slots.some(
             (slotMapping) =>
-              slotMapping.name === slotName && slotMapping.components.length > 0
-          )
-        )
+              slotMapping.name === slotName &&
+              slotMapping.components.length > 0,
+          ),
+        ),
       );
     };
 
   const loadComponent: SlotServiceInterface['loadComponent'] = async (
-    component
+    component,
   ) => {
     try {
       const exposedModule = component.exposedModule.startsWith('./')
@@ -127,7 +128,7 @@ export const SlotProvider: FC<PropsWithChildren> = ({ children }) => {
         'Failed to load remote module ',
         component.exposedModule,
         component.remoteEntryUrl,
-        e
+        e,
       );
       return undefined;
     }

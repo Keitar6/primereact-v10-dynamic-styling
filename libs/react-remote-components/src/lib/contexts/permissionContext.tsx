@@ -2,9 +2,9 @@ import {
   type FC,
   createContext,
   useContext,
-  type PropsWithChildren,
   useState,
   useEffect,
+  PropsWithChildren,
 } from 'react';
 import { filter, firstValueFrom, map } from 'rxjs';
 import {
@@ -18,17 +18,17 @@ interface PermissionContextType {
 }
 
 const PermissionContext = createContext<PermissionContextType | undefined>(
-  undefined
+  undefined,
 );
 
 const permissionsTopic$ = new PermissionsRpcTopic();
 
-export const PermissionProvider: FC<PropsWithChildren> = ({ children }) => {
+export const PermissionProvider: FC<PropsWithChildren<{}>> = ({ children }) => {
   const [permissions, setPermissions] = useState<PermissionsRpc[]>([]);
 
   const getPermissions = async (
     appId: string,
-    productName: string
+    productName: string,
   ): Promise<string[]> => {
     const permissions = firstValueFrom(
       permissionsTopic$.pipe(
@@ -36,10 +36,10 @@ export const PermissionProvider: FC<PropsWithChildren> = ({ children }) => {
           (message) =>
             message.appId === appId &&
             message.productName === productName &&
-            Array.isArray(message.permissions)
+            Array.isArray(message.permissions),
         ),
-        map((message) => message.permissions ?? [])
-      )
+        map((message) => message.permissions ?? []),
+      ),
     );
     permissionsTopic$.publish({ appId: appId, productName: productName });
     return permissions;

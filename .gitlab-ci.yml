@@ -1,0 +1,85 @@
+include:
+  - project: '1000kit/case-studies/telekom/nevershop/config/templates/gitlab-ci-telekom-shop-nx-next-template'
+    ref: 'v4'
+    file: '.gitlab-ci-telekom-shop-nx-next.yml'
+
+variables:
+  SAMO_PROJECT_NAME: ${CI_PROJECT_NAME}
+  GIT_DEPTH: 10000
+  SAMO_NPM_DOCKER_REPO_PREFIX: 1000kit/
+  BUILD_TOOL: 'npm'
+  APP_NAME: 'test-example-ui'
+
+  # Docker client configuration
+  HARBOR_HELM_TELEKOM: 'https://harbor.1000kit.org/chartrepo/1000kit/'
+  HARBOR_HELM_TELEKOM_API: 'https://harbor.1000kit.org/api/chartrepo/1000kit/charts'
+  SAMO_DOCKER_GROUP: 1000kit/
+  SAMO_DOCKER_RELEASE_GROUP: 1000kit/
+  SAMO_HELM_SOURCE_DIR: helm
+  SAMO_HELM_SOURCE_COPY: 'true'
+  SAMO_HELM_PUSH_URL: '${HARBOR_HELM_TKIT_API}'
+  SAMO_HELM_REPO: 1000kit
+  SAMO_HELM_REPO_URL: '${HARBOR_HELM_TKIT}'
+  SAMO_HELM_REPO_USERNAME: '${HARBOR_USERNAME}'
+  SAMO_HELM_REPO_PASSWORD: '${HARBOR_PASSWORD}'
+  SAMO_HELM_DIR: helm
+  SAMO_HELM_CHART_TEMPLATE_LIST: version={{ .Version }},appVersion={{ .Version }},name=${APP_NAME}
+  SAMO_HELM_VALUES_TEMPLATE_LIST:
+    app.image.registry=${SAMO_DOCKER_REGISTRY},app.image.tag={{
+    .Version }},app.image.repository=1000kit/${APP_NAME}
+  SAMO_HELM_PUSH_TYPE: harbor
+  SAMO_HELM_VALUES_RELEASE_TEMPLATE_LIST:
+    app.image.registry=${SAMO_DOCKER_RELEASE_REGISTRY},app.image.tag={{
+    .Release }},app.image.repository=1000kit/${APP_NAME}
+  SAMO_HELM_CHART_RELEASE_TEMPLATE_LIST:
+    version={{ .Release }},appVersion={{ .Release
+    }},name=${APP_NAME}
+  PROJECT_REPO_URL: https://oauth2:${CI_GIT_WRITE_USER_TOKEN}@gitlab.com/${CI_PROJECT_PATH}.git
+
+node:package:
+  stage: package
+  extends: .distributed
+  script:
+    - npx nx run test-webcomponent:build --configuration=production --skip-nx-cache
+  dependencies:
+    - node:install
+  rules:
+    - if: '$CI_COMMIT_TAG == null'
+      when: on_success
+    - if: $CI_COMMIT_BRANCH == "master"
+  artifacts:
+    paths:
+      - node_modules/.cache/nx
+      - package.json
+      - dist/
+    expire_in: 1 hrs
+
+format-check:
+  rules:
+    - when: never
+
+lint:
+  rules:
+    - when: never
+
+test:
+  rules:
+    - when: never
+
+storybook:package:
+  stage: publish
+  extends: .distributed
+  script:
+    - echo "Storybook job disabled"
+
+pages:
+  stage: publish
+  extends: .distributed
+  script:
+    - echo "Pages job disabled"
+
+pages:deploy:
+  stage: publish
+  extends: .distributed
+  script:
+    - echo "Pages deploy job disabled"

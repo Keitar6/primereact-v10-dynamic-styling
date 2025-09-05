@@ -6,8 +6,8 @@ import {
   type FC,
   type ReactElement,
   type ReactNode,
-  type ComponentRef,
   type ComponentType,
+  ComponentPropsWithRef,
 } from 'react';
 import { type RemoteComponentConfig } from '@onecx/angular-utils';
 import { BehaviorSubject, combineLatest, Observable } from 'rxjs';
@@ -37,7 +37,7 @@ type ViewContainersRef = HTMLDivElement;
 const viewContainers$ = new BehaviorSubject<ViewContainersRef[]>([]);
 
 const _assignedComponents$ = new BehaviorSubject<
-  (ComponentRef<any> | HTMLElement)[]
+  (ComponentPropsWithRef<any> | HTMLElement)[]
 >([]);
 
 export const SlotComponent: FC<SlotProps> = ({
@@ -67,7 +67,7 @@ export const SlotComponent: FC<SlotProps> = ({
   useEffect(() => {
     if (!slotService) {
       console.error(
-        `SLOT_SERVICE token was not provided. ${name} slot will not be filled with data.`
+        `SLOT_SERVICE token was not provided. ${name} slot will not be filled with data.`,
       );
       return;
     }
@@ -137,7 +137,7 @@ export const SlotComponent: FC<SlotProps> = ({
 
     if (componentType) {
       const element = document.createElement(
-        componentInfo.remoteComponent.elementName || ''
+        componentInfo.remoteComponent.elementName || '',
       );
       (element as any)['ocxRemoteComponentConfig'] = rcConfig;
 
@@ -154,7 +154,7 @@ export const SlotComponent: FC<SlotProps> = ({
 
   const addDataStyleId = (
     element: HTMLElement,
-    rcInfo: RemoteComponentInfo
+    rcInfo: RemoteComponentInfo,
   ) => {
     element.dataset['styleId'] = `${rcInfo.productName}|${rcInfo.appId}`;
   };
@@ -167,17 +167,17 @@ export const SlotComponent: FC<SlotProps> = ({
     (
       component: ReactElement | HTMLElement,
       inputs: Record<string, unknown>,
-      outputs: Record<string, any>
+      outputs: Record<string, any>,
     ) => {
       setProps(component, inputs);
       setProps(component, outputs);
     },
-    []
+    [],
   );
 
   const setProps = (
     component: ReactElement | HTMLElement,
-    props: Record<string, unknown>
+    props: Record<string, unknown>,
   ) => {
     if (!component) return;
 
@@ -204,7 +204,7 @@ export const SlotComponent: FC<SlotProps> = ({
 
     return () => subscription?.unsubscribe();
 
-    // @ts-expect-error Is used before
+    // @ts-ignore
   }, [components$]);
 
   return (
