@@ -4,7 +4,7 @@ import { map } from 'rxjs/operators';
 import {
   useAppState,
   useConfiguration,
-} from '@onecx/react-integration-interface';
+} from '../../../react-integration-interface/src';
 
 const normalizeHref = (appBaseHref: string, baseHref: string): string => {
   const cleanedAppBaseHref = appBaseHref.replace(/\/$/, '');
@@ -33,12 +33,12 @@ export const useAppHref = () => {
     const fetchBaseHref = async () => {
       const baseHref: string = currentMfe$
         ? await firstValueFrom(
-            currentMfe$.pipe(map((data) => data.baseHref || ''))
+            currentMfe$.pipe(map((data) => data.baseHref || '')),
           )
         : '';
       const baseUrl: string = currentWorkspace$
         ? await firstValueFrom(
-            currentWorkspace$.pipe(map((data) => data.baseUrl || ''))
+            currentWorkspace$.pipe(map((data) => data.baseUrl || '')),
           )
         : '';
       const appBaseHref = config?.APP_BASE_HREF ?? '';

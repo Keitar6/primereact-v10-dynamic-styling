@@ -1,6 +1,6 @@
 import { FC } from 'react';
 import { withLocationMgmt } from '../../onecxIntegration/utils/withLocationMgmt';
-import '../../../styles/styles.css';
+import '../../onecxIntegration/styles/styles.css';
 
 type Props = {
   location: {
