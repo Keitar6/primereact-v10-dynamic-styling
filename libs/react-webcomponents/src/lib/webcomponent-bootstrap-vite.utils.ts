@@ -2,7 +2,7 @@ import r2wc from '@r2wc/react-to-web-component';
 
 function createViteAppWebComponent(
   component: React.ComponentType,
-  elementName: string
+  elementName: string,
 ) {
   const AppWebComponent = r2wc(component, {
     props: {},
@@ -12,7 +12,7 @@ function createViteAppWebComponent(
 
   AppWebComponent.prototype.connectedCallback = function () {
     this.dataset.mfeElement = '';
-    // this.dataset.noPortalLayoutStyles = '';
+    this.dataset.noPortalLayoutStyles = '';
     originalConnectedCallback.call(this);
   };
 

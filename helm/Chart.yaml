@@ -1,0 +1,21 @@
+apiVersion: v2
+name: test-example-ui
+version: 0.0.0
+description: Test Webcomponent UI
+home: https://gitlab.com/1000kit/apps/
+keywords:
+  - test-example-ui
+sources:
+  - https://gitlab.com/1000kit/apps/
+maintainers:
+  - name: Tkit Developer
+    email: tkit_dev@1000kit.org
+dependencies:
+  - name: helm-product
+    version: ^0
+    repository: oci://ghcr.io/onecx/charts
+    alias: product
+  - name: helm-angular-app
+    version: ^0
+    repository: oci://ghcr.io/onecx/charts
+    alias: app

@@ -1,0 +1,65 @@
+productName: &product_name test-example
+product:
+  info:
+    data:
+      name: *product_name
+      description: 'Product to manage events'
+      displayName: 'Test Webcomponent'
+      basePath: '/'
+app:
+  name: test-example-ui
+  image:
+    repository: '1000kit/test-example-ui'
+    tag: 0.0.0
+  imagePullSecrets: '1000kit-nexus'
+  routing:
+    enabled: true
+  product: false
+  env:
+    KEYCLOAK_URL: https://secure-keycloak2-test.apps.openshift1.1000kit.net/auth/
+    JAEGER_URL: https://jaeger-test.apps.openshift1.1000kit.net/
+  operator:
+    microservice:
+      spec:
+        productName: *product_name
+    microfrontend:
+      enabled: true
+      specs:
+        main:
+          productName: *product_name
+          exposedModule: './TestWebcomponent'
+          description: 'Test Webcomponent UI Module'
+          type: MODULE
+          technology: WEBCOMPONENTMODULE
+          remoteName: test-example-ui
+          tagName: test-example-ui-entrypoint
+    permission:
+      enabled: true
+      spec:
+        productName: *product_name
+        permissions:
+          EVENT:
+            CANCEL: Cancel Event
+            CREATE: Create Event
+            EDIT: Edit Event
+            PUBLISH: Publish Event
+            REQUEST: Request event
+            SEARCH: Event Search
+            VIEW: View event
+            EDIT_ALLOW_SELF_REGISTRATION: Allow self registration in edit
+            EDIT_CATERING_REQUIRED: Catering required in edit
+          GUEST:
+            ADD: Add Guest
+            EDIT: Edit Guest
+            MANAGE: View guest list
+            VIEW: View guest
+          STAFF:
+            ADD: Add Staff
+            EDIT: Edit Staff
+            MANAGE: View staff list
+            VIEW: View Staff
+          SURVEY:
+            CREATE: Create Survey
+            EDIT: Edit Survey
+            PARTICIPATE: Participate in Survey
+            START: Start Survey

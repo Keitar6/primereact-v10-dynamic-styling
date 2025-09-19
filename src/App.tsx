@@ -1,25 +1,21 @@
-import logo from './logo.svg';
+import { PrimeReactProvider } from 'primereact/api';
 import './App.css';
+import { PRODUCT_NAME } from './onecxIntegration/utils/globals';
+import { Button } from 'primereact/button';
+import { withApp } from './utils/Hocs/hocsManagement';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+    <div className={PRODUCT_NAME}>
+      <header>
+        <div>Learn React</div>
       </header>
+
+      <h1>Home Page</h1>
+      <Button label="About page" />
+      <Button label="Event management" />
     </div>
   );
 }
 
-export default App;
+export default withApp(App);

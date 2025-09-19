@@ -1,6 +1,7 @@
 import { FC } from 'react';
-import { withLocationMgmt } from '../../onecxIntegration/utils/withLocationMgmt';
-import '../../onecxIntegration/styles/styles.css';
+import { Button } from 'primereact/button';
+import '../../styles/styles.css';
+import { withRemote } from '../../utils/Hocs/hocsManagement';
 
 type Props = {
   location: {
@@ -13,8 +14,10 @@ const Remote: FC<Props> = ({ location }) => {
     <>
       <h5 className="testyStylessy">test remote</h5>
       <span>{location.url}</span>
+      <Button label="First Button" />
+      <Button label="Second Button" />
     </>
   );
 };
 
-export default withLocationMgmt(Remote);
+export default withRemote(Remote);

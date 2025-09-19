@@ -4,10 +4,9 @@ import * as path from 'path';
 import { defineConfig, loadEnv } from 'vite';
 import react from '@vitejs/plugin-react';
 import { federation } from '@module-federation/vite';
-// eslint-disable-next-line @nx/enforce-module-boundaries
 import { viteStaticCopy } from 'vite-plugin-static-copy';
 import cssInjectedByJsPlugin from 'vite-plugin-css-injected-by-js';
-import { APP_NAME } from './src/onecxIntegration/utils/globals';
+import { APP_NAME, PRODUCT_NAME } from './src/onecxIntegration/utils/globals';
 
 /// <reference types='ModuleFederationOptions' />
 const mfConfig = {
@@ -18,12 +17,13 @@ const mfConfig = {
     './TestRemote': './src/remotes/test-remote/bootstrap.ts',
   },
 };
+
 export default defineConfig(({ mode }) => {
   const selfEnv = loadEnv(mode, process.cwd());
 
   return {
     root: __dirname,
-    base: mode === 'production' ? '/mfe/test-example/' : '/',
+    base: mode === 'production' ? `/mfe/${PRODUCT_NAME}-ui/` : '/',
     cacheDir: './node_modules/.vite/apps/test-webcomponent',
     server: {
       port: 4200,
@@ -48,11 +48,8 @@ export default defineConfig(({ mode }) => {
       viteStaticCopy({
         targets: [
           {
-            src: path.resolve(
-              __dirname,
-              './src/onecxIntegration/styles/styles.css',
-            ),
-            dest: '', // this will place it directly under /mfe/vite-example-ui/
+            src: path.resolve(__dirname, './src/styles/styles.css'),
+            dest: '', // this will place it directly under /mfe/test-example-ui/
           },
         ],
       }),
@@ -60,7 +57,7 @@ export default defineConfig(({ mode }) => {
       // {
       //   name: 'serve-scss',
       //   configureServer(server) {
-      //     server.middlewares.use('/mfe/vite-example-ui/styles.scss', (req, res) => {
+      //     server.middlewares.use('/mfe/test-example-ui/styles.scss', (req, res) => {
       //       const filePath = path.resolve(__dirname, 'src/styles/styles.scss');
       //       const file = fs.readFileSync(filePath, 'utf-8');
       //       res.setHeader('Content-Type', 'text/x-scss');
@@ -87,7 +84,7 @@ export default defineConfig(({ mode }) => {
 
         '@onecx/react-integration-interface': path.resolve(
           __dirname,
-          'libs/react-integration/src',
+          'libs/react-integration-interface/src',
         ),
         '@onecx/react-remote-components': path.resolve(
           __dirname,
