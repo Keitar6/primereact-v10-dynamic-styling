@@ -1,7 +1,7 @@
 import { FC } from 'react';
 import { Button } from 'primereact/button';
+import { withRemote } from '../../utils/Hocs';
 import '../../styles/styles.css';
-import { withRemote } from '../../utils/Hocs/hocsManagement';
 
 type Props = {
   location: {
@@ -14,8 +14,8 @@ const Remote: FC<Props> = ({ location }) => {
     <>
       <h5 className="testyStylessy">test remote</h5>
       <span>{location.url}</span>
-      <Button label="First Button" />
-      <Button label="Second Button" />
+      <Button label="First Button">First Button</Button>
+      <Button label="Second Button">Second Button</Button>
     </>
   );
 };

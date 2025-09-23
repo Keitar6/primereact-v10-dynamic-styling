@@ -1,4 +1,7 @@
 import { createViteAppWebComponent } from '@onecx/react-webcomponents';
 import Remote from './main';
 
-createViteAppWebComponent(Remote, 'test-remote');
+(function bootstrapRemote() {
+  createViteAppWebComponent(Remote, 'test-remote');
+  return () => {};
+})();
