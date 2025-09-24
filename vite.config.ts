@@ -53,27 +53,10 @@ export default defineConfig(({ mode }) => {
           },
         ],
       }),
-
-      // {
-      //   name: 'serve-scss',
-      //   configureServer(server) {
-      //     server.middlewares.use('/mfe/test-example-ui/styles.scss', (req, res) => {
-      //       const filePath = path.resolve(__dirname, 'src/styles/styles.scss');
-      //       const file = fs.readFileSync(filePath, 'utf-8');
-      //       res.setHeader('Content-Type', 'text/x-scss');
-      //       res.end(file);
-      //     });
-      //   },
-      // },
-
       react(),
       federation(mfConfig),
       cssInjectedByJsPlugin(),
     ],
-    // Uncomment this if you are using workers.
-    // worker: {
-    //  plugins: [ nxViteTsPaths() ],
-    // },
     resolve: {
       alias: {
         '@onecx/react-webcomponents': path.resolve(

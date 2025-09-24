@@ -2,7 +2,7 @@ import { ComponentType } from 'react';
 import { withLocationMgmt } from './withLocationMgmt';
 import { withProviders } from './withProviders';
 import { withRemotesPrimereactStylesIsolation } from '../primereactStyling/hocs/remotes';
-import { withAppPrimereactStylesIsolation } from '../primereactStyling/hocs/app';
+// import { withAppPrimereactStylesIsolation } from '../primereactStyling/hocs/app';
 
 type HOC<InjectedProps, OriginalProps> = (
   component: ComponentType<OriginalProps & InjectedProps>,
@@ -27,6 +27,6 @@ const withRemote = <P extends object>(Component: ComponentType<P>) =>
   )(Component);
 
 const withApp = (Component: ComponentType) =>
-  composeProviders(withAppPrimereactStylesIsolation, withProviders)(Component);
+  composeProviders(withProviders)(Component);
 
 export { withRemote, withApp };

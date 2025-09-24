@@ -1,0 +1,2464 @@
+/* ==== app:vite-example|vite-main | primereact:base ==== */
+@scope ([data-style-id="vite-example|vite-main"]) to ([data-style-isolation]) {
+  .p-hidden-accessible {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    opacity: 0;
+    overflow: hidden;
+    padding: 0;
+    pointer-events: none;
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+  }
+  .p-overflow-hidden {
+    overflow: hidden;
+    padding-right: var(--vite-example-scrollbar-width);
+  }
+}
+/* ==== app:vite-example|vite-main | primereact:primitive-variables ==== */
+@scope ([data-style-id="vite-example|vite-main"]) to ([data-style-isolation]) {
+  :scope {
+    --vite-example-stone-50: #fafaf9;
+    --vite-example-stone-100: #f5f5f4;
+    --vite-example-stone-200: #e7e5e4;
+    --vite-example-stone-300: #d6d3d1;
+    --vite-example-stone-400: #a8a29e;
+    --vite-example-stone-500: #78716c;
+    --vite-example-stone-600: #57534e;
+    --vite-example-stone-700: #44403c;
+    --vite-example-stone-800: #292524;
+    --vite-example-stone-900: #1c1917;
+    --vite-example-stone-950: #0c0a09;
+    --vite-example-neutral-50: #fafafa;
+    --vite-example-neutral-100: #f5f5f5;
+    --vite-example-neutral-200: #e5e5e5;
+    --vite-example-neutral-300: #d4d4d4;
+    --vite-example-neutral-400: #a3a3a3;
+    --vite-example-neutral-500: #737373;
+    --vite-example-neutral-600: #525252;
+    --vite-example-neutral-700: #404040;
+    --vite-example-neutral-800: #262626;
+    --vite-example-neutral-900: #171717;
+    --vite-example-neutral-950: #0a0a0a;
+    --vite-example-zinc-50: #fafafa;
+    --vite-example-zinc-100: #f4f4f5;
+    --vite-example-zinc-200: #e4e4e7;
+    --vite-example-zinc-300: #d4d4d8;
+    --vite-example-zinc-400: #a1a1aa;
+    --vite-example-zinc-500: #71717a;
+    --vite-example-zinc-600: #52525b;
+    --vite-example-zinc-700: #3f3f46;
+    --vite-example-zinc-800: #27272a;
+    --vite-example-zinc-900: #18181b;
+    --vite-example-zinc-950: #09090b;
+    --vite-example-gray-50: #f9fafb;
+    --vite-example-gray-100: #f3f4f6;
+    --vite-example-gray-200: #e5e7eb;
+    --vite-example-gray-300: #d1d5db;
+    --vite-example-gray-400: #9ca3af;
+    --vite-example-gray-500: #6b7280;
+    --vite-example-gray-600: #4b5563;
+    --vite-example-gray-700: #374151;
+    --vite-example-gray-800: #1f2937;
+    --vite-example-gray-900: #111827;
+    --vite-example-gray-950: #030712;
+    --vite-example-slate-50: #f8fafc;
+    --vite-example-slate-100: #f1f5f9;
+    --vite-example-slate-200: #e2e8f0;
+    --vite-example-slate-300: #cbd5e1;
+    --vite-example-slate-400: #94a3b8;
+    --vite-example-slate-500: #64748b;
+    --vite-example-slate-600: #475569;
+    --vite-example-slate-700: #334155;
+    --vite-example-slate-800: #1e293b;
+    --vite-example-slate-900: #0f172a;
+    --vite-example-slate-950: #020617;
+    --vite-example-rose-50: #fff1f2;
+    --vite-example-rose-100: #ffe4e6;
+    --vite-example-rose-200: #fecdd3;
+    --vite-example-rose-300: #fda4af;
+    --vite-example-rose-400: #fb7185;
+    --vite-example-rose-500: #f43f5e;
+    --vite-example-rose-600: #e11d48;
+    --vite-example-rose-700: #be123c;
+    --vite-example-rose-800: #9f1239;
+    --vite-example-rose-900: #881337;
+    --vite-example-rose-950: #4c0519;
+    --vite-example-pink-50: #fdf2f8;
+    --vite-example-pink-100: #fce7f3;
+    --vite-example-pink-200: #fbcfe8;
+    --vite-example-pink-300: #f9a8d4;
+    --vite-example-pink-400: #f472b6;
+    --vite-example-pink-500: #ec4899;
+    --vite-example-pink-600: #db2777;
+    --vite-example-pink-700: #be185d;
+    --vite-example-pink-800: #9d174d;
+    --vite-example-pink-900: #831843;
+    --vite-example-pink-950: #500724;
+    --vite-example-fuchsia-50: #fdf4ff;
+    --vite-example-fuchsia-100: #fae8ff;
+    --vite-example-fuchsia-200: #f5d0fe;
+    --vite-example-fuchsia-300: #f0abfc;
+    --vite-example-fuchsia-400: #e879f9;
+    --vite-example-fuchsia-500: #d946ef;
+    --vite-example-fuchsia-600: #c026d3;
+    --vite-example-fuchsia-700: #a21caf;
+    --vite-example-fuchsia-800: #86198f;
+    --vite-example-fuchsia-900: #701a75;
+    --vite-example-fuchsia-950: #4a044e;
+    --vite-example-purple-50: #faf5ff;
+    --vite-example-purple-100: #f3e8ff;
+    --vite-example-purple-200: #e9d5ff;
+    --vite-example-purple-300: #d8b4fe;
+    --vite-example-purple-400: #c084fc;
+    --vite-example-purple-500: #a855f7;
+    --vite-example-purple-600: #9333ea;
+    --vite-example-purple-700: #7e22ce;
+    --vite-example-purple-800: #6b21a8;
+    --vite-example-purple-900: #581c87;
+    --vite-example-purple-950: #3b0764;
+    --vite-example-violet-50: #f5f3ff;
+    --vite-example-violet-100: #ede9fe;
+    --vite-example-violet-200: #ddd6fe;
+    --vite-example-violet-300: #c4b5fd;
+    --vite-example-violet-400: #a78bfa;
+    --vite-example-violet-500: #8b5cf6;
+    --vite-example-violet-600: #7c3aed;
+    --vite-example-violet-700: #6d28d9;
+    --vite-example-violet-800: #5b21b6;
+    --vite-example-violet-900: #4c1d95;
+    --vite-example-violet-950: #2e1065;
+    --vite-example-indigo-50: #eef2ff;
+    --vite-example-indigo-100: #e0e7ff;
+    --vite-example-indigo-200: #c7d2fe;
+    --vite-example-indigo-300: #a5b4fc;
+    --vite-example-indigo-400: #818cf8;
+    --vite-example-indigo-500: #6366f1;
+    --vite-example-indigo-600: #4f46e5;
+    --vite-example-indigo-700: #4338ca;
+    --vite-example-indigo-800: #3730a3;
+    --vite-example-indigo-900: #312e81;
+    --vite-example-indigo-950: #1e1b4b;
+    --vite-example-blue-50: #eff6ff;
+    --vite-example-blue-100: #dbeafe;
+    --vite-example-blue-200: #bfdbfe;
+    --vite-example-blue-300: #93c5fd;
+    --vite-example-blue-400: #60a5fa;
+    --vite-example-blue-500: #3b82f6;
+    --vite-example-blue-600: #2563eb;
+    --vite-example-blue-700: #1d4ed8;
+    --vite-example-blue-800: #1e40af;
+    --vite-example-blue-900: #1e3a8a;
+    --vite-example-blue-950: #172554;
+    --vite-example-sky-50: #f0f9ff;
+    --vite-example-sky-100: #e0f2fe;
+    --vite-example-sky-200: #bae6fd;
+    --vite-example-sky-300: #7dd3fc;
+    --vite-example-sky-400: #38bdf8;
+    --vite-example-sky-500: #0ea5e9;
+    --vite-example-sky-600: #0284c7;
+    --vite-example-sky-700: #0369a1;
+    --vite-example-sky-800: #075985;
+    --vite-example-sky-900: #0c4a6e;
+    --vite-example-sky-950: #082f49;
+    --vite-example-cyan-50: #ecfeff;
+    --vite-example-cyan-100: #cffafe;
+    --vite-example-cyan-200: #a5f3fc;
+    --vite-example-cyan-300: #67e8f9;
+    --vite-example-cyan-400: #22d3ee;
+    --vite-example-cyan-500: #06b6d4;
+    --vite-example-cyan-600: #0891b2;
+    --vite-example-cyan-700: #0e7490;
+    --vite-example-cyan-800: #155e75;
+    --vite-example-cyan-900: #164e63;
+    --vite-example-cyan-950: #083344;
+    --vite-example-teal-50: #f0fdfa;
+    --vite-example-teal-100: #ccfbf1;
+    --vite-example-teal-200: #99f6e4;
+    --vite-example-teal-300: #5eead4;
+    --vite-example-teal-400: #2dd4bf;
+    --vite-example-teal-500: #14b8a6;
+    --vite-example-teal-600: #0d9488;
+    --vite-example-teal-700: #0f766e;
+    --vite-example-teal-800: #115e59;
+    --vite-example-teal-900: #134e4a;
+    --vite-example-teal-950: #042f2e;
+    --vite-example-yellow-50: #fefce8;
+    --vite-example-yellow-100: #fef9c3;
+    --vite-example-yellow-200: #fef08a;
+    --vite-example-yellow-300: #fde047;
+    --vite-example-yellow-400: #facc15;
+    --vite-example-yellow-500: #eab308;
+    --vite-example-yellow-600: #ca8a04;
+    --vite-example-yellow-700: #a16207;
+    --vite-example-yellow-800: #854d0e;
+    --vite-example-yellow-900: #713f12;
+    --vite-example-yellow-950: #422006;
+    --vite-example-amber-50: #fffbeb;
+    --vite-example-amber-100: #fef3c7;
+    --vite-example-amber-200: #fde68a;
+    --vite-example-amber-300: #fcd34d;
+    --vite-example-amber-400: #fbbf24;
+    --vite-example-amber-500: #f59e0b;
+    --vite-example-amber-600: #d97706;
+    --vite-example-amber-700: #b45309;
+    --vite-example-amber-800: #92400e;
+    --vite-example-amber-900: #78350f;
+    --vite-example-amber-950: #451a03;
+    --vite-example-orange-50: #fff7ed;
+    --vite-example-orange-100: #ffedd5;
+    --vite-example-orange-200: #fed7aa;
+    --vite-example-orange-300: #fdba74;
+    --vite-example-orange-400: #fb923c;
+    --vite-example-orange-500: #f97316;
+    --vite-example-orange-600: #ea580c;
+    --vite-example-orange-700: #c2410c;
+    --vite-example-orange-800: #9a3412;
+    --vite-example-orange-900: #7c2d12;
+    --vite-example-orange-950: #431407;
+    --vite-example-red-50: #fef2f2;
+    --vite-example-red-100: #fee2e2;
+    --vite-example-red-200: #fecaca;
+    --vite-example-red-300: #fca5a5;
+    --vite-example-red-400: #f87171;
+    --vite-example-red-500: #ef4444;
+    --vite-example-red-600: #dc2626;
+    --vite-example-red-700: #b91c1c;
+    --vite-example-red-800: #991b1b;
+    --vite-example-red-900: #7f1d1d;
+    --vite-example-red-950: #450a0a;
+    --vite-example-lime-50: #f7fee7;
+    --vite-example-lime-100: #ecfccb;
+    --vite-example-lime-200: #d9f99d;
+    --vite-example-lime-300: #bef264;
+    --vite-example-lime-400: #a3e635;
+    --vite-example-lime-500: #84cc16;
+    --vite-example-lime-600: #65a30d;
+    --vite-example-lime-700: #4d7c0f;
+    --vite-example-lime-800: #3f6212;
+    --vite-example-lime-900: #365314;
+    --vite-example-lime-950: #1a2e05;
+    --vite-example-green-50: #f0fdf4;
+    --vite-example-green-100: #dcfce7;
+    --vite-example-green-200: #bbf7d0;
+    --vite-example-green-300: #86efac;
+    --vite-example-green-400: #4ade80;
+    --vite-example-green-500: #22c55e;
+    --vite-example-green-600: #16a34a;
+    --vite-example-green-700: #15803d;
+    --vite-example-green-800: #166534;
+    --vite-example-green-900: #14532d;
+    --vite-example-green-950: #052e16;
+    --vite-example-emerald-50: #ecfdf5;
+    --vite-example-emerald-100: #d1fae5;
+    --vite-example-emerald-200: #a7f3d0;
+    --vite-example-emerald-300: #6ee7b7;
+    --vite-example-emerald-400: #34d399;
+    --vite-example-emerald-500: #10b981;
+    --vite-example-emerald-600: #059669;
+    --vite-example-emerald-700: #047857;
+    --vite-example-emerald-800: #065f46;
+    --vite-example-emerald-900: #064e3b;
+    --vite-example-emerald-950: #022c22;
+    --vite-example-border-radius-none: 0;
+    --vite-example-border-radius-xs: 2px;
+    --vite-example-border-radius-sm: 4px;
+    --vite-example-border-radius-md: 6px;
+    --vite-example-border-radius-lg: 8px;
+    --vite-example-border-radius-xl: 12px;
+  }
+} /* ==== app:vite-example|vite-main | primereact:semantic-variables ==== */
+@scope ([data-style-id="vite-example|vite-main"]) to ([data-style-isolation]) {
+  :scope {
+    --vite-example-transition-duration: 0.2s;
+    --vite-example-disabled-opacity: 0.6;
+    --vite-example-icon-size: 1rem;
+    --vite-example-anchor-gutter: 2px;
+    --vite-example-onecx-font-family:
+      Ubuntu, Helvetica Neue Light, Helvetica Neue, Helvetica, Arial,
+      Lucida Grande, sans-serif;
+    --vite-example-onecx-font-size: undefined;
+    --vite-example-onecx-topbar-bg-color: #0d3650;
+    --vite-example-onecx-topbar-item-text-color: #ffffff;
+    --vite-example-onecx-topbar-text-color: #ffffff;
+    --vite-example-onecx-topbar-left-bg-color: #0d3650;
+    --vite-example-onecx-topbar-item-text-hover-bg-color: #262626;
+    --vite-example-onecx-topbar-menu-button-bg-color: rgb(255 0 68);
+    --vite-example-onecx-logo-color: #ffffff;
+    --vite-example-onecx-menu-text-color: #f06d06;
+    --vite-example-onecx-menu-bg-color: #fdfeff;
+    --vite-example-onecx-menu-item-text-color: #515c66;
+    --vite-example-onecx-menu-item-bg-color: undefined;
+    --vite-example-onecx-menu-item-hover-bg-color: #d0021b;
+    --vite-example-onecx-menu-active-item-text-color: #515c66;
+    --vite-example-onecx-menu-active-item-bg-color: rgba(0, 0, 0, 0.04);
+    --vite-example-onecx-menu-inline-border-color: undefined;
+    --vite-example-onecx-primary-color: #f06d06;
+    --vite-example-onecx-secondary-color: #1c4257;
+    --vite-example-onecx-text-color: rgba(0, 0, 0, 0.87);
+    --vite-example-onecx-text-secondary-color: #262626;
+    --vite-example-onecx-body-bg-color: #f7f7f7;
+    --vite-example-onecx-content-bg-color: #ffffff;
+    --vite-example-onecx-content-alt-bg-color: undefined;
+    --vite-example-onecx-overlay-content-bg-color: #ffffff;
+    --vite-example-onecx-hover-bg-color: #ad1457;
+    --vite-example-onecx-solid-surface-text-color: #ffffff;
+    --vite-example-onecx-divider-color: #e4e4e4;
+    --vite-example-onecx-button-hover-bg: #ad1457;
+    --vite-example-onecx-button-active-bg: rgba(39, 75, 95, 0.68);
+    --vite-example-onecx-danger-button-bg: #d32f2f;
+    --vite-example-onecx-info-message-bg: #b3e5fc;
+    --vite-example-onecx-success-message-bg: #c8e6c9;
+    --vite-example-onecx-warning-message-bg: #ffecb3;
+    --vite-example-onecx-error-message-bg: #ffcdd2;
+    --vite-example-onecx-error-color: #b00020;
+    --vite-example-onecx-animation-duration: 0.2s;
+    --vite-example-onecx-error-message-bg: #ffcdd2;
+    --vite-example-onecx-warning-message-bg: #ffecb3;
+    --vite-example-onecx-success-message-bg: #c8e6c9;
+    --vite-example-onecx-info-message-bg: #b3e5fc;
+    --vite-example-onecx-danger-button-bg: #d32f2f;
+    --vite-example-onecx-button-active-bg: undefined;
+    --vite-example-onecx-button-hover-bg: #ad1457;
+    --vite-example-onecx-divider-color: #e4e4e4;
+    --vite-example-onecx-solid-surface-text-color: #ffffff;
+    --vite-example-onecx-hover-bg-color: #ad1457;
+    --vite-example-onecx-overlay-content-bg-color: #ffffff;
+    --vite-example-onecx-content-alt-bg-color: #ffffff;
+    --vite-example-onecx-content-bg-color: #ffffff;
+    --vite-example-onecx-body-bg-color: #f7f7f7;
+    --vite-example-onecx-text-color: rgba(0, 0, 0, 0.87);
+    --vite-example-onecx-text-secondary-color: #262626;
+    --vite-example-onecx-secondary-color: #1c4257;
+    --vite-example-onecx-primary-color: #274b5f;
+    --vite-example-onecx-menu-inline-border-color: #e4e4e4;
+    --vite-example-onecx-menu-active-item-bg-color: rgba(0, 0, 0, 0.04);
+    --vite-example-onecx-menu-active-item-text-color: #515c66;
+    --vite-example-onecx-menu-item-hover-bg-color: #e4e4e4;
+    --vite-example-onecx-menu-item-text-color: #515c66;
+    --vite-example-onecx-menu-bg-color: #fdfeff;
+    --vite-example-onecx-menu-text-color: #274b5f;
+    --vite-example-onecx-logo-color: #ffffff;
+    --vite-example-onecx-topbar-menu-button-bg-color: rgb(255 0 68);
+    --vite-example-onecx-topbar-left-bg-color: #c8e6c9;
+    --vite-example-onecx-topbar-text-color: #ffffff;
+    --vite-example-onecx-topbar-item-text-color: #ffffff;
+    --vite-example-onecx-topbar-item-text-hover-bg-color: #262626;
+    --vite-example-onecx-topbar-bg-color: #c8e6c9;
+    --vite-example-onecx-font-family: undefined;
+    --vite-example-onecx-font-size: undefined;
+    --vite-example-overlay-navigation-shadow:
+      0 2px 4px -1px rgba(0, 0, 0, 0.2), 0 4px 5px 0 rgba(0, 0, 0, 0.14),
+      0 1px 10px 0 rgba(0, 0, 0, 0.12);
+    --vite-example-overlay-modal-border-radius: var(
+      --vite-example-border-radius-sm
+    );
+    --vite-example-overlay-modal-padding: 1.25rem;
+    --vite-example-overlay-modal-shadow:
+      0 11px 15px -7px rgba(0, 0, 0, 0.2), 0 24px 38px 3px rgba(0, 0, 0, 0.14),
+      0 9px 46px 8px rgba(0, 0, 0, 0.12);
+    --vite-example-overlay-popover-border-radius: var(
+      --vite-example-border-radius-sm
+    );
+    --vite-example-overlay-popover-padding: 0.75rem;
+    --vite-example-overlay-popover-shadow:
+      0 5px 5px -3px rgba(0, 0, 0, 0.2), 0 8px 10px 1px rgba(0, 0, 0, 0.14),
+      0 3px 14px 2px rgba(0, 0, 0, 0.12);
+    --vite-example-overlay-select-border-radius: var(
+      --vite-example-border-radius-sm
+    );
+    --vite-example-overlay-select-shadow:
+      0 5px 5px -3px rgba(0, 0, 0, 0.2), 0 8px 10px 1px rgba(0, 0, 0, 0.14),
+      0 3px 14px 2px rgba(0, 0, 0, 0.12);
+    --vite-example-navigation-submenu-icon-size: 0.875rem;
+    --vite-example-navigation-submenu-label-padding: 0.75rem;
+    --vite-example-navigation-submenu-label-font-weight: 400;
+    --vite-example-navigation-item-padding: 0.75rem 0.75rem;
+    --vite-example-navigation-item-border-radius: 0;
+    --vite-example-navigation-item-gap: 0.5rem;
+    --vite-example-navigation-list-padding: 0.5rem 1.25rem;
+    --vite-example-navigation-list-gap: 2px;
+    --vite-example-mask-transition-duration: 0.15s;
+    --vite-example-content-border-radius: var(--vite-example-border-radius-md);
+    --vite-example-list-padding: 0;
+    --vite-example-list-gap: 2px;
+    --vite-example-list-option-group-padding: 0.75rem;
+    --vite-example-list-option-group-font-weight: 600;
+    --vite-example-list-option-padding: 0.75rem 0.75rem;
+    --vite-example-list-option-border-radius: 0;
+    --vite-example-list-header-padding: 0.75rem;
+    --vite-example-form-field-padding-x: 0.75rem;
+    --vite-example-form-field-padding-y: 0.75rem;
+    --vite-example-form-field-border-radius: var(
+      --vite-example-border-radius-md
+    );
+    --vite-example-form-field-transition-duration: var(
+      --vite-example-transition-duration
+    );
+    --vite-example-form-field-focus-ring-width: 0;
+    --vite-example-form-field-focus-ring-style: none;
+    --vite-example-form-field-focus-ring-color: transparent;
+    --vite-example-form-field-focus-ring-offset: 0;
+    --vite-example-form-field-focus-ring-shadow: none;
+    --vite-example-form-field-lg-font-size: 1.125rem;
+    --vite-example-form-field-lg-padding-x: 0.875rem;
+    --vite-example-form-field-lg-padding-y: 0.875rem;
+    --vite-example-form-field-sm-font-size: 0.875rem;
+    --vite-example-form-field-sm-padding-x: 0.625rem;
+    --vite-example-form-field-sm-padding-y: 0.625rem;
+    --vite-example-primary-50: #f9ffff;
+    --vite-example-primary-100: #eaffff;
+    --vite-example-primary-200: #bde1f5;
+    --vite-example-primary-300: #89adc1;
+    --vite-example-primary-400: #3b5f73;
+    --vite-example-primary-500: #274b5f;
+    --vite-example-primary-600: #0e3246;
+    --vite-example-primary-700: #000a1e;
+    --vite-example-primary-800: #00000f;
+    --vite-example-primary-900: #000000;
+    --vite-example-primary-950: #000000;
+    --vite-example-focus-ring-width: 1px;
+    --vite-example-focus-ring-style: solid;
+    --vite-example-focus-ring-color: var(--vite-example-primary-color);
+    --vite-example-focus-ring-offset: 2px;
+    --vite-example-focus-ring-shadow: none;
+    --vite-example-navigation-submenu-icon-color: var(
+      --vite-example-surface-400
+    );
+    --vite-example-navigation-submenu-icon-focus-color: var(
+      --vite-example-surface-500
+    );
+    --vite-example-navigation-submenu-icon-active-color: var(
+      --vite-example-surface-500
+    );
+    --vite-example-navigation-submenu-label-background: transparent;
+    --vite-example-navigation-submenu-label-color: var(
+      --vite-example-text-muted-color
+    );
+    --vite-example-navigation-item-focus-background: var(
+      --vite-example-surface-100
+    );
+    --vite-example-navigation-item-active-background: var(
+      --vite-example-surface-100
+    );
+    --vite-example-navigation-item-color: var(--vite-example-text-color);
+    --vite-example-navigation-item-focus-color: var(
+      --vite-example-text-hover-color
+    );
+    --vite-example-navigation-item-active-color: var(
+      --vite-example-text-hover-color
+    );
+    --vite-example-navigation-item-icon-color: var(--vite-example-surface-400);
+    --vite-example-navigation-item-icon-focus-color: var(
+      --vite-example-surface-500
+    );
+    --vite-example-navigation-item-icon-active-color: var(
+      --vite-example-surface-500
+    );
+    --vite-example-list-option-group-background: var(--vite-example-surface-0);
+    --vite-example-list-option-group-color: var(
+      --vite-example-text-muted-color
+    );
+    --vite-example-list-option-focus-background: var(
+      --vite-example-surface-100
+    );
+    --vite-example-list-option-selected-background: var(
+      --vite-example-highlight-background
+    );
+    --vite-example-list-option-selected-focus-background: var(
+      --vite-example-highlight-focus-background
+    );
+    --vite-example-list-option-color: var(--vite-example-text-color);
+    --vite-example-list-option-focus-color: var(
+      --vite-example-text-hover-color
+    );
+    --vite-example-list-option-selected-color: var(
+      --vite-example-highlight-color
+    );
+    --vite-example-list-option-selected-focus-color: var(
+      --vite-example-highlight-focus-color
+    );
+    --vite-example-list-option-option-selected-color: var(
+      --vite-example-primary-color
+    );
+    --vite-example-list-option-option-selected-focus-color: var(
+      --vite-example-primary-color
+    );
+    --vite-example-list-option-icon-color: var(--vite-example-surface-400);
+    --vite-example-list-option-icon-focus-color: var(
+      --vite-example-surface-500
+    );
+    --vite-example-overlay-modal-background: var(--vite-example-surface-0);
+    --vite-example-overlay-modal-border-color: var(--vite-example-surface-200);
+    --vite-example-overlay-modal-color: var(--vite-example-text-color);
+    --vite-example-overlay-popover-background: var(--vite-example-surface-0);
+    --vite-example-overlay-popover-border-color: var(
+      --vite-example-surface-200
+    );
+    --vite-example-overlay-popover-color: var(--vite-example-text-color);
+    --vite-example-overlay-select-background: var(--vite-example-surface-0);
+    --vite-example-overlay-select-border-color: var(--vite-example-surface-200);
+    --vite-example-overlay-select-color: var(--vite-example-text-color);
+    --vite-example-content-background: var(
+      --vite-example-onecx-content-bg-color
+    );
+    --vite-example-content-hover-background: var(
+      --vite-example-onecx-hover-bg-color
+    );
+    --vite-example-content-border-color: var(--vite-example-surface-100);
+    --vite-example-content-color: var(--vite-example-text-color);
+    --vite-example-content-hover-color: var(--vite-example-text-hover-color);
+    --vite-example-text-color: var(--vite-example-onecx-text-color);
+    --vite-example-text-hover-color: var(
+      --vite-example-onecx-text-secondary-color
+    );
+    --vite-example-text-muted-color: var(--vite-example-surface-500);
+    --vite-example-text-hover-muted-color: var(--vite-example-surface-600);
+    --vite-example-form-field-background: var(--vite-example-surface-0);
+    --vite-example-form-field-disabled-background: var(
+      --vite-example-surface-100
+    );
+    --vite-example-form-field-filled-background: var(--vite-example-surface-50);
+    --vite-example-form-field-filled-hover-background: var(
+      --vite-example-surface-50
+    );
+    --vite-example-form-field-filled-focus-background: var(
+      --vite-example-surface-50
+    );
+    --vite-example-form-field-border-color: var(--vite-example-surface-200);
+    --vite-example-form-field-hover-border-color: var(
+      --vite-example-surface-400
+    );
+    --vite-example-form-field-focus-border-color: var(
+      --vite-example-primary-color
+    );
+    --vite-example-form-field-invalid-border-color: var(
+      --vite-example-onecx-error-color
+    );
+    --vite-example-form-field-color: var(--vite-example-surface-700);
+    --vite-example-form-field-disabled-color: var(--vite-example-surface-400);
+    --vite-example-form-field-placeholder-color: var(
+      --vite-example-surface-500
+    );
+    --vite-example-form-field-invalid-placeholder-color: var(
+      --vite-example-onecx-error-color
+    );
+    --vite-example-form-field-float-label-color: var(
+      --vite-example-surface-500
+    );
+    --vite-example-form-field-float-label-focus-color: var(
+      --vite-example-primary-color
+    );
+    --vite-example-form-field-float-label-active-color: var(
+      --vite-example-surface-500
+    );
+    --vite-example-form-field-float-label-invalid-color: var(
+      --vite-example-form-field-invalid-placeholder-color
+    );
+    --vite-example-form-field-icon-color: var(--vite-example-surface-400);
+    --vite-example-form-field-shadow:
+      0 0 #0000, 0 0 #0000, 0 1px 2px 0 rgba(18, 18, 23, 0.05);
+    --vite-example-mask-background: rgba(0, 0, 0, 0.32);
+    --vite-example-mask-color: var(--vite-example-surface-200);
+    --vite-example-highlight-background: var(--vite-example-primary-100);
+    --vite-example-highlight-focus-background: var(--vite-example-primary-200);
+    --vite-example-highlight-color: var(--vite-example-primary-color);
+    --vite-example-highlight-focus-color: var(--vite-example-text-color);
+    --vite-example-primary-50: #f9ffff;
+    --vite-example-primary-100: #eaffff;
+    --vite-example-primary-200: #bde1f5;
+    --vite-example-primary-300: #89adc1;
+    --vite-example-primary-400: #3b5f73;
+    --vite-example-primary-500: #274b5f;
+    --vite-example-primary-600: #0e3246;
+    --vite-example-primary-700: #000a1e;
+    --vite-example-primary-800: #00000f;
+    --vite-example-primary-900: #000000;
+    --vite-example-primary-950: #000000;
+    --vite-example-primary-color: var(--vite-example-primary-500);
+    --vite-example-primary-contrast-color: #ffffff;
+    --vite-example-primary-hover-color: var(
+      --vite-example-onecx-button-hover-bg
+    );
+    --vite-example-primary-active-color: var(
+      --vite-example-onecx-button-active-bg
+    );
+    --vite-example-surface-0: #ffffff;
+    --vite-example-surface-50: #f7f8f9;
+    --vite-example-surface-100: #dadee3;
+    --vite-example-surface-200: #bcc3cd;
+    --vite-example-surface-300: #9fa9b7;
+    --vite-example-surface-400: #818ea1;
+    --vite-example-surface-500: #64748b;
+    --vite-example-surface-600: #556376;
+    --vite-example-surface-700: #465161;
+    --vite-example-surface-800: #37404c;
+    --vite-example-surface-900: #282e38;
+    --vite-example-surface-950: #191d23;
+  }
+  .p-dark {
+    --vite-example-navigation-submenu-icon-color: var(
+      --vite-example-surface-500
+    );
+    --vite-example-navigation-submenu-icon-focus-color: var(
+      --vite-example-surface-400
+    );
+    --vite-example-navigation-submenu-icon-active-color: var(
+      --vite-example-surface-400
+    );
+    --vite-example-navigation-submenu-label-background: transparent;
+    --vite-example-navigation-submenu-label-color: var(
+      --vite-example-text-muted-color
+    );
+    --vite-example-navigation-item-focus-background: var(
+      --vite-example-surface-800
+    );
+    --vite-example-navigation-item-active-background: var(
+      --vite-example-surface-800
+    );
+    --vite-example-navigation-item-color: var(--vite-example-text-color);
+    --vite-example-navigation-item-focus-color: var(
+      --vite-example-text-hover-color
+    );
+    --vite-example-navigation-item-active-color: var(
+      --vite-example-text-hover-color
+    );
+    --vite-example-navigation-item-icon-color: var(--vite-example-surface-500);
+    --vite-example-navigation-item-icon-focus-color: var(
+      --vite-example-surface-400
+    );
+    --vite-example-navigation-item-icon-active-color: var(
+      --vite-example-surface-400
+    );
+    --vite-example-list-option-group-background: transparent;
+    --vite-example-list-option-group-color: var(
+      --vite-example-text-muted-color
+    );
+    --vite-example-list-option-focus-background: var(
+      --vite-example-surface-800
+    );
+    --vite-example-list-option-selected-background: var(
+      --vite-example-highlight-background
+    );
+    --vite-example-list-option-selected-focus-background: var(
+      --vite-example-highlight-focus-background
+    );
+    --vite-example-list-option-color: var(--vite-example-text-color);
+    --vite-example-list-option-focus-color: var(
+      --vite-example-text-hover-color
+    );
+    --vite-example-list-option-selected-color: var(
+      --vite-example-highlight-color
+    );
+    --vite-example-list-option-selected-focus-color: var(
+      --vite-example-highlight-focus-color
+    );
+    --vite-example-list-option-icon-color: var(--vite-example-surface-500);
+    --vite-example-list-option-icon-focus-color: var(
+      --vite-example-surface-400
+    );
+    --vite-example-overlay-modal-background: var(--vite-example-surface-900);
+    --vite-example-overlay-modal-border-color: var(--vite-example-surface-700);
+    --vite-example-overlay-modal-color: var(--vite-example-text-color);
+    --vite-example-overlay-popover-background: var(--vite-example-surface-900);
+    --vite-example-overlay-popover-border-color: var(
+      --vite-example-surface-700
+    );
+    --vite-example-overlay-popover-color: var(--vite-example-text-color);
+    --vite-example-overlay-select-background: var(--vite-example-surface-900);
+    --vite-example-overlay-select-border-color: var(--vite-example-surface-700);
+    --vite-example-overlay-select-color: var(--vite-example-text-color);
+    --vite-example-content-background: var(--vite-example-surface-900);
+    --vite-example-content-hover-background: var(--vite-example-surface-800);
+    --vite-example-content-border-color: var(--vite-example-surface-700);
+    --vite-example-content-color: var(--vite-example-text-color);
+    --vite-example-content-hover-color: var(--vite-example-text-hover-color);
+    --vite-example-text-color: var(--vite-example-surface-0);
+    --vite-example-text-hover-color: var(--vite-example-surface-0);
+    --vite-example-text-muted-color: var(--vite-example-surface-400);
+    --vite-example-text-hover-muted-color: var(--vite-example-surface-300);
+    --vite-example-form-field-background: var(--vite-example-surface-950);
+    --vite-example-form-field-disabled-background: var(
+      --vite-example-surface-700
+    );
+    --vite-example-form-field-filled-background: var(
+      --vite-example-surface-800
+    );
+    --vite-example-form-field-filled-hover-background: var(
+      --vite-example-surface-800
+    );
+    --vite-example-form-field-filled-focus-background: var(
+      --vite-example-surface-800
+    );
+    --vite-example-form-field-border-color: var(--vite-example-surface-600);
+    --vite-example-form-field-hover-border-color: var(
+      --vite-example-surface-500
+    );
+    --vite-example-form-field-focus-border-color: var(
+      --vite-example-primary-color
+    );
+    --vite-example-form-field-invalid-border-color: var(--vite-example-red-300);
+    --vite-example-form-field-color: var(--vite-example-surface-0);
+    --vite-example-form-field-disabled-color: var(--vite-example-surface-400);
+    --vite-example-form-field-placeholder-color: var(
+      --vite-example-surface-400
+    );
+    --vite-example-form-field-invalid-placeholder-color: var(
+      --vite-example-red-400
+    );
+    --vite-example-form-field-float-label-color: var(
+      --vite-example-surface-400
+    );
+    --vite-example-form-field-float-label-focus-color: var(
+      --vite-example-primary-color
+    );
+    --vite-example-form-field-float-label-active-color: var(
+      --vite-example-surface-400
+    );
+    --vite-example-form-field-float-label-invalid-color: var(
+      --vite-example-form-field-invalid-placeholder-color
+    );
+    --vite-example-form-field-icon-color: var(--vite-example-surface-400);
+    --vite-example-form-field-shadow:
+      0 0 #0000, 0 0 #0000, 0 1px 2px 0 rgba(18, 18, 23, 0.05);
+    --vite-example-mask-background: rgba(0, 0, 0, 0.6);
+    --vite-example-mask-color: var(--vite-example-surface-200);
+    --vite-example-highlight-background: color-mix(
+      in srgb,
+      var(--vite-example-primary-400),
+      transparent 84%
+    );
+    --vite-example-highlight-focus-background: color-mix(
+      in srgb,
+      var(--vite-example-primary-400),
+      transparent 76%
+    );
+    --vite-example-highlight-color: rgba(255, 255, 255, 0.87);
+    --vite-example-highlight-focus-color: rgba(255, 255, 255, 0.87);
+    --vite-example-primary-color: var(--vite-example-primary-400);
+    --vite-example-primary-contrast-color: var(--vite-example-surface-900);
+    --vite-example-primary-hover-color: var(--vite-example-primary-300);
+    --vite-example-primary-active-color: var(--vite-example-primary-200);
+    --vite-example-surface-0: #ffffff;
+    --vite-example-surface-50: var(--vite-example-zinc-50);
+    --vite-example-surface-100: var(--vite-example-zinc-100);
+    --vite-example-surface-200: var(--vite-example-zinc-200);
+    --vite-example-surface-300: var(--vite-example-zinc-300);
+    --vite-example-surface-400: var(--vite-example-zinc-400);
+    --vite-example-surface-500: var(--vite-example-zinc-500);
+    --vite-example-surface-600: var(--vite-example-zinc-600);
+    --vite-example-surface-700: var(--vite-example-zinc-700);
+    --vite-example-surface-800: var(--vite-example-zinc-800);
+    --vite-example-surface-900: var(--vite-example-zinc-900);
+    --vite-example-surface-950: var(--vite-example-zinc-950);
+  }
+}
+/* ==== app:vite-example|vite-main | primereact:global-variables ==== */
+@scope ([data-style-id="vite-example|vite-main"]) to ([data-style-isolation]) {
+  :scope {
+    color-scheme: light;
+  }
+  .p-dark {
+    color-scheme: dark;
+  }
+}
+/* ==== app:vite-example|vite-main | primereact:global-style ==== */
+@scope ([data-style-id="vite-example|vite-main"]) to ([data-style-isolation]) {
+  *,
+  ::before,
+  ::after {
+    box-sizing: border-box;
+  }
+  .p-connected-overlay {
+    opacity: 0;
+    transform: scaleY(0.8);
+    transition:
+      transform 0.12s cubic-bezier(0, 0, 0.2, 1),
+      opacity 0.12s cubic-bezier(0, 0, 0.2, 1);
+  }
+  .p-connected-overlay-visible {
+    opacity: 1;
+    transform: scaleY(1);
+  }
+  .p-connected-overlay-hidden {
+    opacity: 0;
+    transform: scaleY(1);
+    transition: opacity 0.1s linear;
+  }
+  .p-connected-overlay-enter-from {
+    opacity: 0;
+    transform: scaleY(0.8);
+  }
+  .p-connected-overlay-leave-to {
+    opacity: 0;
+  }
+  .p-connected-overlay-enter-active {
+    transition:
+      transform 0.12s cubic-bezier(0, 0, 0.2, 1),
+      opacity 0.12s cubic-bezier(0, 0, 0.2, 1);
+  }
+  .p-connected-overlay-leave-active {
+    transition: opacity 0.1s linear;
+  }
+  .p-toggleable-content-enter-from,
+  .p-toggleable-content-leave-to {
+    max-height: 0;
+  }
+  .p-toggleable-content-enter-to,
+  .p-toggleable-content-leave-from {
+    max-height: 1000px;
+  }
+  .p-toggleable-content-leave-active {
+    overflow: hidden;
+    transition: max-height 0.45s cubic-bezier(0, 1, 0, 1);
+  }
+  .p-toggleable-content-enter-active {
+    overflow: hidden;
+    transition: max-height 1s ease-in-out;
+  }
+  .p-disabled,
+  .p-disabled * {
+    cursor: default;
+    pointer-events: none;
+    user-select: none;
+  }
+  .p-disabled,
+  .p-component:disabled {
+    opacity: var(--vite-example-disabled-opacity);
+  }
+  .pi {
+    font-size: var(--vite-example-icon-size);
+  }
+  .p-icon {
+    width: var(--vite-example-icon-size);
+    height: var(--vite-example-icon-size);
+  }
+  .p-overlay-mask {
+    background: var(--vite-example-mask-background);
+    color: var(--vite-example-mask-color);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+  .p-overlay-mask-enter {
+    animation: p-overlay-mask-enter-animation
+      var(--vite-example-mask-transition-duration) forwards;
+  }
+  .p-overlay-mask-leave {
+    animation: p-overlay-mask-leave-animation
+      var(--vite-example-mask-transition-duration) forwards;
+  }
+  @keyframes p-overlay-mask-enter-animation {
+    from {
+      background: transparent;
+    }
+    to {
+      background: var(--vite-example-mask-background);
+    }
+  }
+  @keyframes p-overlay-mask-leave-animation {
+    from {
+      background: var(--vite-example-mask-background);
+    }
+    to {
+      background: transparent;
+    }
+  }
+}
+/* ==== app:vite-example|vite-main | primereact:button-variables ==== */
+@scope ([data-style-id="vite-example|vite-main"]) to ([data-style-isolation]) {
+  :scope {
+    --vite-example-button-border-radius: var(
+      --vite-example-form-field-border-radius
+    );
+    --vite-example-button-rounded-border-radius: 2rem;
+    --vite-example-button-gap: 0.5rem;
+    --vite-example-button-padding-x: var(--vite-example-form-field-padding-x);
+    --vite-example-button-padding-y: 0.643rem;
+    --vite-example-button-icon-only-width: 2.5rem;
+    --vite-example-button-raised-shadow:
+      0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 2px 2px 0 rgba(0, 0, 0, 0.14),
+      0 1px 5px 0 rgba(0, 0, 0, 0.12);
+    --vite-example-button-badge-size: 1rem;
+    --vite-example-button-transition-duration: var(
+      --vite-example-form-field-transition-duration
+    );
+    --vite-example-button-focus-ring-width: var(
+      --vite-example-focus-ring-width
+    );
+    --vite-example-button-focus-ring-style: var(
+      --vite-example-focus-ring-style
+    );
+    --vite-example-button-focus-ring-offset: var(
+      --vite-example-focus-ring-offset
+    );
+    --vite-example-button-label-font-weight: 500;
+    --vite-example-button-lg-font-size: var(
+      --vite-example-form-field-lg-font-size
+    );
+    --vite-example-button-lg-padding-x: var(
+      --vite-example-form-field-lg-padding-x
+    );
+    --vite-example-button-lg-padding-y: var(
+      --vite-example-form-field-lg-padding-y
+    );
+    --vite-example-button-lg-icon-only-width: 3rem;
+    --vite-example-button-sm-font-size: var(
+      --vite-example-form-field-sm-font-size
+    );
+    --vite-example-button-sm-padding-x: var(
+      --vite-example-form-field-sm-padding-x
+    );
+    --vite-example-button-sm-padding-y: var(
+      --vite-example-form-field-sm-padding-y
+    );
+    --vite-example-button-sm-icon-only-width: 2rem;
+    --vite-example-button-link-color: var(--vite-example-primary-color);
+    --vite-example-button-link-hover-color: var(--vite-example-primary-color);
+    --vite-example-button-link-active-color: var(--vite-example-primary-color);
+    --vite-example-button-text-plain-hover-background: var(
+      --vite-example-surface-50
+    );
+    --vite-example-button-text-plain-active-background: var(
+      --vite-example-surface-100
+    );
+    --vite-example-button-text-plain-color: var(--vite-example-surface-700);
+    --vite-example-button-text-contrast-hover-background: var(
+      --vite-example-surface-50
+    );
+    --vite-example-button-text-contrast-active-background: var(
+      --vite-example-surface-100
+    );
+    --vite-example-button-text-contrast-color: var(--vite-example-surface-950);
+    --vite-example-button-text-danger-hover-background: var(
+      --vite-example-red-50
+    );
+    --vite-example-button-text-danger-active-background: var(
+      --vite-example-red-100
+    );
+    --vite-example-button-text-danger-color: var(--vite-example-red-500);
+    --vite-example-button-text-help-hover-background: var(
+      --vite-example-purple-50
+    );
+    --vite-example-button-text-help-active-background: var(
+      --vite-example-purple-100
+    );
+    --vite-example-button-text-help-color: var(--vite-example-purple-500);
+    --vite-example-button-text-warn-hover-background: var(
+      --vite-example-orange-50
+    );
+    --vite-example-button-text-warn-active-background: var(
+      --vite-example-orange-100
+    );
+    --vite-example-button-text-warn-color: var(--vite-example-orange-500);
+    --vite-example-button-text-info-hover-background: var(
+      --vite-example-sky-50
+    );
+    --vite-example-button-text-info-active-background: var(
+      --vite-example-sky-100
+    );
+    --vite-example-button-text-info-color: var(--vite-example-sky-500);
+    --vite-example-button-text-success-hover-background: var(
+      --vite-example-green-50
+    );
+    --vite-example-button-text-success-active-background: var(
+      --vite-example-green-100
+    );
+    --vite-example-button-text-success-color: var(--vite-example-green-500);
+    --vite-example-button-text-secondary-hover-background: var(
+      --vite-example-surface-50
+    );
+    --vite-example-button-text-secondary-active-background: var(
+      --vite-example-surface-100
+    );
+    --vite-example-button-text-secondary-color: var(--vite-example-surface-500);
+    --vite-example-button-text-primary-hover-background: var(
+      --vite-example-primary-50
+    );
+    --vite-example-button-text-primary-active-background: var(
+      --vite-example-primary-100
+    );
+    --vite-example-button-text-primary-color: var(--vite-example-primary-color);
+    --vite-example-button-outlined-plain-hover-background: var(
+      --vite-example-surface-50
+    );
+    --vite-example-button-outlined-plain-active-background: var(
+      --vite-example-surface-100
+    );
+    --vite-example-button-outlined-plain-border-color: var(
+      --vite-example-surface-200
+    );
+    --vite-example-button-outlined-plain-color: var(--vite-example-surface-700);
+    --vite-example-button-outlined-contrast-hover-background: var(
+      --vite-example-surface-50
+    );
+    --vite-example-button-outlined-contrast-active-background: var(
+      --vite-example-surface-100
+    );
+    --vite-example-button-outlined-contrast-border-color: var(
+      --vite-example-surface-700
+    );
+    --vite-example-button-outlined-contrast-color: var(
+      --vite-example-surface-950
+    );
+    --vite-example-button-outlined-danger-hover-background: var(
+      --vite-example-red-50
+    );
+    --vite-example-button-outlined-danger-active-background: var(
+      --vite-example-red-100
+    );
+    --vite-example-button-outlined-danger-border-color: var(
+      --vite-example-red-200
+    );
+    --vite-example-button-outlined-danger-color: var(--vite-example-red-500);
+    --vite-example-button-outlined-help-hover-background: var(
+      --vite-example-purple-50
+    );
+    --vite-example-button-outlined-help-active-background: var(
+      --vite-example-purple-100
+    );
+    --vite-example-button-outlined-help-border-color: var(
+      --vite-example-purple-200
+    );
+    --vite-example-button-outlined-help-color: var(--vite-example-purple-500);
+    --vite-example-button-outlined-warn-hover-background: var(
+      --vite-example-orange-50
+    );
+    --vite-example-button-outlined-warn-active-background: var(
+      --vite-example-orange-100
+    );
+    --vite-example-button-outlined-warn-border-color: var(
+      --vite-example-orange-200
+    );
+    --vite-example-button-outlined-warn-color: var(--vite-example-orange-500);
+    --vite-example-button-outlined-info-hover-background: var(
+      --vite-example-sky-50
+    );
+    --vite-example-button-outlined-info-active-background: var(
+      --vite-example-sky-100
+    );
+    --vite-example-button-outlined-info-border-color: var(
+      --vite-example-sky-200
+    );
+    --vite-example-button-outlined-info-color: var(--vite-example-sky-500);
+    --vite-example-button-outlined-success-hover-background: var(
+      --vite-example-green-50
+    );
+    --vite-example-button-outlined-success-active-background: var(
+      --vite-example-green-100
+    );
+    --vite-example-button-outlined-success-border-color: var(
+      --vite-example-green-200
+    );
+    --vite-example-button-outlined-success-color: var(--vite-example-green-500);
+    --vite-example-button-outlined-secondary-hover-background: var(
+      --vite-example-surface-50
+    );
+    --vite-example-button-outlined-secondary-active-background: var(
+      --vite-example-surface-100
+    );
+    --vite-example-button-outlined-secondary-border-color: var(
+      --vite-example-surface-200
+    );
+    --vite-example-button-outlined-secondary-color: var(
+      --vite-example-surface-500
+    );
+    --vite-example-button-outlined-primary-hover-background: var(
+      --vite-example-primary-50
+    );
+    --vite-example-button-outlined-primary-active-background: var(
+      --vite-example-primary-100
+    );
+    --vite-example-button-outlined-primary-border-color: var(
+      --vite-example-primary-200
+    );
+    --vite-example-button-outlined-primary-color: var(
+      --vite-example-primary-color
+    );
+    --vite-example-button-contrast-background: var(--vite-example-surface-950);
+    --vite-example-button-contrast-hover-background: var(
+      --vite-example-surface-900
+    );
+    --vite-example-button-contrast-active-background: var(
+      --vite-example-surface-800
+    );
+    --vite-example-button-contrast-border-color: var(
+      --vite-example-surface-950
+    );
+    --vite-example-button-contrast-hover-border-color: var(
+      --vite-example-surface-900
+    );
+    --vite-example-button-contrast-active-border-color: var(
+      --vite-example-surface-800
+    );
+    --vite-example-button-contrast-color: var(--vite-example-surface-0);
+    --vite-example-button-contrast-hover-color: var(--vite-example-surface-0);
+    --vite-example-button-contrast-active-color: var(--vite-example-surface-0);
+    --vite-example-button-contrast-focus-ring-color: var(
+      --vite-example-surface-950
+    );
+    --vite-example-button-contrast-focus-ring-shadow: none;
+    --vite-example-button-danger-background: var(--vite-example-red-500);
+    --vite-example-button-danger-hover-background: var(--vite-example-red-600);
+    --vite-example-button-danger-active-background: var(--vite-example-red-700);
+    --vite-example-button-danger-border-color: var(--vite-example-red-500);
+    --vite-example-button-danger-hover-border-color: var(
+      --vite-example-red-600
+    );
+    --vite-example-button-danger-active-border-color: var(
+      --vite-example-red-700
+    );
+    --vite-example-button-danger-color: #ffffff;
+    --vite-example-button-danger-hover-color: #ffffff;
+    --vite-example-button-danger-active-color: #ffffff;
+    --vite-example-button-danger-focus-ring-color: var(--vite-example-red-500);
+    --vite-example-button-danger-focus-ring-shadow: none;
+    --vite-example-button-help-background: var(--vite-example-purple-500);
+    --vite-example-button-help-hover-background: var(--vite-example-purple-600);
+    --vite-example-button-help-active-background: var(
+      --vite-example-purple-700
+    );
+    --vite-example-button-help-border-color: var(--vite-example-purple-500);
+    --vite-example-button-help-hover-border-color: var(
+      --vite-example-purple-600
+    );
+    --vite-example-button-help-active-border-color: var(
+      --vite-example-purple-700
+    );
+    --vite-example-button-help-color: #ffffff;
+    --vite-example-button-help-hover-color: #ffffff;
+    --vite-example-button-help-active-color: #ffffff;
+    --vite-example-button-help-focus-ring-color: var(--vite-example-purple-500);
+    --vite-example-button-help-focus-ring-shadow: none;
+    --vite-example-button-warn-background: var(--vite-example-orange-500);
+    --vite-example-button-warn-hover-background: var(--vite-example-orange-600);
+    --vite-example-button-warn-active-background: var(
+      --vite-example-orange-700
+    );
+    --vite-example-button-warn-border-color: var(--vite-example-orange-500);
+    --vite-example-button-warn-hover-border-color: var(
+      --vite-example-orange-600
+    );
+    --vite-example-button-warn-active-border-color: var(
+      --vite-example-orange-700
+    );
+    --vite-example-button-warn-color: #ffffff;
+    --vite-example-button-warn-hover-color: #ffffff;
+    --vite-example-button-warn-active-color: #ffffff;
+    --vite-example-button-warn-focus-ring-color: var(--vite-example-orange-500);
+    --vite-example-button-warn-focus-ring-shadow: none;
+    --vite-example-button-success-background: var(--vite-example-green-500);
+    --vite-example-button-success-hover-background: var(
+      --vite-example-green-600
+    );
+    --vite-example-button-success-active-background: var(
+      --vite-example-green-700
+    );
+    --vite-example-button-success-border-color: var(--vite-example-green-500);
+    --vite-example-button-success-hover-border-color: var(
+      --vite-example-green-600
+    );
+    --vite-example-button-success-active-border-color: var(
+      --vite-example-green-700
+    );
+    --vite-example-button-success-color: #ffffff;
+    --vite-example-button-success-hover-color: #ffffff;
+    --vite-example-button-success-active-color: #ffffff;
+    --vite-example-button-success-focus-ring-color: var(
+      --vite-example-green-500
+    );
+    --vite-example-button-success-focus-ring-shadow: none;
+    --vite-example-button-info-background: var(--vite-example-sky-500);
+    --vite-example-button-info-hover-background: var(--vite-example-sky-600);
+    --vite-example-button-info-active-background: var(--vite-example-sky-700);
+    --vite-example-button-info-border-color: var(--vite-example-sky-500);
+    --vite-example-button-info-hover-border-color: var(--vite-example-sky-600);
+    --vite-example-button-info-active-border-color: var(--vite-example-sky-700);
+    --vite-example-button-info-color: #ffffff;
+    --vite-example-button-info-hover-color: #ffffff;
+    --vite-example-button-info-active-color: #ffffff;
+    --vite-example-button-info-focus-ring-color: var(--vite-example-sky-500);
+    --vite-example-button-info-focus-ring-shadow: none;
+    --vite-example-button-secondary-background: var(--vite-example-surface-100);
+    --vite-example-button-secondary-hover-background: var(
+      --vite-example-surface-200
+    );
+    --vite-example-button-secondary-active-background: var(
+      --vite-example-surface-300
+    );
+    --vite-example-button-secondary-border-color: var(
+      --vite-example-surface-100
+    );
+    --vite-example-button-secondary-hover-border-color: var(
+      --vite-example-surface-200
+    );
+    --vite-example-button-secondary-active-border-color: var(
+      --vite-example-surface-300
+    );
+    --vite-example-button-secondary-color: var(--vite-example-surface-600);
+    --vite-example-button-secondary-hover-color: var(
+      --vite-example-surface-700
+    );
+    --vite-example-button-secondary-active-color: var(
+      --vite-example-surface-800
+    );
+    --vite-example-button-secondary-focus-ring-color: var(
+      --vite-example-surface-600
+    );
+    --vite-example-button-secondary-focus-ring-shadow: none;
+    --vite-example-button-primary-background: var(--vite-example-primary-color);
+    --vite-example-button-primary-hover-background: var(
+      --vite-example-primary-hover-color
+    );
+    --vite-example-button-primary-active-background: var(
+      --vite-example-primary-active-color
+    );
+    --vite-example-button-primary-border-color: var(
+      --vite-example-primary-color
+    );
+    --vite-example-button-primary-hover-border-color: var(
+      --vite-example-primary-hover-color
+    );
+    --vite-example-button-primary-active-border-color: var(
+      --vite-example-primary-active-color
+    );
+    --vite-example-button-primary-color: var(
+      --vite-example-primary-contrast-color
+    );
+    --vite-example-button-primary-hover-color: var(
+      --vite-example-primary-contrast-color
+    );
+    --vite-example-button-primary-active-color: var(
+      --vite-example-primary-contrast-color
+    );
+    --vite-example-button-primary-focus-ring-color: var(
+      --vite-example-primary-color
+    );
+    --vite-example-button-primary-focus-ring-shadow: none;
+  }
+  .p-dark {
+    --vite-example-button-link-color: var(--vite-example-primary-color);
+    --vite-example-button-link-hover-color: var(--vite-example-primary-color);
+    --vite-example-button-link-active-color: var(--vite-example-primary-color);
+    --vite-example-button-text-plain-hover-background: var(
+      --vite-example-surface-800
+    );
+    --vite-example-button-text-plain-active-background: var(
+      --vite-example-surface-700
+    );
+    --vite-example-button-text-plain-color: var(--vite-example-surface-0);
+    --vite-example-button-text-contrast-hover-background: var(
+      --vite-example-surface-800
+    );
+    --vite-example-button-text-contrast-active-background: var(
+      --vite-example-surface-700
+    );
+    --vite-example-button-text-contrast-color: var(--vite-example-surface-0);
+    --vite-example-button-text-danger-hover-background: color-mix(
+      in srgb,
+      var(--vite-example-red-400),
+      transparent 96%
+    );
+    --vite-example-button-text-danger-active-background: color-mix(
+      in srgb,
+      var(--vite-example-red-400),
+      transparent 84%
+    );
+    --vite-example-button-text-danger-color: var(--vite-example-red-400);
+    --vite-example-button-text-help-hover-background: color-mix(
+      in srgb,
+      var(--vite-example-purple-400),
+      transparent 96%
+    );
+    --vite-example-button-text-help-active-background: color-mix(
+      in srgb,
+      var(--vite-example-purple-400),
+      transparent 84%
+    );
+    --vite-example-button-text-help-color: var(--vite-example-purple-400);
+    --vite-example-button-text-warn-hover-background: color-mix(
+      in srgb,
+      var(--vite-example-orange-400),
+      transparent 96%
+    );
+    --vite-example-button-text-warn-active-background: color-mix(
+      in srgb,
+      var(--vite-example-orange-400),
+      transparent 84%
+    );
+    --vite-example-button-text-warn-color: var(--vite-example-orange-400);
+    --vite-example-button-text-info-hover-background: color-mix(
+      in srgb,
+      var(--vite-example-sky-400),
+      transparent 96%
+    );
+    --vite-example-button-text-info-active-background: color-mix(
+      in srgb,
+      var(--vite-example-sky-400),
+      transparent 84%
+    );
+    --vite-example-button-text-info-color: var(--vite-example-sky-400);
+    --vite-example-button-text-success-hover-background: color-mix(
+      in srgb,
+      var(--vite-example-green-400),
+      transparent 96%
+    );
+    --vite-example-button-text-success-active-background: color-mix(
+      in srgb,
+      var(--vite-example-green-400),
+      transparent 84%
+    );
+    --vite-example-button-text-success-color: var(--vite-example-green-400);
+    --vite-example-button-text-secondary-hover-background: var(
+      --vite-example-surface-800
+    );
+    --vite-example-button-text-secondary-active-background: var(
+      --vite-example-surface-700
+    );
+    --vite-example-button-text-secondary-color: var(--vite-example-surface-400);
+    --vite-example-button-text-primary-hover-background: color-mix(
+      in srgb,
+      var(--vite-example-primary-color),
+      transparent 96%
+    );
+    --vite-example-button-text-primary-active-background: color-mix(
+      in srgb,
+      var(--vite-example-primary-color),
+      transparent 84%
+    );
+    --vite-example-button-text-primary-color: var(--vite-example-primary-color);
+    --vite-example-button-outlined-plain-hover-background: var(
+      --vite-example-surface-800
+    );
+    --vite-example-button-outlined-plain-active-background: var(
+      --vite-example-surface-700
+    );
+    --vite-example-button-outlined-plain-border-color: var(
+      --vite-example-surface-600
+    );
+    --vite-example-button-outlined-plain-color: var(--vite-example-surface-0);
+    --vite-example-button-outlined-contrast-hover-background: var(
+      --vite-example-surface-800
+    );
+    --vite-example-button-outlined-contrast-active-background: var(
+      --vite-example-surface-700
+    );
+    --vite-example-button-outlined-contrast-border-color: var(
+      --vite-example-surface-500
+    );
+    --vite-example-button-outlined-contrast-color: var(
+      --vite-example-surface-0
+    );
+    --vite-example-button-outlined-danger-hover-background: color-mix(
+      in srgb,
+      var(--vite-example-red-400),
+      transparent 96%
+    );
+    --vite-example-button-outlined-danger-active-background: color-mix(
+      in srgb,
+      var(--vite-example-red-400),
+      transparent 84%
+    );
+    --vite-example-button-outlined-danger-border-color: var(
+      --vite-example-red-700
+    );
+    --vite-example-button-outlined-danger-color: var(--vite-example-red-400);
+    --vite-example-button-outlined-help-hover-background: color-mix(
+      in srgb,
+      var(--vite-example-purple-400),
+      transparent 96%
+    );
+    --vite-example-button-outlined-help-active-background: color-mix(
+      in srgb,
+      var(--vite-example-purple-400),
+      transparent 84%
+    );
+    --vite-example-button-outlined-help-border-color: var(
+      --vite-example-purple-700
+    );
+    --vite-example-button-outlined-help-color: var(--vite-example-purple-400);
+    --vite-example-button-outlined-warn-hover-background: color-mix(
+      in srgb,
+      var(--vite-example-orange-400),
+      transparent 96%
+    );
+    --vite-example-button-outlined-warn-active-background: color-mix(
+      in srgb,
+      var(--vite-example-orange-400),
+      transparent 84%
+    );
+    --vite-example-button-outlined-warn-border-color: var(
+      --vite-example-orange-700
+    );
+    --vite-example-button-outlined-warn-color: var(--vite-example-orange-400);
+    --vite-example-button-outlined-info-hover-background: color-mix(
+      in srgb,
+      var(--vite-example-sky-400),
+      transparent 96%
+    );
+    --vite-example-button-outlined-info-active-background: color-mix(
+      in srgb,
+      var(--vite-example-sky-400),
+      transparent 84%
+    );
+    --vite-example-button-outlined-info-border-color: var(
+      --vite-example-sky-700
+    );
+    --vite-example-button-outlined-info-color: var(--vite-example-sky-400);
+    --vite-example-button-outlined-success-hover-background: color-mix(
+      in srgb,
+      var(--vite-example-green-400),
+      transparent 96%
+    );
+    --vite-example-button-outlined-success-active-background: color-mix(
+      in srgb,
+      var(--vite-example-green-400),
+      transparent 84%
+    );
+    --vite-example-button-outlined-success-border-color: var(
+      --vite-example-green-700
+    );
+    --vite-example-button-outlined-success-color: var(--vite-example-green-400);
+    --vite-example-button-outlined-secondary-hover-background: rgba(
+      255,
+      255,
+      255,
+      0.04
+    );
+    --vite-example-button-outlined-secondary-active-background: rgba(
+      255,
+      255,
+      255,
+      0.16
+    );
+    --vite-example-button-outlined-secondary-border-color: var(
+      --vite-example-surface-700
+    );
+    --vite-example-button-outlined-secondary-color: var(
+      --vite-example-surface-400
+    );
+    --vite-example-button-outlined-primary-hover-background: color-mix(
+      in srgb,
+      var(--vite-example-primary-color),
+      transparent 96%
+    );
+    --vite-example-button-outlined-primary-active-background: color-mix(
+      in srgb,
+      var(--vite-example-primary-color),
+      transparent 84%
+    );
+    --vite-example-button-outlined-primary-border-color: var(
+      --vite-example-primary-700
+    );
+    --vite-example-button-outlined-primary-color: var(
+      --vite-example-primary-color
+    );
+    --vite-example-button-contrast-background: var(--vite-example-surface-0);
+    --vite-example-button-contrast-hover-background: var(
+      --vite-example-surface-100
+    );
+    --vite-example-button-contrast-active-background: var(
+      --vite-example-surface-200
+    );
+    --vite-example-button-contrast-border-color: var(--vite-example-surface-0);
+    --vite-example-button-contrast-hover-border-color: var(
+      --vite-example-surface-100
+    );
+    --vite-example-button-contrast-active-border-color: var(
+      --vite-example-surface-200
+    );
+    --vite-example-button-contrast-color: var(--vite-example-surface-950);
+    --vite-example-button-contrast-hover-color: var(--vite-example-surface-950);
+    --vite-example-button-contrast-active-color: var(
+      --vite-example-surface-950
+    );
+    --vite-example-button-contrast-focus-ring-color: var(
+      --vite-example-surface-0
+    );
+    --vite-example-button-contrast-focus-ring-shadow: none;
+    --vite-example-button-danger-background: var(--vite-example-red-400);
+    --vite-example-button-danger-hover-background: var(--vite-example-red-300);
+    --vite-example-button-danger-active-background: var(--vite-example-red-200);
+    --vite-example-button-danger-border-color: var(--vite-example-red-400);
+    --vite-example-button-danger-hover-border-color: var(
+      --vite-example-red-300
+    );
+    --vite-example-button-danger-active-border-color: var(
+      --vite-example-red-200
+    );
+    --vite-example-button-danger-color: var(--vite-example-red-950);
+    --vite-example-button-danger-hover-color: var(--vite-example-red-950);
+    --vite-example-button-danger-active-color: var(--vite-example-red-950);
+    --vite-example-button-danger-focus-ring-color: var(--vite-example-red-400);
+    --vite-example-button-danger-focus-ring-shadow: none;
+    --vite-example-button-help-background: var(--vite-example-purple-400);
+    --vite-example-button-help-hover-background: var(--vite-example-purple-300);
+    --vite-example-button-help-active-background: var(
+      --vite-example-purple-200
+    );
+    --vite-example-button-help-border-color: var(--vite-example-purple-400);
+    --vite-example-button-help-hover-border-color: var(
+      --vite-example-purple-300
+    );
+    --vite-example-button-help-active-border-color: var(
+      --vite-example-purple-200
+    );
+    --vite-example-button-help-color: var(--vite-example-purple-950);
+    --vite-example-button-help-hover-color: var(--vite-example-purple-950);
+    --vite-example-button-help-active-color: var(--vite-example-purple-950);
+    --vite-example-button-help-focus-ring-color: var(--vite-example-purple-400);
+    --vite-example-button-help-focus-ring-shadow: none;
+    --vite-example-button-warn-background: var(--vite-example-orange-400);
+    --vite-example-button-warn-hover-background: var(--vite-example-orange-300);
+    --vite-example-button-warn-active-background: var(
+      --vite-example-orange-200
+    );
+    --vite-example-button-warn-border-color: var(--vite-example-orange-400);
+    --vite-example-button-warn-hover-border-color: var(
+      --vite-example-orange-300
+    );
+    --vite-example-button-warn-active-border-color: var(
+      --vite-example-orange-200
+    );
+    --vite-example-button-warn-color: var(--vite-example-orange-950);
+    --vite-example-button-warn-hover-color: var(--vite-example-orange-950);
+    --vite-example-button-warn-active-color: var(--vite-example-orange-950);
+    --vite-example-button-warn-focus-ring-color: var(--vite-example-orange-400);
+    --vite-example-button-warn-focus-ring-shadow: none;
+    --vite-example-button-success-background: var(--vite-example-green-400);
+    --vite-example-button-success-hover-background: var(
+      --vite-example-green-300
+    );
+    --vite-example-button-success-active-background: var(
+      --vite-example-green-200
+    );
+    --vite-example-button-success-border-color: var(--vite-example-green-400);
+    --vite-example-button-success-hover-border-color: var(
+      --vite-example-green-300
+    );
+    --vite-example-button-success-active-border-color: var(
+      --vite-example-green-200
+    );
+    --vite-example-button-success-color: var(--vite-example-green-950);
+    --vite-example-button-success-hover-color: var(--vite-example-green-950);
+    --vite-example-button-success-active-color: var(--vite-example-green-950);
+    --vite-example-button-success-focus-ring-color: var(
+      --vite-example-green-400
+    );
+    --vite-example-button-success-focus-ring-shadow: none;
+    --vite-example-button-info-background: var(--vite-example-sky-400);
+    --vite-example-button-info-hover-background: var(--vite-example-sky-300);
+    --vite-example-button-info-active-background: var(--vite-example-sky-200);
+    --vite-example-button-info-border-color: var(--vite-example-sky-400);
+    --vite-example-button-info-hover-border-color: var(--vite-example-sky-300);
+    --vite-example-button-info-active-border-color: var(--vite-example-sky-200);
+    --vite-example-button-info-color: var(--vite-example-sky-950);
+    --vite-example-button-info-hover-color: var(--vite-example-sky-950);
+    --vite-example-button-info-active-color: var(--vite-example-sky-950);
+    --vite-example-button-info-focus-ring-color: var(--vite-example-sky-400);
+    --vite-example-button-info-focus-ring-shadow: none;
+    --vite-example-button-secondary-background: var(--vite-example-surface-800);
+    --vite-example-button-secondary-hover-background: var(
+      --vite-example-surface-700
+    );
+    --vite-example-button-secondary-active-background: var(
+      --vite-example-surface-600
+    );
+    --vite-example-button-secondary-border-color: var(
+      --vite-example-surface-800
+    );
+    --vite-example-button-secondary-hover-border-color: var(
+      --vite-example-surface-700
+    );
+    --vite-example-button-secondary-active-border-color: var(
+      --vite-example-surface-600
+    );
+    --vite-example-button-secondary-color: var(--vite-example-surface-300);
+    --vite-example-button-secondary-hover-color: var(
+      --vite-example-surface-200
+    );
+    --vite-example-button-secondary-active-color: var(
+      --vite-example-surface-100
+    );
+    --vite-example-button-secondary-focus-ring-color: var(
+      --vite-example-surface-300
+    );
+    --vite-example-button-secondary-focus-ring-shadow: none;
+    --vite-example-button-primary-background: var(--vite-example-primary-color);
+    --vite-example-button-primary-hover-background: var(
+      --vite-example-primary-hover-color
+    );
+    --vite-example-button-primary-active-background: var(
+      --vite-example-primary-active-color
+    );
+    --vite-example-button-primary-border-color: var(
+      --vite-example-primary-color
+    );
+    --vite-example-button-primary-hover-border-color: var(
+      --vite-example-primary-hover-color
+    );
+    --vite-example-button-primary-active-border-color: var(
+      --vite-example-primary-active-color
+    );
+    --vite-example-button-primary-color: var(
+      --vite-example-primary-contrast-color
+    );
+    --vite-example-button-primary-hover-color: var(
+      --vite-example-primary-contrast-color
+    );
+    --vite-example-button-primary-active-color: var(
+      --vite-example-primary-contrast-color
+    );
+    --vite-example-button-primary-focus-ring-color: var(
+      --vite-example-primary-color
+    );
+    --vite-example-button-primary-focus-ring-shadow: none;
+  }
+} /* ==== app:vite-example|vite-main | primereact:button-style ==== */
+@scope ([data-style-id="vite-example|vite-main"]) to ([data-style-isolation]) {
+  .p-button {
+    display: inline-flex;
+    cursor: pointer;
+    user-select: none;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    position: relative;
+    color: var(--vite-example-button-primary-color);
+    background: var(--vite-example-button-primary-background);
+    border: 1px solid var(--vite-example-button-primary-border-color);
+    padding: var(--vite-example-button-padding-y)
+      var(--vite-example-button-padding-x);
+    font-size: 1rem;
+    font-family: inherit;
+    font-feature-settings: inherit;
+    transition:
+      background var(--vite-example-button-transition-duration),
+      color var(--vite-example-button-transition-duration),
+      border-color var(--vite-example-button-transition-duration),
+      outline-color var(--vite-example-button-transition-duration),
+      box-shadow var(--vite-example-button-transition-duration);
+    border-radius: var(--vite-example-button-border-radius);
+    outline-color: transparent;
+    gap: var(--vite-example-button-gap);
+  }
+  .p-button:disabled {
+    cursor: default;
+  }
+  .p-button-icon-right {
+    order: 1;
+  }
+  .p-button-icon-right:dir(rtl) {
+    order: -1;
+  }
+  .p-button:not(.p-button-vertical)
+    .p-button-icon:not(.p-button-icon-right):dir(rtl) {
+    order: 1;
+  }
+  .p-button-icon-bottom {
+    order: 2;
+  }
+  .p-button-icon-only {
+    width: var(--vite-example-button-icon-only-width);
+    padding-inline-start: 0;
+    padding-inline-end: 0;
+    gap: 0;
+  }
+  .p-button-icon-only.p-button-rounded {
+    border-radius: 50%;
+    height: var(--vite-example-button-icon-only-width);
+  }
+  .p-button-icon-only .p-button-label {
+    visibility: hidden;
+    width: 0;
+  }
+  .p-button-icon-only::after {
+    content: 'A0';
+    visibility: hidden;
+    width: 0;
+  }
+  .p-button-sm {
+    font-size: var(--vite-example-button-sm-font-size);
+    padding: var(--vite-example-button-sm-padding-y)
+      var(--vite-example-button-sm-padding-x);
+  }
+  .p-button-sm .p-button-icon {
+    font-size: var(--vite-example-button-sm-font-size);
+  }
+  .p-button-sm.p-button-icon-only {
+    width: var(--vite-example-button-sm-icon-only-width);
+  }
+  .p-button-sm.p-button-icon-only.p-button-rounded {
+    height: var(--vite-example-button-sm-icon-only-width);
+  }
+  .p-button-lg {
+    font-size: var(--vite-example-button-lg-font-size);
+    padding: var(--vite-example-button-lg-padding-y)
+      var(--vite-example-button-lg-padding-x);
+  }
+  .p-button-lg .p-button-icon {
+    font-size: var(--vite-example-button-lg-font-size);
+  }
+  .p-button-lg.p-button-icon-only {
+    width: var(--vite-example-button-lg-icon-only-width);
+  }
+  .p-button-lg.p-button-icon-only.p-button-rounded {
+    height: var(--vite-example-button-lg-icon-only-width);
+  }
+  .p-button-vertical {
+    flex-direction: column;
+  }
+  .p-button-label {
+    font-weight: var(--vite-example-button-label-font-weight);
+  }
+  .p-button-fluid {
+    width: 100%;
+  }
+  .p-button-fluid.p-button-icon-only {
+    width: var(--vite-example-button-icon-only-width);
+  }
+  .p-button:not(:disabled):hover {
+    background: var(--vite-example-button-primary-hover-background);
+    border: 1px solid var(--vite-example-button-primary-hover-border-color);
+    color: var(--vite-example-button-primary-hover-color);
+  }
+  .p-button:not(:disabled):active {
+    background: var(--vite-example-button-primary-active-background);
+    border: 1px solid var(--vite-example-button-primary-active-border-color);
+    color: var(--vite-example-button-primary-active-color);
+  }
+  .p-button:focus-visible {
+    box-shadow: var(--vite-example-button-primary-focus-ring-shadow);
+    outline: var(--vite-example-button-focus-ring-width)
+      var(--vite-example-button-focus-ring-style)
+      var(--vite-example-button-primary-focus-ring-color);
+    outline-offset: var(--vite-example-button-focus-ring-offset);
+  }
+  .p-button .p-badge {
+    min-width: var(--vite-example-button-badge-size);
+    height: var(--vite-example-button-badge-size);
+    line-height: var(--vite-example-button-badge-size);
+  }
+  .p-button-raised {
+    box-shadow: var(--vite-example-button-raised-shadow);
+  }
+  .p-button-rounded {
+    border-radius: var(--vite-example-button-rounded-border-radius);
+  }
+  .p-button-secondary {
+    background: var(--vite-example-button-secondary-background);
+    border: 1px solid var(--vite-example-button-secondary-border-color);
+    color: var(--vite-example-button-secondary-color);
+  }
+  .p-button-secondary:not(:disabled):hover {
+    background: var(--vite-example-button-secondary-hover-background);
+    border: 1px solid var(--vite-example-button-secondary-hover-border-color);
+    color: var(--vite-example-button-secondary-hover-color);
+  }
+  .p-button-secondary:not(:disabled):active {
+    background: var(--vite-example-button-secondary-active-background);
+    border: 1px solid var(--vite-example-button-secondary-active-border-color);
+    color: var(--vite-example-button-secondary-active-color);
+  }
+  .p-button-secondary:focus-visible {
+    outline-color: var(--vite-example-button-secondary-focus-ring-color);
+    box-shadow: var(--vite-example-button-secondary-focus-ring-shadow);
+  }
+  .p-button-success {
+    background: var(--vite-example-button-success-background);
+    border: 1px solid var(--vite-example-button-success-border-color);
+    color: var(--vite-example-button-success-color);
+  }
+  .p-button-success:not(:disabled):hover {
+    background: var(--vite-example-button-success-hover-background);
+    border: 1px solid var(--vite-example-button-success-hover-border-color);
+    color: var(--vite-example-button-success-hover-color);
+  }
+  .p-button-success:not(:disabled):active {
+    background: var(--vite-example-button-success-active-background);
+    border: 1px solid var(--vite-example-button-success-active-border-color);
+    color: var(--vite-example-button-success-active-color);
+  }
+  .p-button-success:focus-visible {
+    outline-color: var(--vite-example-button-success-focus-ring-color);
+    box-shadow: var(--vite-example-button-success-focus-ring-shadow);
+  }
+  .p-button-info {
+    background: var(--vite-example-button-info-background);
+    border: 1px solid var(--vite-example-button-info-border-color);
+    color: var(--vite-example-button-info-color);
+  }
+  .p-button-info:not(:disabled):hover {
+    background: var(--vite-example-button-info-hover-background);
+    border: 1px solid var(--vite-example-button-info-hover-border-color);
+    color: var(--vite-example-button-info-hover-color);
+  }
+  .p-button-info:not(:disabled):active {
+    background: var(--vite-example-button-info-active-background);
+    border: 1px solid var(--vite-example-button-info-active-border-color);
+    color: var(--vite-example-button-info-active-color);
+  }
+  .p-button-info:focus-visible {
+    outline-color: var(--vite-example-button-info-focus-ring-color);
+    box-shadow: var(--vite-example-button-info-focus-ring-shadow);
+  }
+  .p-button-warn {
+    background: var(--vite-example-button-warn-background);
+    border: 1px solid var(--vite-example-button-warn-border-color);
+    color: var(--vite-example-button-warn-color);
+  }
+  .p-button-warn:not(:disabled):hover {
+    background: var(--vite-example-button-warn-hover-background);
+    border: 1px solid var(--vite-example-button-warn-hover-border-color);
+    color: var(--vite-example-button-warn-hover-color);
+  }
+  .p-button-warn:not(:disabled):active {
+    background: var(--vite-example-button-warn-active-background);
+    border: 1px solid var(--vite-example-button-warn-active-border-color);
+    color: var(--vite-example-button-warn-active-color);
+  }
+  .p-button-warn:focus-visible {
+    outline-color: var(--vite-example-button-warn-focus-ring-color);
+    box-shadow: var(--vite-example-button-warn-focus-ring-shadow);
+  }
+  .p-button-help {
+    background: var(--vite-example-button-help-background);
+    border: 1px solid var(--vite-example-button-help-border-color);
+    color: var(--vite-example-button-help-color);
+  }
+  .p-button-help:not(:disabled):hover {
+    background: var(--vite-example-button-help-hover-background);
+    border: 1px solid var(--vite-example-button-help-hover-border-color);
+    color: var(--vite-example-button-help-hover-color);
+  }
+  .p-button-help:not(:disabled):active {
+    background: var(--vite-example-button-help-active-background);
+    border: 1px solid var(--vite-example-button-help-active-border-color);
+    color: var(--vite-example-button-help-active-color);
+  }
+  .p-button-help:focus-visible {
+    outline-color: var(--vite-example-button-help-focus-ring-color);
+    box-shadow: var(--vite-example-button-help-focus-ring-shadow);
+  }
+  .p-button-danger {
+    background: var(--vite-example-button-danger-background);
+    border: 1px solid var(--vite-example-button-danger-border-color);
+    color: var(--vite-example-button-danger-color);
+  }
+  .p-button-danger:not(:disabled):hover {
+    background: var(--vite-example-button-danger-hover-background);
+    border: 1px solid var(--vite-example-button-danger-hover-border-color);
+    color: var(--vite-example-button-danger-hover-color);
+  }
+  .p-button-danger:not(:disabled):active {
+    background: var(--vite-example-button-danger-active-background);
+    border: 1px solid var(--vite-example-button-danger-active-border-color);
+    color: var(--vite-example-button-danger-active-color);
+  }
+  .p-button-danger:focus-visible {
+    outline-color: var(--vite-example-button-danger-focus-ring-color);
+    box-shadow: var(--vite-example-button-danger-focus-ring-shadow);
+  }
+  .p-button-contrast {
+    background: var(--vite-example-button-contrast-background);
+    border: 1px solid var(--vite-example-button-contrast-border-color);
+    color: var(--vite-example-button-contrast-color);
+  }
+  .p-button-contrast:not(:disabled):hover {
+    background: var(--vite-example-button-contrast-hover-background);
+    border: 1px solid var(--vite-example-button-contrast-hover-border-color);
+    color: var(--vite-example-button-contrast-hover-color);
+  }
+  .p-button-contrast:not(:disabled):active {
+    background: var(--vite-example-button-contrast-active-background);
+    border: 1px solid var(--vite-example-button-contrast-active-border-color);
+    color: var(--vite-example-button-contrast-active-color);
+  }
+  .p-button-contrast:focus-visible {
+    outline-color: var(--vite-example-button-contrast-focus-ring-color);
+    box-shadow: var(--vite-example-button-contrast-focus-ring-shadow);
+  }
+  .p-button-outlined {
+    background: transparent;
+    border-color: var(--vite-example-button-outlined-primary-border-color);
+    color: var(--vite-example-button-outlined-primary-color);
+  }
+  .p-button-outlined:not(:disabled):hover {
+    background: var(--vite-example-button-outlined-primary-hover-background);
+    border-color: var(--vite-example-button-outlined-primary-border-color);
+    color: var(--vite-example-button-outlined-primary-color);
+  }
+  .p-button-outlined:not(:disabled):active {
+    background: var(--vite-example-button-outlined-primary-active-background);
+    border-color: var(--vite-example-button-outlined-primary-border-color);
+    color: var(--vite-example-button-outlined-primary-color);
+  }
+
+  /* ==== app:test-example|test-remote | primereact:confirmpopup-style ==== */
+  @scope ([data-style-id="test-example|test-remote"]) to ([data-style-isolation]) {
+    .p-confirmpopup {
+      position: absolute;
+      margin-top: var(--vite-example-confirmpopup-gutter);
+      top: 0;
+      left: 0;
+      background: var(--vite-example-confirmpopup-background);
+      color: var(--vite-example-confirmpopup-color);
+      border: 1px solid var(--vite-example-confirmpopup-border-color);
+      border-radius: var(--vite-example-confirmpopup-border-radius);
+      box-shadow: var(--vite-example-confirmpopup-shadow);
+    }
+    .p-confirmpopup-content {
+      display: flex;
+      align-items: center;
+      padding: var(--vite-example-confirmpopup-content-padding);
+      gap: var(--vite-example-confirmpopup-content-gap);
+    }
+    .p-confirmpopup-icon {
+      font-size: var(--vite-example-confirmpopup-icon-size);
+      width: var(--vite-example-confirmpopup-icon-size);
+      height: var(--vite-example-confirmpopup-icon-size);
+      color: var(--vite-example-confirmpopup-icon-color);
+    }
+    .p-confirmpopup-footer {
+      display: flex;
+      justify-content: flex-end;
+      gap: var(--vite-example-confirmpopup-footer-gap);
+      padding: var(--vite-example-confirmpopup-footer-padding);
+    }
+    .p-confirmpopup-footer button {
+      width: auto;
+    }
+    .p-confirmpopup-footer button:last-child {
+      margin: 0;
+    }
+    .p-confirmpopup-flipped {
+      margin-block-start: calc(var(--vite-example-confirmpopup-gutter) * -1);
+      margin-block-end: var(--vite-example-confirmpopup-gutter);
+    }
+    .p-confirmpopup-enter-from {
+      opacity: 0;
+      transform: scaleY(0.8);
+    }
+    .p-confirmpopup-leave-to {
+      opacity: 0;
+    }
+    .p-confirmpopup-enter-active {
+      transition:
+        transform 0.12s cubic-bezier(0, 0, 0.2, 1),
+        opacity 0.12s cubic-bezier(0, 0, 0.2, 1);
+    }
+    .p-confirmpopup-leave-active {
+      transition: opacity 0.1s linear;
+    }
+    .p-confirmpopup:after,
+    .p-confirmpopup:before {
+      bottom: 100%;
+      left: calc(
+        var(--vite-example-confirmpopup-arrow-offset) +
+          var(--vite-example-confirmpopup-arrow-left)
+      );
+      content: ' ';
+      height: 0;
+      width: 0;
+      position: absolute;
+      pointer-events: none;
+    }
+    .p-confirmpopup:after {
+      border-width: calc(var(--vite-example-confirmpopup-gutter) - 2px);
+      margin-left: calc(-1 * (var(--vite-example-confirmpopup-gutter) - 2px));
+      border-style: solid;
+      border-color: transparent;
+      border-bottom-color: var(--vite-example-confirmpopup-background);
+    }
+    .p-confirmpopup:before {
+      border-width: var(--vite-example-confirmpopup-gutter);
+      margin-left: calc(-1 * var(--vite-example-confirmpopup-gutter));
+      border-style: solid;
+      border-color: transparent;
+      border-bottom-color: var(--vite-example-confirmpopup-border-color);
+    }
+    .p-confirmpopup-flipped:after,
+    .p-confirmpopup-flipped:before {
+      bottom: auto;
+      top: 100%;
+    }
+    .p-confirmpopup-flipped:after {
+      border-bottom-color: transparent;
+      border-top-color: var(--vite-example-confirmpopup-background);
+    }
+    .p-confirmpopup-flipped:before {
+      border-bottom-color: transparent;
+      border-top-color: var(--vite-example-confirmpopup-border-color);
+    }
+  }
+
+  /* ==== app:test-example|test-remote | primereact:knob-variables ==== */
+  @scope ([data-style-id="test-example|test-remote"]) to ([data-style-isolation]) {
+    :scope {
+      --vite-example-knob-text-color: var(--vite-example-text-muted-color);
+      --vite-example-knob-range-background: var(
+        --vite-example-content-border-color
+      );
+      --vite-example-knob-value-background: var(--vite-example-primary-color);
+      --vite-example-knob-transition-duration: var(
+        --vite-example-transition-duration
+      );
+      --vite-example-knob-focus-ring-width: var(
+        --vite-example-focus-ring-width
+      );
+      --vite-example-knob-focus-ring-style: var(
+        --vite-example-focus-ring-style
+      );
+      --vite-example-knob-focus-ring-color: var(
+        --vite-example-focus-ring-color
+      );
+      --vite-example-knob-focus-ring-offset: var(
+        --vite-example-focus-ring-offset
+      );
+      --vite-example-knob-focus-ring-shadow: var(
+        --vite-example-focus-ring-shadow
+      );
+    }
+  }
+
+  /* ==== app:test-example|test-remote | primereact:knob-style ==== */
+  @scope ([data-style-id="test-example|test-remote"]) to ([data-style-isolation]) {
+    .p-knob-range {
+      fill: none;
+      transition: stroke 0.1s ease-in;
+    }
+    .p-knob-value {
+      animation-name: p-knob-dash-frame;
+      animation-fill-mode: forwards;
+      fill: none;
+    }
+    .p-knob-text {
+      font-size: 1.3rem;
+      text-align: center;
+    }
+    .p-knob svg {
+      border-radius: 50%;
+      outline-color: transparent;
+      transition:
+        background var(--vite-example-knob-transition-duration),
+        color var(--vite-example-knob-transition-duration),
+        outline-color var(--vite-example-knob-transition-duration),
+        box-shadow var(--vite-example-knob-transition-duration);
+    }
+    .p-knob svg:focus-visible {
+      box-shadow: var(--vite-example-knob-focus-ring-shadow);
+      outline: var(--vite-example-knob-focus-ring-width)
+        var(--vite-example-knob-focus-ring-style)
+        var(--vite-example-knob-focus-ring-color);
+      outline-offset: var(--vite-example-knob-focus-ring-offset);
+    }
+    @keyframes p-knob-dash-frame {
+      100% {
+        stroke-dashoffset: 0;
+      }
+    }
+  }
+
+  /* ==== app:test-example|test-remote | primereact:common ==== */
+  @scope ([data-style-id="test-example|test-remote"]) to ([data-style-isolation]) {
+    @layer primereact {
+      .p-component,
+      .p-component * {
+        box-sizing: border-box;
+      }
+
+      .p-hidden {
+        display: none;
+      }
+
+      .p-hidden-space {
+        visibility: hidden;
+      }
+
+      .p-reset {
+        margin: 0;
+        padding: 0;
+        border: 0;
+        outline: 0;
+        text-decoration: none;
+        font-size: 100%;
+        list-style: none;
+      }
+
+      .p-disabled,
+      .p-disabled * {
+        cursor: default;
+        pointer-events: none;
+        user-select: none;
+      }
+
+      .p-component-overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+      }
+
+      .p-unselectable-text {
+        user-select: none;
+      }
+
+      .p-scrollbar-measure {
+        width: 100px;
+        height: 100px;
+        overflow: scroll;
+        position: absolute;
+        top: -9999px;
+      }
+
+      @-webkit-keyframes p-fadein {
+        0% {
+          opacity: 0;
+        }
+        100% {
+          opacity: 1;
+        }
+      }
+      @keyframes p-fadein {
+        0% {
+          opacity: 0;
+        }
+        100% {
+          opacity: 1;
+        }
+      }
+
+      .p-link {
+        text-align: left;
+        background-color: transparent;
+        margin: 0;
+        padding: 0;
+        border: none;
+        cursor: pointer;
+        user-select: none;
+      }
+
+      .p-link:disabled {
+        cursor: default;
+      }
+
+      /* Non react overlay animations */
+      .p-connected-overlay {
+        opacity: 0;
+        transform: scaleY(0.8);
+        transition:
+          transform 0.12s cubic-bezier(0, 0, 0.2, 1),
+          opacity 0.12s cubic-bezier(0, 0, 0.2, 1);
+      }
+
+      .p-connected-overlay-visible {
+        opacity: 1;
+        transform: scaleY(1);
+      }
+
+      .p-connected-overlay-hidden {
+        opacity: 0;
+        transform: scaleY(1);
+        transition: opacity 0.1s linear;
+      }
+
+      /* React based overlay animations */
+      .p-connected-overlay-enter {
+        opacity: 0;
+        transform: scaleY(0.8);
+      }
+
+      .p-connected-overlay-enter-active {
+        opacity: 1;
+        transform: scaleY(1);
+        transition:
+          transform 0.12s cubic-bezier(0, 0, 0.2, 1),
+          opacity 0.12s cubic-bezier(0, 0, 0.2, 1);
+      }
+
+      .p-connected-overlay-enter-done {
+        transform: none;
+      }
+
+      .p-connected-overlay-exit {
+        opacity: 1;
+      }
+
+      .p-connected-overlay-exit-active {
+        opacity: 0;
+        transition: opacity 0.1s linear;
+      }
+
+      /* Toggleable Content */
+      .p-toggleable-content-enter {
+        max-height: 0;
+      }
+
+      .p-toggleable-content-enter-active {
+        overflow: hidden;
+        max-height: 1000px;
+        transition: max-height 1s ease-in-out;
+      }
+
+      .p-toggleable-content-enter-done {
+        transform: none;
+      }
+
+      .p-toggleable-content-exit {
+        max-height: 1000px;
+      }
+
+      .p-toggleable-content-exit-active {
+        overflow: hidden;
+        max-height: 0;
+        transition: max-height 0.45s cubic-bezier(0, 1, 0, 1);
+      }
+
+      /* @todo Refactor */
+      .p-menu .p-menuitem-link {
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        text-decoration: none;
+        overflow: hidden;
+        position: relative;
+      }
+
+      .p-button {
+        margin: 0;
+        display: inline-flex;
+        cursor: pointer;
+        user-select: none;
+        align-items: center;
+        vertical-align: bottom;
+        text-align: center;
+        overflow: hidden;
+        position: relative;
+      }
+
+      .p-button-label {
+        flex: 1 1 auto;
+      }
+
+      .p-button-icon {
+        pointer-events: none;
+      }
+
+      .p-button-icon-right {
+        order: 1;
+      }
+
+      .p-button:disabled {
+        cursor: default;
+      }
+
+      .p-button-icon-only {
+        justify-content: center;
+      }
+
+      .p-button-icon-only .p-button-label {
+        visibility: hidden;
+        width: 0;
+        flex: 0 0 auto;
+      }
+
+      .p-button-vertical {
+        flex-direction: column;
+      }
+
+      .p-button-icon-bottom {
+        order: 2;
+      }
+
+      .p-button-group .p-button {
+        margin: 0;
+      }
+
+      .p-button-group .p-button:not(:last-child) {
+        border-right: 0 none;
+      }
+
+      .p-button-group .p-button:not(:first-of-type):not(:last-of-type) {
+        border-radius: 0;
+      }
+
+      .p-button-group .p-button:first-of-type {
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 0;
+      }
+
+      .p-button-group .p-button:last-of-type {
+        border-top-left-radius: 0;
+        border-bottom-left-radius: 0;
+      }
+
+      .p-button-group .p-button:focus {
+        position: relative;
+        z-index: 1;
+      }
+
+      .p-button-group-single .p-button:first-of-type {
+        border-top-right-radius: var(--border-radius) !important;
+        border-bottom-right-radius: var(--border-radius) !important;
+      }
+
+      .p-button-group-single .p-button:last-of-type {
+        border-top-left-radius: var(--border-radius) !important;
+        border-bottom-left-radius: var(--border-radius) !important;
+      }
+
+      .p-inputtext {
+        margin: 0;
+      }
+
+      .p-fluid .p-inputtext {
+        width: 100%;
+      }
+
+      /* InputGroup */
+      .p-inputgroup {
+        display: flex;
+        align-items: stretch;
+        width: 100%;
+      }
+
+      .p-inputgroup-addon {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .p-inputgroup .p-float-label {
+        display: flex;
+        align-items: stretch;
+        width: 100%;
+      }
+
+      .p-inputgroup .p-inputtext,
+      .p-fluid .p-inputgroup .p-inputtext,
+      .p-inputgroup .p-inputwrapper,
+      .p-fluid .p-inputgroup .p-input {
+        flex: 1 1 auto;
+        width: 1%;
+      }
+
+      /* Floating Label */
+      .p-float-label {
+        display: block;
+        position: relative;
+      }
+
+      .p-float-label label {
+        position: absolute;
+        pointer-events: none;
+        top: 50%;
+        margin-top: -0.5rem;
+        transition-property: all;
+        transition-timing-function: ease;
+        line-height: 1;
+      }
+
+      .p-float-label textarea ~ label,
+      .p-float-label .p-mention ~ label {
+        top: 1rem;
+      }
+
+      .p-float-label input:focus ~ label,
+      .p-float-label input:-webkit-autofill ~ label,
+      .p-float-label input.p-filled ~ label,
+      .p-float-label textarea:focus ~ label,
+      .p-float-label textarea.p-filled ~ label,
+      .p-float-label .p-inputwrapper-focus ~ label,
+      .p-float-label .p-inputwrapper-filled ~ label,
+      .p-float-label .p-tooltip-target-wrapper ~ label {
+        top: -0.75rem;
+        font-size: 12px;
+      }
+
+      .p-float-label .p-placeholder,
+      .p-float-label input::placeholder,
+      .p-float-label .p-inputtext::placeholder {
+        opacity: 0;
+        transition-property: all;
+        transition-timing-function: ease;
+      }
+
+      .p-float-label .p-focus .p-placeholder,
+      .p-float-label input:focus::placeholder,
+      .p-float-label .p-inputtext:focus::placeholder {
+        opacity: 1;
+        transition-property: all;
+        transition-timing-function: ease;
+      }
+
+      .p-input-icon-left,
+      .p-input-icon-right {
+        position: relative;
+        display: inline-block;
+      }
+
+      .p-input-icon-left > i,
+      .p-input-icon-right > i,
+      .p-input-icon-left > svg,
+      .p-input-icon-right > svg,
+      .p-input-icon-left > .p-input-prefix,
+      .p-input-icon-right > .p-input-suffix {
+        position: absolute;
+        top: 50%;
+        margin-top: -0.5rem;
+      }
+
+      .p-fluid .p-input-icon-left,
+      .p-fluid .p-input-icon-right {
+        display: block;
+        width: 100%;
+      }
+
+      .p-icon {
+        display: inline-block;
+      }
+
+      .p-icon-spin {
+        -webkit-animation: p-icon-spin 2s infinite linear;
+        animation: p-icon-spin 2s infinite linear;
+      }
+
+      svg.p-icon {
+        pointer-events: auto;
+      }
+
+      svg.p-icon g,
+      .p-disabled svg.p-icon {
+        pointer-events: none;
+      }
+
+      @-webkit-keyframes p-icon-spin {
+        0% {
+          -webkit-transform: rotate(0deg);
+          transform: rotate(0deg);
+        }
+        100% {
+          -webkit-transform: rotate(359deg);
+          transform: rotate(359deg);
+        }
+      }
+
+      @keyframes p-icon-spin {
+        0% {
+          -webkit-transform: rotate(0deg);
+          transform: rotate(0deg);
+        }
+        100% {
+          -webkit-transform: rotate(359deg);
+          transform: rotate(359deg);
+        }
+      }
+    }
+  }
+}

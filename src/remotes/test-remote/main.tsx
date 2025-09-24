@@ -14,8 +14,8 @@ const Remote: FC<Props> = ({ location }) => {
     <>
       <h5 className="testyStylessy">test remote</h5>
       <span>{location.url}</span>
-      <Button label="First Button">First Button</Button>
-      <Button label="Second Button">Second Button</Button>
+      <Button>First Button</Button>
+      <Button>Second Button</Button>
     </>
   );
 };

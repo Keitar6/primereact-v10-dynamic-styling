@@ -1,0 +1,118 @@
+@use 'sass:map';
+@import 'functions';
+@import 'CMSTheme.scss';
+
+$primaryColor: map-get($Colors, 'primary-base') !default;
+$primaryDarkColor: map-get($Colors, 'primary-hover') !default;
+$primaryDarkerColor: map-get($Colors, 'primary-base') !default;
+$primaryTextColor: map-get($Colors, 'text-base') !default;
+$secondaryTextColor: map-get($Colors, 'text-white') !default;
+
+//highlight
+$highlightBg: $primaryColor !default;
+$highlightTextColor: $secondaryTextColor !default;
+$highlightFocusBg: rgba($primaryColor, 0.24) !default;
+
+@import '../theme-base/variables';
+
+.chosen {
+  color: $primaryColor;
+}
+.header {
+  @include applyStylesFromMap(
+    extractStylesFromMap($Layouts, 'header-base')
+  );
+
+  .logo {
+    @include applyStylesFromMap(
+      extractStylesFromMap($Layouts, 'header-logo')
+    );
+  }
+
+  .menu {
+    @include applyStylesFromMap(
+      extractStylesFromMap($Layouts, 'header-menu-base')
+    );
+
+    .upperSection {
+      @include applyStylesFromMap(
+        extractStylesFromMap($Layouts, 'header-menu-upperSection-base')
+      );
+
+      .tabs {
+        @include applyStylesFromMap(
+          extractStylesFromMap($Layouts, 'header-menu-upperSection-tabs-base')
+        );
+
+        @include applyStylesFromMap(
+          extractStylesFromMap($Fonts, 'subtext-small')
+        );
+
+        &:hover {
+          color: $primaryDarkColor;
+        }
+      }
+      .tabsContainer {
+        @include applyStylesFromMap(
+          extractStylesFromMap(
+            $Layouts,
+            'header-menu-upperSection-tabs-container'
+          )
+        );
+      }
+      .other {
+        @include applyStylesFromMap(
+          extractStylesFromMap($Layouts, 'header-menu-upperSection-other')
+        );
+      }
+      .clientTypes {
+        @include applyStylesFromMap(
+          extractStylesFromMap($Layouts, 'header-menu-upperSection-clientTypes')
+        );
+      }
+    }
+
+    .lowerSection {
+      @include applyStylesFromMap(
+        extractStylesFromMap($Layouts, 'header-menu-lowerSection-base')
+      );
+
+      .tabs {
+        @include applyStylesFromMap(
+          extractStylesFromMap($Layouts, 'header-menu-lowerSection-tabs-base')
+        );
+
+        @include applyStylesFromMap(
+          extractStylesFromMap($Fonts, 'header-tabs-regular')
+        );
+
+        &:hover {
+          color: $primaryDarkColor;
+        }
+      }
+
+      .tabsContainer {
+        @include applyStylesFromMap(
+          extractStylesFromMap(
+            $Layouts,
+            'header-menu-lowerSection-tabs-container'
+          )
+        );
+      }
+
+      .iconsContainer {
+        @include applyStylesFromMap(
+          extractStylesFromMap(
+            $Layouts,
+            'header-menu-lowerSection-tabs-iconsContainer'
+          )
+        );
+      }
+    }
+  }
+}
+.subheader {
+  @include applyStylesFromMap(
+    extractStylesFromMap($Layouts, 'subheader')
+  );
+}

@@ -15,8 +15,8 @@ export const Home = () => {
   return (
     <>
       <h1>Home Page</h1>
-      <Button label="About page">About page</Button>
-      <Button label="Event management">Event management</Button>
+      <Button>About page</Button>
+      <Button>Event management</Button>
 
       {/* <div className="card flex flex-wrap gap-2 justify-center">
         <ConfirmPopup>

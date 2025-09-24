@@ -1,1 +1,2222 @@
-.p-menuitem-text{font:normal 700 var(--font-size-title-1, calc(var(--font-size) * 0.875)) siemens sans,"Open Sans","Roboto","Droid Sans",-apple-system,BlinkMacSystemFont,"Arial","Calibri",sans-serif}.testyStylessy{color:#000;border:1px solid green}body .p-dropdown .p-dropdown-label.p-inputtext{display:inline}body .p-dropdown-panel .p-dropdown-item{min-height:2em}.column-filter-input>p-dropdown>div>div.p-dropdown-label-container{min-height:2em}:root{--text-color: #495057;--text-color-secondary: #6c757d;--primary-color: #2196f3;--primary-color-text: #ffffff;--font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol;--surface-0: #ffffff;--surface-50: #fafafa;--surface-100: #f5f5f5;--surface-200: #eeeeee;--surface-300: #e0e0e0;--surface-400: #bdbdbd;--surface-500: #9e9e9e;--surface-600: #757575;--surface-700: #616161;--surface-800: #424242;--surface-900: #212121;--surface-ground: #f8f9fa;--surface-section: #ffffff;--surface-card: #ffffff;--surface-overlay: #ffffff;--surface-border: #dee2e6;--content-padding: 1rem;--inline-spacing: 0.5rem;--border-radius: 3px;--blue-50: #f4fafe;--blue-100: #cae6fc;--blue-200: #a0d2fa;--blue-300: #75bef8;--blue-400: #4baaf5;--blue-500: #2196f3;--blue-600: #1c80cf;--blue-700: #1769aa;--blue-800: #125386;--blue-900: #0d3c61;--green-50: #f6fbf6;--green-100: #d4ecd5;--green-200: #b2ddb4;--green-300: #90cd93;--green-400: #6ebe71;--green-500: #4caf50;--green-600: #419544;--green-700: #357b38;--green-800: #2a602c;--green-900: #1e4620;--yellow-50: #fffcf5;--yellow-100: #fef0cd;--yellow-200: #fde4a5;--yellow-300: #fdd87d;--yellow-400: #fccc55;--yellow-500: #fbc02d;--yellow-600: #d5a326;--yellow-700: #b08620;--yellow-800: #8a6a19;--yellow-900: #644d12;--cyan-50: #f2fcfd;--cyan-100: #c2eff5;--cyan-200: #91e2ed;--cyan-300: #61d5e4;--cyan-400: #30c9dc;--cyan-500: #00bcd4;--cyan-600: #00a0b4;--cyan-700: #008494;--cyan-800: #006775;--cyan-900: #004b55;--pink-50: #fef4f7;--pink-100: #fac9da;--pink-200: #f69ebc;--pink-300: #f1749e;--pink-400: #ed4981;--pink-500: #e91e63;--pink-600: #c61a54;--pink-700: #a31545;--pink-800: #801136;--pink-900: #5d0c28;--indigo-50: #f5f6fb;--indigo-100: #d1d5ed;--indigo-200: #acb4df;--indigo-300: #8893d1;--indigo-400: #6372c3;--indigo-500: #3f51b5;--indigo-600: #36459a;--indigo-700: #2c397f;--indigo-800: #232d64;--indigo-900: #192048;--teal-50: #f2faf9;--teal-100: #c2e6e2;--teal-200: #91d2cc;--teal-300: #61beb5;--teal-400: #30aa9f;--teal-500: #009688;--teal-600: #008074;--teal-700: #00695f;--teal-800: #00534b;--teal-900: #003c36;--orange-50: #fff8f2;--orange-100: #fde0c2;--orange-200: #fbc791;--orange-300: #f9ae61;--orange-400: #f79530;--orange-500: #f57c00;--orange-600: #d06900;--orange-700: #ac5700;--orange-800: #874400;--orange-900: #623200;--bluegray-50: #f7f9f9;--bluegray-100: #d9e0e3;--bluegray-200: #bbc7cd;--bluegray-300: #9caeb7;--bluegray-400: #7e96a1;--bluegray-500: #607d8b;--bluegray-600: #526a76;--bluegray-700: #435861;--bluegray-800: #35454c;--bluegray-900: #263238;--purple-50: #faf4fb;--purple-100: #e7cbec;--purple-200: #d4a2dd;--purple-300: #c279ce;--purple-400: #af50bf;--purple-500: #9c27b0;--purple-600: #852196;--purple-700: #6d1b7b;--purple-800: #561561;--purple-900: #3e1046;--gray-50: #fafafa;--gray-100: #f5f5f5;--gray-200: #eeeeee;--gray-300: #e0e0e0;--gray-400: #bdbdbd;--gray-500: #9e9e9e;--gray-600: #757575;--gray-700: #616161;--gray-800: #424242;--gray-900: #212121;--red-50: #fff5f5;--red-100: #ffd1ce;--red-200: #ffada7;--red-300: #ff8980;--red-400: #ff6459;--red-500: #ff4032;--red-600: #d9362b;--red-700: #b32d23;--red-800: #8c231c;--red-900: #661a14;--primary-50: #f4fafe;--primary-100: #cae6fc;--primary-200: #a0d2fa;--primary-300: #75bef8;--primary-400: #4baaf5;--primary-500: #2196f3;--primary-600: #1c80cf;--primary-700: #1769aa;--primary-800: #125386;--primary-900: #0d3c61}/*# sourceMappingURL=styles.css.map */
+/* @import './prime-base-theme.css'; */
+
+.p-menuitem-text {
+  font:
+    normal 700 var(--font-size-title-1, calc(var(--font-size) * 0.875)) siemens
+      sans,
+    'Open Sans',
+    'Roboto',
+    'Droid Sans',
+    -apple-system,
+    BlinkMacSystemFont,
+    'Arial',
+    'Calibri',
+    sans-serif;
+}
+.testyStylessy {
+  color: #000;
+  border: 1px solid green;
+}
+body .p-dropdown .p-dropdown-label.p-inputtext {
+  display: inline;
+}
+body .p-dropdown-panel .p-dropdown-item {
+  min-height: 2em;
+}
+
+.p-button.p-component {
+  border: 3px solid orange;
+}
+
+.column-filter-input > p-dropdown > div > div.p-dropdown-label-container {
+  min-height: 2em;
+}
+:root {
+  --text-color: #495057;
+  --text-color-secondary: #6c757d;
+  --primary-color: #2196f3;
+  --primary-color-text: #ffffff;
+  --font-family:
+    -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica, Arial,
+    sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol;
+  --surface-0: #ffffff;
+  --surface-50: #fafafa;
+  --surface-100: #f5f5f5;
+  --surface-200: #eeeeee;
+  --surface-300: #e0e0e0;
+  --surface-400: #bdbdbd;
+  --surface-500: #9e9e9e;
+  --surface-600: #757575;
+  --surface-700: #616161;
+  --surface-800: #424242;
+  --surface-900: #212121;
+  --surface-ground: #f8f9fa;
+  --surface-section: #ffffff;
+  --surface-card: #ffffff;
+  --surface-overlay: #ffffff;
+  --surface-border: #dee2e6;
+  --content-padding: 1rem;
+  --inline-spacing: 0.5rem;
+  --border-radius: 3px;
+  --blue-50: #f4fafe;
+  --blue-100: #cae6fc;
+  --blue-200: #a0d2fa;
+  --blue-300: #75bef8;
+  --blue-400: #4baaf5;
+  --blue-500: #2196f3;
+  --blue-600: #1c80cf;
+  --blue-700: #1769aa;
+  --blue-800: #125386;
+  --blue-900: #0d3c61;
+  --green-50: #f6fbf6;
+  --green-100: #d4ecd5;
+  --green-200: #b2ddb4;
+  --green-300: #90cd93;
+  --green-400: #6ebe71;
+  --green-500: #4caf50;
+  --green-600: #419544;
+  --green-700: #357b38;
+  --green-800: #2a602c;
+  --green-900: #1e4620;
+  --yellow-50: #fffcf5;
+  --yellow-100: #fef0cd;
+  --yellow-200: #fde4a5;
+  --yellow-300: #fdd87d;
+  --yellow-400: #fccc55;
+  --yellow-500: #fbc02d;
+  --yellow-600: #d5a326;
+  --yellow-700: #b08620;
+  --yellow-800: #8a6a19;
+  --yellow-900: #644d12;
+  --cyan-50: #f2fcfd;
+  --cyan-100: #c2eff5;
+  --cyan-200: #91e2ed;
+  --cyan-300: #61d5e4;
+  --cyan-400: #30c9dc;
+  --cyan-500: #00bcd4;
+  --cyan-600: #00a0b4;
+  --cyan-700: #008494;
+  --cyan-800: #006775;
+  --cyan-900: #004b55;
+  --pink-50: #fef4f7;
+  --pink-100: #fac9da;
+  --pink-200: #f69ebc;
+  --pink-300: #f1749e;
+  --pink-400: #ed4981;
+  --pink-500: #e91e63;
+  --pink-600: #c61a54;
+  --pink-700: #a31545;
+  --pink-800: #801136;
+  --pink-900: #5d0c28;
+  --indigo-50: #f5f6fb;
+  --indigo-100: #d1d5ed;
+  --indigo-200: #acb4df;
+  --indigo-300: #8893d1;
+  --indigo-400: #6372c3;
+  --indigo-500: #3f51b5;
+  --indigo-600: #36459a;
+  --indigo-700: #2c397f;
+  --indigo-800: #232d64;
+  --indigo-900: #192048;
+  --teal-50: #f2faf9;
+  --teal-100: #c2e6e2;
+  --teal-200: #91d2cc;
+  --teal-300: #61beb5;
+  --teal-400: #30aa9f;
+  --teal-500: #009688;
+  --teal-600: #008074;
+  --teal-700: #00695f;
+  --teal-800: #00534b;
+  --teal-900: #003c36;
+  --orange-50: #fff8f2;
+  --orange-100: #fde0c2;
+  --orange-200: #fbc791;
+  --orange-300: #f9ae61;
+  --orange-400: #f79530;
+  --orange-500: #f57c00;
+  --orange-600: #d06900;
+  --orange-700: #ac5700;
+  --orange-800: #874400;
+  --orange-900: #623200;
+  --bluegray-50: #f7f9f9;
+  --bluegray-100: #d9e0e3;
+  --bluegray-200: #bbc7cd;
+  --bluegray-300: #9caeb7;
+  --bluegray-400: #7e96a1;
+  --bluegray-500: #607d8b;
+  --bluegray-600: #526a76;
+  --bluegray-700: #435861;
+  --bluegray-800: #35454c;
+  --bluegray-900: #263238;
+  --purple-50: #faf4fb;
+  --purple-100: #e7cbec;
+  --purple-200: #d4a2dd;
+  --purple-300: #c279ce;
+  --purple-400: #af50bf;
+  --purple-500: #9c27b0;
+  --purple-600: #852196;
+  --purple-700: #6d1b7b;
+  --purple-800: #561561;
+  --purple-900: #3e1046;
+  --gray-50: #fafafa;
+  --gray-100: #f5f5f5;
+  --gray-200: #eeeeee;
+  --gray-300: #e0e0e0;
+  --gray-400: #bdbdbd;
+  --gray-500: #9e9e9e;
+  --gray-600: #757575;
+  --gray-700: #616161;
+  --gray-800: #424242;
+  --gray-900: #212121;
+  --red-50: #fff5f5;
+  --red-100: #ffd1ce;
+  --red-200: #ffada7;
+  --red-300: #ff8980;
+  --red-400: #ff6459;
+  --red-500: #ff4032;
+  --red-600: #d9362b;
+  --red-700: #b32d23;
+  --red-800: #8c231c;
+  --red-900: #661a14;
+  --primary-50: #f4fafe;
+  --primary-100: #cae6fc;
+  --primary-200: #a0d2fa;
+  --primary-300: #75bef8;
+  --primary-400: #4baaf5;
+  --primary-500: #2196f3;
+  --primary-600: #1c80cf;
+  --primary-700: #1769aa;
+  --primary-800: #125386;
+  --primary-900: #0d3c61;
+}
+
+/* ==== primereact:base ==== */
+.p-hidden-accessible {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  opacity: 0;
+  overflow: hidden;
+  padding: 0;
+  pointer-events: none;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+.p-overflow-hidden {
+  overflow: hidden;
+  padding-right: var(--test-example-scrollbar-width);
+}
+
+/* ==== app:test-example|test-example-ui | primereact:primitive-variables ==== */
+:scope {
+  --test-example-stone-50: #fafaf9;
+  --test-example-stone-100: #f5f5f4;
+  --test-example-stone-200: #e7e5e4;
+  --test-example-stone-300: #d6d3d1;
+  --test-example-stone-400: #a8a29e;
+  --test-example-stone-500: #78716c;
+  --test-example-stone-600: #57534e;
+  --test-example-stone-700: #44403c; /* Consolidated CSS Variables */
+  --test-example-stone-800: #292524;
+  --test-example-stone-900: #1c1917;
+  --test-example-stone-950: #0c0a09;
+  --test-example-neutral-50: #fafafa;
+  --test-example-neutral-100: #f5f5f5;
+  --test-example-neutral-200: #e5e5e5;
+  --test-example-neutral-300: #d4d4d4;
+  --test-example-neutral-400: #a3a3a3;
+  --test-example-neutral-500: #737373;
+  --test-example-neutral-600: #525252;
+  --test-example-neutral-700: #404040;
+  --test-example-neutral-800: #262626;
+  --test-example-neutral-900: #171717;
+  --test-example-neutral-950: #0a0a0a;
+  --test-example-zinc-50: #fafafa;
+  --test-example-zinc-100: #f4f4f5;
+  --test-example-zinc-200: #e4e4e7;
+  --test-example-zinc-300: #d4d4d8;
+  --test-example-zinc-400: #a1a1aa;
+  --test-example-zinc-500: #71717a;
+  --test-example-zinc-600: #52525b;
+  --test-example-zinc-700: #3f3f46;
+  --test-example-zinc-800: #27272a;
+  --test-example-zinc-900: #18181b;
+  --test-example-zinc-950: #09090b;
+  --test-example-gray-50: #f9fafb;
+  --test-example-gray-100: #f3f4f6;
+  --test-example-gray-200: #e5e7eb;
+  --test-example-gray-300: #d1d5db;
+  --test-example-gray-400: #9ca3af;
+  --test-example-gray-500: #6b7280;
+  --test-example-gray-600: #4b5563;
+  --test-example-gray-700: #374151;
+  --test-example-gray-800: #1f2937;
+  --test-example-gray-900: #111827;
+  --test-example-gray-950: #030712;
+  --test-example-slate-50: #f8fafc;
+  --test-example-slate-100: #f1f5f9;
+  --test-example-slate-200: #e2e8f0;
+  --test-example-slate-300: #cbd5e1;
+  --test-example-slate-400: #94a3b8;
+  --test-example-slate-500: #64748b;
+  --test-example-slate-600: #475569;
+  --test-example-slate-700: #334155;
+  --test-example-slate-800: #1e293b;
+  --test-example-slate-900: #0f172a;
+  --test-example-slate-950: #020617;
+  --test-example-rose-50: #fff1f2;
+  --test-example-rose-100: #ffe4e6;
+  --test-example-rose-200: #fecdd3;
+  --test-example-rose-300: #fda4af;
+  --test-example-rose-400: #fb7185;
+  --test-example-rose-500: #f43f5e;
+  --test-example-rose-600: #e11d48;
+  --test-example-rose-700: #be123c;
+  --test-example-rose-800: #9f1239;
+  --test-example-rose-900: #881337;
+  --test-example-rose-950: #4c0519;
+  --test-example-pink-50: #fdf2f8;
+  --test-example-pink-100: #fce7f3;
+  --test-example-pink-200: #fbcfe8;
+  --test-example-pink-300: #f9a8d4;
+  --test-example-pink-400: #f472b6;
+  --test-example-pink-500: #ec4899;
+  --test-example-pink-600: #db2777;
+  --test-example-pink-700: #be185d;
+  --test-example-pink-800: #9d174d;
+  --test-example-pink-900: #831843;
+  --test-example-pink-950: #500724;
+  --test-example-fuchsia-50: #fdf4ff;
+  --test-example-fuchsia-100: #fae8ff;
+  --test-example-fuchsia-200: #f5d0fe;
+  --test-example-fuchsia-300: #f0abfc;
+  --test-example-fuchsia-400: #e879f9;
+  --test-example-fuchsia-500: #d946ef;
+  --test-example-fuchsia-600: #c026d3;
+  --test-example-fuchsia-700: #a21caf;
+  --test-example-fuchsia-800: #86198f;
+  --test-example-fuchsia-900: #701a75;
+  --test-example-fuchsia-950: #4a044e;
+  --test-example-purple-50: #faf5ff;
+  --test-example-purple-100: #f3e8ff;
+  --test-example-purple-200: #e9d5ff;
+  --test-example-purple-300: #d8b4fe;
+  --test-example-purple-400: #c084fc;
+  --test-example-purple-500: #a855f7;
+  --test-example-purple-600: #9333ea;
+  --test-example-purple-700: #7e22ce;
+  --test-example-purple-800: #6b21a8;
+  --test-example-purple-900: #581c87;
+  --test-example-purple-950: #3b0764;
+  --test-example-violet-50: #f5f3ff;
+  --test-example-violet-100: #ede9fe;
+  --test-example-violet-200: #ddd6fe;
+  --test-example-violet-300: #c4b5fd;
+  --test-example-violet-400: #a78bfa;
+  --test-example-violet-500: #8b5cf6;
+  --test-example-violet-600: #7c3aed;
+  --test-example-violet-700: #6d28d9;
+  --test-example-violet-800: #5b21b6;
+  --test-example-violet-900: #4c1d95;
+  --test-example-violet-950: #2e1065;
+  --test-example-indigo-50: #eef2ff;
+  --test-example-indigo-100: #e0e7ff;
+  --test-example-indigo-200: #c7d2fe;
+  --test-example-indigo-300: #a5b4fc;
+  --test-example-indigo-400: #818cf8;
+  --test-example-indigo-500: #6366f1;
+  --test-example-indigo-600: #4f46e5;
+  --test-example-indigo-700: #4338ca;
+  --test-example-indigo-800: #3730a3;
+  --test-example-indigo-900: #312e81;
+  --test-example-indigo-950: #1e1b4b;
+  --test-example-blue-50: #eff6ff;
+  --test-example-blue-100: #dbeafe;
+  --test-example-blue-200: #bfdbfe;
+  --test-example-blue-300: #93c5fd;
+  --test-example-blue-400: #60a5fa;
+  --test-example-blue-500: #3b82f6;
+  --test-example-blue-600: #2563eb;
+  --test-example-blue-700: #1d4ed8;
+  --test-example-blue-800: #1e40af;
+  --test-example-blue-900: #1e3a8a;
+  --test-example-blue-950: #172554;
+  --test-example-sky-50: #f0f9ff;
+  --test-example-sky-100: #e0f2fe;
+  --test-example-sky-200: #bae6fd;
+  --test-example-sky-300: #7dd3fc;
+  --test-example-sky-400: #38bdf8;
+  --test-example-sky-500: #0ea5e9;
+  --test-example-sky-600: #0284c7;
+  --test-example-sky-700: #0369a1;
+  --test-example-sky-800: #075985;
+  --test-example-sky-900: #0c4a6e;
+  --test-example-sky-950: #082f49;
+  --test-example-cyan-50: #ecfeff;
+  --test-example-cyan-100: #cffafe;
+  --test-example-cyan-200: #a5f3fc;
+  --test-example-cyan-300: #67e8f9;
+  --test-example-cyan-400: #22d3ee;
+  --test-example-cyan-500: #06b6d4;
+  --test-example-cyan-600: #0891b2;
+  --test-example-cyan-700: #0e7490;
+  --test-example-cyan-800: #155e75;
+  --test-example-cyan-900: #164e63;
+  --test-example-cyan-950: #083344;
+  --test-example-teal-50: #f0fdfa;
+  --test-example-teal-100: #ccfbf1;
+  --test-example-teal-200: #99f6e4;
+  --test-example-teal-300: #5eead4;
+  --test-example-teal-400: #2dd4bf;
+  --test-example-teal-500: #14b8a6;
+  --test-example-teal-600: #0d9488;
+  --test-example-teal-700: #0f766e;
+  --test-example-teal-800: #115e59;
+  --test-example-teal-900: #134e4a;
+  --test-example-teal-950: #042f2e;
+  --test-example-yellow-50: #fefce8;
+  --test-example-yellow-100: #fef9c3;
+  --test-example-yellow-200: #fef08a;
+  --test-example-yellow-300: #fde047;
+  --test-example-yellow-400: #facc15;
+  --test-example-yellow-500: #eab308;
+  --test-example-yellow-600: #ca8a04;
+  --test-example-yellow-700: #a16207;
+  --test-example-yellow-800: #854d0e;
+  --test-example-yellow-900: #713f12;
+  --test-example-yellow-950: #422006;
+  --test-example-amber-50: #fffbeb;
+  --test-example-amber-100: #fef3c7;
+  --test-example-amber-200: #fde68a;
+  --test-example-amber-300: #fcd34d;
+  --test-example-amber-400: #fbbf24;
+  --test-example-amber-500: #f59e0b;
+  --test-example-amber-600: #d97706;
+  --test-example-amber-700: #b45309;
+  --test-example-amber-800: #92400e;
+  --test-example-amber-900: #78350f;
+  --test-example-amber-950: #451a03;
+  --test-example-orange-50: #fff7ed;
+  --test-example-orange-100: #ffedd5;
+  --test-example-orange-200: #fed7aa;
+  --test-example-orange-300: #fdba74;
+  --test-example-orange-400: #fb923c;
+  --test-example-orange-500: #f97316;
+  --test-example-orange-600: #ea580c;
+  --test-example-orange-700: #c2410c;
+  --test-example-orange-800: #9a3412;
+  --test-example-orange-900: #7c2d12;
+  --test-example-orange-950: #431407;
+  --test-example-red-50: #fef2f2;
+  --test-example-red-100: #fee2e2;
+  --test-example-red-200: #fecaca;
+  --test-example-red-300: #fca5a5;
+  --test-example-red-400: #f87171;
+  --test-example-red-500: #ef4444;
+  --test-example-red-600: #dc2626;
+  --test-example-red-700: #b91c1c;
+  --test-example-red-800: #991b1b;
+  --test-example-red-900: #7f1d1d;
+  --test-example-red-950: #450a0a;
+  --test-example-lime-50: #f7fee7;
+  --test-example-lime-100: #ecfccb;
+  --test-example-lime-200: #d9f99d;
+  --test-example-lime-300: #bef264;
+  --test-example-lime-400: #a3e635;
+  --test-example-lime-500: #84cc16;
+  --test-example-lime-600: #65a30d;
+  --test-example-lime-700: #4d7c0f;
+  --test-example-lime-800: #3f6212;
+  --test-example-lime-900: #365314;
+  --test-example-lime-950: #1a2e05;
+  --test-example-green-50: #f0fdf4;
+  --test-example-green-100: #dcfce7;
+  --test-example-green-200: #bbf7d0;
+  --test-example-green-300: #86efac;
+  --test-example-green-400: #4ade80;
+  --test-example-green-500: #22c55e;
+  --test-example-green-600: #16a34a;
+  --test-example-green-700: #15803d;
+  --test-example-green-800: #166534;
+  --test-example-green-900: #14532d;
+  --test-example-green-950: #052e16;
+  --test-example-emerald-50: #ecfdf5;
+  --test-example-emerald-100: #d1fae5;
+  --test-example-emerald-200: #a7f3d0;
+  --test-example-emerald-300: #6ee7b7;
+  --test-example-emerald-400: #34d399;
+  --test-example-emerald-500: #10b981;
+  --test-example-emerald-600: #059669;
+  --test-example-emerald-700: #047857;
+  --test-example-emerald-800: #065f46;
+  --test-example-emerald-900: #064e3b;
+  --test-example-emerald-950: #022c22;
+  --test-example-border-radius-none: 0;
+  --test-example-border-radius-xs: 2px;
+  --test-example-border-radius-sm: 4px;
+  --test-example-border-radius-md: 6px;
+  --test-example-border-radius-lg: 8px;
+  --test-example-border-radius-xl: 12px;
+  /* End consolidated variables */
+
+  /* All remaining CSS rules, with scoping removed, should follow here. */
+  --test-example-stone-800: #292524;
+  --test-example-stone-900: #1c1917;
+  --test-example-stone-950: #0c0a09;
+  --test-example-neutral-50: #fafafa;
+  --test-example-neutral-100: #f5f5f5;
+  --test-example-neutral-200: #e5e5e5;
+  --test-example-neutral-300: #d4d4d4;
+  --test-example-neutral-400: #a3a3a3;
+  --test-example-neutral-500: #737373;
+  --test-example-neutral-600: #525252;
+  --test-example-neutral-700: #404040;
+  --test-example-neutral-800: #262626;
+  --test-example-neutral-900: #171717;
+  --test-example-neutral-950: #0a0a0a;
+  --test-example-zinc-50: #fafafa;
+  --test-example-zinc-100: #f4f4f5;
+  --test-example-zinc-200: #e4e4e7;
+  --test-example-zinc-300: #d4d4d8;
+  --test-example-zinc-400: #a1a1aa;
+  --test-example-zinc-500: #71717a;
+  --test-example-zinc-600: #52525b;
+  --test-example-zinc-700: #3f3f46;
+  --test-example-zinc-800: #27272a;
+  --test-example-zinc-900: #18181b;
+  --test-example-zinc-950: #09090b;
+  --test-example-gray-50: #f9fafb;
+  --test-example-gray-100: #f3f4f6;
+  --test-example-gray-200: #e5e7eb;
+  --test-example-gray-300: #d1d5db;
+  --test-example-gray-400: #9ca3af;
+  --test-example-gray-500: #6b7280;
+  --test-example-gray-600: #4b5563;
+  --test-example-gray-700: #374151;
+  --test-example-gray-800: #1f2937;
+  --test-example-gray-900: #111827;
+  --test-example-gray-950: #030712;
+  --test-example-slate-50: #f8fafc;
+  --test-example-slate-100: #f1f5f9;
+  --test-example-slate-200: #e2e8f0;
+  --test-example-slate-300: #cbd5e1;
+  --test-example-slate-400: #94a3b8;
+  --test-example-slate-500: #64748b;
+  --test-example-slate-600: #475569;
+  --test-example-slate-700: #334155;
+  --test-example-slate-800: #1e293b;
+  --test-example-slate-900: #0f172a;
+  --test-example-slate-950: #020617;
+  --test-example-rose-50: #fff1f2;
+  --test-example-rose-100: #ffe4e6;
+  --test-example-rose-200: #fecdd3;
+  --test-example-rose-300: #fda4af;
+  --test-example-rose-400: #fb7185;
+  --test-example-rose-500: #f43f5e;
+  --test-example-rose-600: #e11d48;
+  --test-example-rose-700: #be123c;
+  --test-example-rose-800: #9f1239;
+  --test-example-rose-900: #881337;
+  --test-example-rose-950: #4c0519;
+  --test-example-pink-50: #fdf2f8;
+  --test-example-pink-100: #fce7f3;
+  --test-example-pink-200: #fbcfe8;
+  --test-example-pink-300: #f9a8d4;
+  --test-example-pink-400: #f472b6;
+  --test-example-pink-500: #ec4899;
+  --test-example-pink-600: #db2777;
+  --test-example-pink-700: #be185d;
+  --test-example-pink-800: #9d174d;
+  --test-example-pink-900: #831843;
+  --test-example-pink-950: #500724;
+  --test-example-fuchsia-50: #fdf4ff;
+  --test-example-fuchsia-100: #fae8ff;
+  --test-example-fuchsia-200: #f5d0fe;
+  --test-example-fuchsia-300: #f0abfc;
+  --test-example-fuchsia-400: #e879f9;
+  --test-example-fuchsia-500: #d946ef;
+  --test-example-fuchsia-600: #c026d3;
+  --test-example-fuchsia-700: #a21caf;
+  --test-example-fuchsia-800: #86198f;
+  --test-example-fuchsia-900: #701a75;
+  --test-example-fuchsia-950: #4a044e;
+  --test-example-purple-50: #faf5ff;
+  --test-example-purple-100: #f3e8ff;
+  --test-example-purple-200: #e9d5ff;
+  --test-example-purple-300: #d8b4fe;
+  --test-example-purple-400: #c084fc;
+  --test-example-purple-500: #a855f7;
+  --test-example-purple-600: #9333ea;
+  --test-example-purple-700: #7e22ce;
+  --test-example-purple-800: #6b21a8;
+  --test-example-purple-900: #581c87;
+  --test-example-purple-950: #3b0764;
+  --test-example-violet-50: #f5f3ff;
+  --test-example-violet-100: #ede9fe;
+  --test-example-violet-200: #ddd6fe;
+  --test-example-violet-300: #c4b5fd;
+  --test-example-violet-400: #a78bfa;
+  --test-example-violet-500: #8b5cf6;
+  --test-example-violet-600: #7c3aed;
+  --test-example-violet-700: #6d28d9;
+  --test-example-violet-800: #5b21b6;
+  --test-example-violet-900: #4c1d95;
+  --test-example-violet-950: #2e1065;
+  --test-example-indigo-50: #eef2ff;
+  --test-example-indigo-100: #e0e7ff;
+  --test-example-indigo-200: #c7d2fe;
+  --test-example-indigo-300: #a5b4fc;
+  --test-example-indigo-400: #818cf8;
+  --test-example-indigo-500: #6366f1;
+  --test-example-indigo-600: #4f46e5;
+  --test-example-indigo-700: #4338ca;
+  --test-example-indigo-800: #3730a3;
+  --test-example-indigo-900: #312e81;
+  --test-example-indigo-950: #1e1b4b;
+  --test-example-blue-50: #eff6ff;
+  --test-example-blue-100: #dbeafe;
+  --test-example-blue-200: #bfdbfe;
+  --test-example-blue-300: #93c5fd;
+  --test-example-blue-400: #60a5fa;
+  --test-example-blue-500: #3b82f6;
+  --test-example-blue-600: #2563eb;
+  --test-example-blue-700: #1d4ed8;
+  --test-example-blue-800: #1e40af;
+  --test-example-blue-900: #1e3a8a;
+  --test-example-blue-950: #172554;
+  --test-example-sky-50: #f0f9ff;
+  --test-example-sky-100: #e0f2fe;
+  --test-example-sky-200: #bae6fd;
+  --test-example-sky-300: #7dd3fc;
+  --test-example-sky-400: #38bdf8;
+  --test-example-sky-500: #0ea5e9;
+  --test-example-sky-600: #0284c7;
+  --test-example-sky-700: #0369a1;
+  --test-example-sky-800: #075985;
+  --test-example-sky-900: #0c4a6e;
+  --test-example-sky-950: #082f49;
+  --test-example-cyan-50: #ecfeff;
+  --test-example-cyan-100: #cffafe;
+  --test-example-cyan-200: #a5f3fc;
+  --test-example-cyan-300: #67e8f9;
+  --test-example-cyan-400: #22d3ee;
+  --test-example-cyan-500: #06b6d4;
+  --test-example-cyan-600: #0891b2;
+  --test-example-cyan-700: #0e7490;
+  --test-example-cyan-800: #155e75;
+  --test-example-cyan-900: #164e63;
+  --test-example-cyan-950: #083344;
+  --test-example-teal-50: #f0fdfa;
+  --test-example-teal-100: #ccfbf1;
+  --test-example-teal-200: #99f6e4;
+  --test-example-teal-300: #5eead4;
+  --test-example-teal-400: #2dd4bf;
+  --test-example-teal-500: #14b8a6;
+  --test-example-teal-600: #0d9488;
+  --test-example-teal-700: #0f766e;
+  --test-example-teal-800: #115e59;
+  --test-example-teal-900: #134e4a;
+  --test-example-teal-950: #042f2e;
+  --test-example-yellow-50: #fefce8;
+  --test-example-yellow-100: #fef9c3;
+  --test-example-yellow-200: #fef08a;
+  --test-example-yellow-300: #fde047;
+  --test-example-yellow-400: #facc15;
+  --test-example-yellow-500: #eab308;
+  --test-example-yellow-600: #ca8a04;
+  --test-example-yellow-700: #a16207;
+  --test-example-yellow-800: #854d0e;
+  --test-example-yellow-900: #713f12;
+  --test-example-yellow-950: #422006;
+  --test-example-amber-50: #fffbeb;
+  --test-example-amber-100: #fef3c7;
+  --test-example-amber-200: #fde68a;
+  --test-example-amber-300: #fcd34d;
+  --test-example-amber-400: #fbbf24;
+  --test-example-amber-500: #f59e0b;
+  --test-example-amber-600: #d97706;
+  --test-example-amber-700: #b45309;
+  --test-example-amber-800: #92400e;
+  --test-example-amber-900: #78350f;
+  --test-example-amber-950: #451a03;
+  --test-example-orange-50: #fff7ed;
+  --test-example-orange-100: #ffedd5;
+  --test-example-orange-200: #fed7aa;
+  --test-example-orange-300: #fdba74;
+  --test-example-orange-400: #fb923c;
+  --test-example-orange-500: #f97316;
+  --test-example-orange-600: #ea580c;
+  --test-example-orange-700: #c2410c;
+  --test-example-orange-800: #9a3412;
+  --test-example-orange-900: #7c2d12;
+  --test-example-orange-950: #431407;
+  --test-example-red-50: #fef2f2;
+  --test-example-red-100: #fee2e2;
+  --test-example-red-200: #fecaca;
+  --test-example-red-300: #fca5a5;
+  --test-example-red-400: #f87171;
+  --test-example-red-500: #ef4444;
+  --test-example-red-600: #dc2626;
+  --test-example-red-700: #b91c1c;
+  --test-example-red-800: #991b1b;
+  --test-example-red-900: #7f1d1d;
+  --test-example-red-950: #450a0a;
+  --test-example-lime-50: #f7fee7;
+  --test-example-lime-100: #ecfccb;
+  --test-example-lime-200: #d9f99d;
+  --test-example-lime-300: #bef264;
+  --test-example-lime-400: #a3e635;
+  --test-example-lime-500: #84cc16;
+  --test-example-lime-600: #65a30d;
+  --test-example-lime-700: #4d7c0f;
+  --test-example-lime-800: #3f6212;
+  --test-example-lime-900: #365314;
+  --test-example-lime-950: #1a2e05;
+  --test-example-green-50: #f0fdf4;
+  --test-example-green-100: #dcfce7;
+  --test-example-green-200: #bbf7d0;
+  --test-example-green-300: #86efac;
+  --test-example-green-400: #4ade80;
+  --test-example-green-500: #22c55e;
+  --test-example-green-600: #16a34a;
+  --test-example-green-700: #15803d;
+  --test-example-green-800: #166534;
+  --test-example-green-900: #14532d;
+  --test-example-green-950: #052e16;
+  --test-example-emerald-50: #ecfdf5;
+  --test-example-emerald-100: #d1fae5;
+  --test-example-emerald-200: #a7f3d0;
+  --test-example-emerald-300: #6ee7b7;
+  --test-example-emerald-400: #34d399;
+  --test-example-emerald-500: #10b981;
+  --test-example-emerald-600: #059669;
+  --test-example-emerald-700: #047857;
+  --test-example-emerald-800: #065f46;
+  --test-example-emerald-900: #064e3b;
+  --test-example-emerald-950: #022c22;
+  --test-example-border-radius-none: 0;
+  --test-example-border-radius-xs: 2px;
+  --test-example-border-radius-sm: 4px;
+  --test-example-border-radius-md: 6px;
+  --test-example-border-radius-lg: 8px;
+  --test-example-border-radius-xl: 12px;
+}
+
+/* ==== app:test-example|test-example-ui | primereact:semantic-variables ==== */
+:scope {
+  --test-example-transition-duration: 0.2s;
+  --test-example-disabled-opacity: 0.6;
+  --test-example-icon-size: 1rem;
+  --test-example-anchor-gutter: 2px;
+  --test-example-onecx-font-family:
+    Ubuntu, Helvetica Neue Light, Helvetica Neue, Helvetica, Arial,
+    Lucida Grande, sans-serif;
+  --test-example-onecx-font-size: undefined;
+  --test-example-onecx-topbar-bg-color: #0d3650;
+  --test-example-onecx-topbar-item-text-color: #ffffff;
+  --test-example-onecx-topbar-text-color: #ffffff;
+  --test-example-onecx-topbar-left-bg-color: #0d3650;
+  --test-example-onecx-topbar-item-text-hover-bg-color: #262626;
+  --test-example-onecx-topbar-menu-button-bg-color: rgb(255 0 68);
+  --test-example-onecx-logo-color: #ffffff;
+  --test-example-onecx-menu-text-color: #f06d06;
+  --test-example-onecx-menu-bg-color: #fdfeff;
+  --test-example-onecx-menu-item-text-color: #515c66;
+  --test-example-onecx-menu-item-bg-color: undefined;
+  --test-example-onecx-menu-item-hover-bg-color: #d0021b;
+  --test-example-onecx-menu-active-item-text-color: #515c66;
+  --test-example-onecx-menu-active-item-bg-color: rgba(0, 0, 0, 0.04);
+  --test-example-onecx-menu-inline-border-color: undefined;
+  --test-example-onecx-primary-color: #f06d06;
+  --test-example-onecx-secondary-color: #1c4257;
+  --test-example-onecx-text-color: rgba(0, 0, 0, 0.87);
+  --test-example-onecx-text-secondary-color: #262626;
+  --test-example-onecx-body-bg-color: #f7f7f7;
+  --test-example-onecx-content-bg-color: #ffffff;
+  --test-example-onecx-content-alt-bg-color: undefined;
+  --test-example-onecx-overlay-content-bg-color: #ffffff;
+  --test-example-onecx-hover-bg-color: #ad1457;
+  --test-example-onecx-solid-surface-text-color: #ffffff;
+  --test-example-onecx-divider-color: #e4e4e4;
+  --test-example-onecx-button-hover-bg: #ad1457;
+  --test-example-onecx-button-active-bg: rgba(39, 75, 95, 0.68);
+  --test-example-onecx-danger-button-bg: #d32f2f;
+  --test-example-onecx-info-message-bg: #b3e5fc;
+  --test-example-onecx-success-message-bg: #c8e6c9;
+  --test-example-onecx-warning-message-bg: #ffecb3;
+  --test-example-onecx-error-message-bg: #ffcdd2;
+  --test-example-onecx-error-color: #b00020;
+  --test-example-onecx-animation-duration: 0.2s;
+  --test-example-onecx-error-message-bg: #ffcdd2;
+  --test-example-onecx-warning-message-bg: #ffecb3;
+  --test-example-onecx-success-message-bg: #c8e6c9;
+  --test-example-onecx-info-message-bg: #b3e5fc;
+  --test-example-onecx-danger-button-bg: #d32f2f;
+  --test-example-onecx-button-active-bg: undefined;
+  --test-example-onecx-button-hover-bg: #ad1457;
+  --test-example-onecx-divider-color: #e4e4e4;
+  --test-example-onecx-solid-surface-text-color: #ffffff;
+  --test-example-onecx-hover-bg-color: #ad1457;
+  --test-example-onecx-overlay-content-bg-color: #ffffff;
+  --test-example-onecx-content-alt-bg-color: #ffffff;
+  --test-example-onecx-content-bg-color: #ffffff;
+  --test-example-onecx-body-bg-color: #f7f7f7;
+  --test-example-onecx-text-color: rgba(0, 0, 0, 0.87);
+  --test-example-onecx-text-secondary-color: #262626;
+  --test-example-onecx-secondary-color: #1c4257;
+  --test-example-onecx-primary-color: #274b5f;
+  --test-example-onecx-menu-inline-border-color: #e4e4e4;
+  --test-example-onecx-menu-active-item-bg-color: rgba(0, 0, 0, 0.04);
+  --test-example-onecx-menu-active-item-text-color: #515c66;
+  --test-example-onecx-menu-item-hover-bg-color: #e4e4e4;
+  --test-example-onecx-menu-item-text-color: #515c66;
+  --test-example-onecx-menu-bg-color: #fdfeff;
+  --test-example-onecx-menu-text-color: #274b5f;
+  --test-example-onecx-logo-color: #ffffff;
+  --test-example-onecx-topbar-menu-button-bg-color: rgb(255 0 68);
+  --test-example-onecx-topbar-left-bg-color: #c8e6c9;
+  --test-example-onecx-topbar-text-color: #ffffff;
+  --test-example-onecx-topbar-item-text-color: #ffffff;
+  --test-example-onecx-topbar-item-text-hover-bg-color: #262626;
+  --test-example-onecx-topbar-bg-color: #c8e6c9;
+  --test-example-onecx-font-family: undefined;
+  --test-example-onecx-font-size: undefined;
+  --test-example-overlay-navigation-shadow:
+    0 2px 4px -1px rgba(0, 0, 0, 0.2), 0 4px 5px 0 rgba(0, 0, 0, 0.14),
+    0 1px 10px 0 rgba(0, 0, 0, 0.12);
+  --test-example-overlay-modal-border-radius: var(
+    --test-example-border-radius-sm
+  );
+  --test-example-overlay-modal-padding: 1.25rem;
+  --test-example-overlay-modal-shadow:
+    0 11px 15px -7px rgba(0, 0, 0, 0.2), 0 24px 38px 3px rgba(0, 0, 0, 0.14),
+    0 9px 46px 8px rgba(0, 0, 0, 0.12);
+  --test-example-overlay-popover-border-radius: var(
+    --test-example-border-radius-sm
+  );
+  --test-example-overlay-popover-padding: 0.75rem;
+  --test-example-overlay-popover-shadow:
+    0 5px 5px -3px rgba(0, 0, 0, 0.2), 0 8px 10px 1px rgba(0, 0, 0, 0.14),
+    0 3px 14px 2px rgba(0, 0, 0, 0.12);
+  --test-example-overlay-select-border-radius: var(
+    --test-example-border-radius-sm
+  );
+  --test-example-overlay-select-shadow:
+    0 5px 5px -3px rgba(0, 0, 0, 0.2), 0 8px 10px 1px rgba(0, 0, 0, 0.14),
+    0 3px 14px 2px rgba(0, 0, 0, 0.12);
+  --test-example-navigation-submenu-icon-size: 0.875rem;
+  --test-example-navigation-submenu-label-padding: 0.75rem;
+  --test-example-navigation-submenu-label-font-weight: 400;
+  --test-example-navigation-item-padding: 0.75rem 0.75rem;
+  --test-example-navigation-item-border-radius: 0;
+  --test-example-navigation-item-gap: 0.5rem;
+  --test-example-navigation-list-padding: 0.5rem 1.25rem;
+  --test-example-navigation-list-gap: 2px;
+  --test-example-mask-transition-duration: 0.15s;
+  --test-example-content-border-radius: var(--test-example-border-radius-md);
+  --test-example-list-padding: 0;
+  --test-example-list-gap: 2px;
+  --test-example-list-option-group-padding: 0.75rem;
+  --test-example-list-option-group-font-weight: 600;
+  --test-example-list-option-padding: 0.75rem 0.75rem;
+  --test-example-list-option-border-radius: 0;
+  --test-example-list-header-padding: 0.75rem;
+  --test-example-form-field-padding-x: 0.75rem;
+  --test-example-form-field-padding-y: 0.75rem;
+  --test-example-form-field-border-radius: var(--test-example-border-radius-md);
+  --test-example-form-field-transition-duration: var(
+    --test-example-transition-duration
+  );
+  --test-example-form-field-focus-ring-width: 0;
+  --test-example-form-field-focus-ring-style: none;
+  --test-example-form-field-focus-ring-color: transparent;
+  --test-example-form-field-focus-ring-offset: 0;
+  --test-example-form-field-focus-ring-shadow: none;
+  --test-example-form-field-lg-font-size: 1.125rem;
+  --test-example-form-field-lg-padding-x: 0.875rem;
+  --test-example-form-field-lg-padding-y: 0.875rem;
+  --test-example-form-field-sm-font-size: 0.875rem;
+  --test-example-form-field-sm-padding-x: 0.625rem;
+  --test-example-form-field-sm-padding-y: 0.625rem;
+  --test-example-primary-50: #f9ffff;
+  --test-example-primary-100: #eaffff;
+  --test-example-primary-200: #bde1f5;
+  --test-example-primary-300: #89adc1;
+  --test-example-primary-400: #3b5f73;
+  --test-example-primary-500: #274b5f;
+  --test-example-primary-600: #0e3246;
+  --test-example-primary-700: #000a1e;
+  --test-example-primary-800: #00000f;
+  --test-example-primary-900: #000000;
+  --test-example-primary-950: #000000;
+  --test-example-focus-ring-width: 1px;
+  --test-example-focus-ring-style: solid;
+  --test-example-focus-ring-color: var(--test-example-primary-color);
+  --test-example-focus-ring-offset: 2px;
+  --test-example-focus-ring-shadow: none;
+  --test-example-navigation-submenu-icon-color: var(--test-example-surface-400);
+  --test-example-navigation-submenu-icon-focus-color: var(
+    --test-example-surface-500
+  );
+  --test-example-navigation-submenu-icon-active-color: var(
+    --test-example-surface-500
+  );
+  --test-example-navigation-submenu-label-background: transparent;
+  --test-example-navigation-submenu-label-color: var(
+    --test-example-text-muted-color
+  );
+  --test-example-navigation-item-focus-background: var(
+    --test-example-surface-100
+  );
+  --test-example-navigation-item-active-background: var(
+    --test-example-surface-100
+  );
+  --test-example-navigation-item-color: var(--test-example-text-color);
+  --test-example-navigation-item-focus-color: var(
+    --test-example-text-hover-color
+  );
+  --test-example-navigation-item-active-color: var(
+    --test-example-text-hover-color
+  );
+  --test-example-navigation-item-icon-color: var(--test-example-surface-400);
+  --test-example-navigation-item-icon-focus-color: var(
+    --test-example-surface-500
+  );
+  --test-example-navigation-item-icon-active-color: var(
+    --test-example-surface-500
+  );
+  --test-example-list-option-group-background: var(--test-example-surface-0);
+  --test-example-list-option-group-color: var(--test-example-text-muted-color);
+  --test-example-list-option-focus-background: var(--test-example-surface-100);
+  --test-example-list-option-selected-background: var(
+    --test-example-highlight-background
+  );
+  --test-example-list-option-selected-focus-background: var(
+    --test-example-highlight-focus-background
+  );
+  --test-example-list-option-color: var(--test-example-text-color);
+  --test-example-list-option-focus-color: var(--test-example-text-hover-color);
+  --test-example-list-option-selected-color: var(
+    --test-example-highlight-color
+  );
+  --test-example-list-option-selected-focus-color: var(
+    --test-example-highlight-focus-color
+  );
+  --test-example-list-option-option-selected-color: var(
+    --test-example-primary-color
+  );
+  --test-example-list-option-option-selected-focus-color: var(
+    --test-example-primary-color
+  );
+  --test-example-list-option-icon-color: var(--test-example-surface-400);
+  --test-example-list-option-icon-focus-color: var(--test-example-surface-500);
+  --test-example-overlay-modal-background: var(--test-example-surface-0);
+  --test-example-overlay-modal-border-color: var(--test-example-surface-200);
+  --test-example-overlay-modal-color: var(--test-example-text-color);
+  --test-example-overlay-popover-background: var(--test-example-surface-0);
+  --test-example-overlay-popover-border-color: var(--test-example-surface-200);
+  --test-example-overlay-popover-color: var(--test-example-text-color);
+  --test-example-overlay-select-background: var(--test-example-surface-0);
+  --test-example-overlay-select-border-color: var(--test-example-surface-200);
+  --test-example-overlay-select-color: var(--test-example-text-color);
+  --test-example-content-background: var(--test-example-onecx-content-bg-color);
+  --test-example-content-hover-background: var(
+    --test-example-onecx-hover-bg-color
+  );
+  --test-example-content-border-color: var(--test-example-surface-100);
+  --test-example-content-color: var(--test-example-text-color);
+  --test-example-content-hover-color: var(--test-example-text-hover-color);
+  --test-example-text-color: var(--test-example-onecx-text-color);
+  --test-example-text-hover-color: var(
+    --test-example-onecx-text-secondary-color
+  );
+  --test-example-text-muted-color: var(--test-example-surface-500);
+  --test-example-text-hover-muted-color: var(--test-example-surface-600);
+  --test-example-form-field-background: var(--test-example-surface-0);
+  --test-example-form-field-disabled-background: var(
+    --test-example-surface-100
+  );
+  --test-example-form-field-filled-background: var(--test-example-surface-50);
+  --test-example-form-field-filled-hover-background: var(
+    --test-example-surface-50
+  );
+  --test-example-form-field-filled-focus-background: var(
+    --test-example-surface-50
+  );
+  --test-example-form-field-border-color: var(--test-example-surface-200);
+  --test-example-form-field-hover-border-color: var(--test-example-surface-400);
+  --test-example-form-field-focus-border-color: var(
+    --test-example-primary-color
+  );
+  --test-example-form-field-invalid-border-color: var(
+    --test-example-onecx-error-color
+  );
+  --test-example-form-field-color: var(--test-example-surface-700);
+  --test-example-form-field-disabled-color: var(--test-example-surface-400);
+  --test-example-form-field-placeholder-color: var(--test-example-surface-500);
+  --test-example-form-field-invalid-placeholder-color: var(
+    --test-example-onecx-error-color
+  );
+  --test-example-form-field-float-label-color: var(--test-example-surface-500);
+  --test-example-form-field-float-label-focus-color: var(
+    --test-example-primary-color
+  );
+  --test-example-form-field-float-label-active-color: var(
+    --test-example-surface-500
+  );
+  --test-example-form-field-float-label-invalid-color: var(
+    --test-example-form-field-invalid-placeholder-color
+  );
+  --test-example-form-field-icon-color: var(--test-example-surface-400);
+  --test-example-form-field-shadow:
+    0 0 #0000, 0 0 #0000, 0 1px 2px 0 rgba(18, 18, 23, 0.05);
+  --test-example-mask-background: rgba(0, 0, 0, 0.32);
+  --test-example-mask-color: var(--test-example-surface-200);
+  --test-example-highlight-background: var(--test-example-primary-100);
+  --test-example-highlight-focus-background: var(--test-example-primary-200);
+  --test-example-highlight-color: var(--test-example-primary-color);
+  --test-example-highlight-focus-color: var(--test-example-text-color);
+  --test-example-primary-50: #f9ffff;
+  --test-example-primary-100: #eaffff;
+  --test-example-primary-200: #bde1f5;
+  --test-example-primary-300: #89adc1;
+  --test-example-primary-400: #3b5f73;
+  --test-example-primary-500: #274b5f;
+  --test-example-primary-600: #0e3246;
+  --test-example-primary-700: #000a1e;
+  --test-example-primary-800: #00000f;
+  --test-example-primary-900: #000000;
+  --test-example-primary-950: #000000;
+  --test-example-primary-color: var(--test-example-primary-500);
+  --test-example-primary-contrast-color: #ffffff;
+  --test-example-primary-hover-color: var(--test-example-onecx-button-hover-bg);
+  --test-example-primary-active-color: var(
+    --test-example-onecx-button-active-bg
+  );
+  --test-example-surface-0: #ffffff;
+  --test-example-surface-50: #f7f8f9;
+  --test-example-surface-100: #dadee3;
+  --test-example-surface-200: #bcc3cd;
+  --test-example-surface-300: #9fa9b7;
+  --test-example-surface-400: #818ea1;
+  --test-example-surface-500: #64748b;
+  --test-example-surface-600: #556376;
+  --test-example-surface-700: #465161;
+  --test-example-surface-800: #37404c;
+  --test-example-surface-900: #282e38;
+  --test-example-surface-950: #191d23;
+}
+.p-dark {
+  --test-example-navigation-submenu-icon-color: var(--test-example-surface-500);
+  --test-example-navigation-submenu-icon-focus-color: var(
+    --test-example-surface-400
+  );
+  --test-example-navigation-submenu-icon-active-color: var(
+    --test-example-surface-400
+  );
+  --test-example-navigation-submenu-label-background: transparent;
+  --test-example-navigation-submenu-label-color: var(
+    --test-example-text-muted-color
+  );
+  --test-example-navigation-item-focus-background: var(
+    --test-example-surface-800
+  );
+  --test-example-navigation-item-active-background: var(
+    --test-example-surface-800
+  );
+  --test-example-navigation-item-color: var(--test-example-text-color);
+  --test-example-navigation-item-focus-color: var(
+    --test-example-text-hover-color
+  );
+  --test-example-navigation-item-active-color: var(
+    --test-example-text-hover-color
+  );
+  --test-example-navigation-item-icon-color: var(--test-example-surface-500);
+  --test-example-navigation-item-icon-focus-color: var(
+    --test-example-surface-400
+  );
+  --test-example-navigation-item-icon-active-color: var(
+    --test-example-surface-400
+  );
+  --test-example-list-option-group-background: transparent;
+  --test-example-list-option-group-color: var(--test-example-text-muted-color);
+  --test-example-list-option-focus-background: var(--test-example-surface-800);
+  --test-example-list-option-selected-background: var(
+    --test-example-highlight-background
+  );
+  --test-example-list-option-selected-focus-background: var(
+    --test-example-highlight-focus-background
+  );
+  --test-example-list-option-color: var(--test-example-text-color);
+  --test-example-list-option-focus-color: var(--test-example-text-hover-color);
+  --test-example-list-option-selected-color: var(
+    --test-example-highlight-color
+  );
+  --test-example-list-option-selected-focus-color: var(
+    --test-example-highlight-focus-color
+  );
+  --test-example-list-option-icon-color: var(--test-example-surface-500);
+  --test-example-list-option-icon-focus-color: var(--test-example-surface-400);
+  --test-example-overlay-modal-background: var(--test-example-surface-900);
+  --test-example-overlay-modal-border-color: var(--test-example-surface-700);
+  --test-example-overlay-modal-color: var(--test-example-text-color);
+  --test-example-overlay-popover-background: var(--test-example-surface-900);
+  --test-example-overlay-popover-border-color: var(--test-example-surface-700);
+  --test-example-overlay-popover-color: var(--test-example-text-color);
+  --test-example-overlay-select-background: var(--test-example-surface-900);
+  --test-example-overlay-select-border-color: var(--test-example-surface-700);
+  --test-example-overlay-select-color: var(--test-example-text-color);
+  --test-example-content-background: var(--test-example-surface-900);
+  --test-example-content-hover-background: var(--test-example-surface-800);
+  --test-example-content-border-color: var(--test-example-surface-700);
+  --test-example-content-color: var(--test-example-text-color);
+  --test-example-content-hover-color: var(--test-example-text-hover-color);
+  --test-example-text-color: var(--test-example-surface-0);
+  --test-example-text-hover-color: var(--test-example-surface-0);
+  --test-example-text-muted-color: var(--test-example-surface-400);
+  --test-example-text-hover-muted-color: var(--test-example-surface-300);
+  --test-example-form-field-background: var(--test-example-surface-950);
+  --test-example-form-field-disabled-background: var(
+    --test-example-surface-700
+  );
+  --test-example-form-field-filled-background: var(--test-example-surface-800);
+  --test-example-form-field-filled-hover-background: var(
+    --test-example-surface-800
+  );
+  --test-example-form-field-filled-focus-background: var(
+    --test-example-surface-800
+  );
+  --test-example-form-field-border-color: var(--test-example-surface-600);
+  --test-example-form-field-hover-border-color: var(--test-example-surface-500);
+  --test-example-form-field-focus-border-color: var(
+    --test-example-primary-color
+  );
+  --test-example-form-field-invalid-border-color: var(--test-example-red-300);
+  --test-example-form-field-color: var(--test-example-surface-0);
+  --test-example-form-field-disabled-color: var(--test-example-surface-400);
+  --test-example-form-field-placeholder-color: var(--test-example-surface-400);
+  --test-example-form-field-invalid-placeholder-color: var(
+    --test-example-red-400
+  );
+  --test-example-form-field-float-label-color: var(--test-example-surface-400);
+  --test-example-form-field-float-label-focus-color: var(
+    --test-example-primary-color
+  );
+  --test-example-form-field-float-label-active-color: var(
+    --test-example-surface-400
+  );
+  --test-example-form-field-float-label-invalid-color: var(
+    --test-example-form-field-invalid-placeholder-color
+  );
+  --test-example-form-field-icon-color: var(--test-example-surface-400);
+  --test-example-form-field-shadow:
+    0 0 #0000, 0 0 #0000, 0 1px 2px 0 rgba(18, 18, 23, 0.05);
+  --test-example-mask-background: rgba(0, 0, 0, 0.6);
+  --test-example-mask-color: var(--test-example-surface-200);
+  --test-example-highlight-background: color-mix(
+    in srgb,
+    var(--test-example-primary-400),
+    transparent 84%
+  );
+  --test-example-highlight-focus-background: color-mix(
+    in srgb,
+    var(--test-example-primary-400),
+    transparent 76%
+  );
+  --test-example-highlight-color: rgba(255, 255, 255, 0.87);
+  --test-example-highlight-focus-color: rgba(255, 255, 255, 0.87);
+  --test-example-primary-color: var(--test-example-primary-400);
+  --test-example-primary-contrast-color: var(--test-example-surface-900);
+  --test-example-primary-hover-color: var(--test-example-primary-300);
+  --test-example-primary-active-color: var(--test-example-primary-200);
+  --test-example-surface-0: #ffffff;
+  --test-example-surface-50: var(--test-example-zinc-50);
+  --test-example-surface-100: var(--test-example-zinc-100);
+  --test-example-surface-200: var(--test-example-zinc-200);
+  --test-example-surface-300: var(--test-example-zinc-300);
+  --test-example-surface-400: var(--test-example-zinc-400);
+  --test-example-surface-500: var(--test-example-zinc-500);
+  --test-example-surface-600: var(--test-example-zinc-600);
+  --test-example-surface-700: var(--test-example-zinc-700);
+  --test-example-surface-800: var(--test-example-zinc-800);
+  --test-example-surface-900: var(--test-example-zinc-900);
+  --test-example-surface-950: var(--test-example-zinc-950);
+}
+
+/* ==== app:test-example|test-example-ui | primereact:global-variables ==== */
+:scope {
+  color-scheme: light;
+}
+.p-dark {
+  color-scheme: dark;
+}
+
+/* ==== app:test-example|test-example-ui | primereact:global-style ==== */
+*,
+::before,
+::after {
+  box-sizing: border-box;
+}
+.p-connected-overlay {
+  opacity: 0;
+  transform: scaleY(0.8);
+  transition:
+    transform 0.12s cubic-bezier(0, 0, 0.2, 1),
+    opacity 0.12s cubic-bezier(0, 0, 0.2, 1);
+}
+.p-connected-overlay-visible {
+  opacity: 1;
+  transform: scaleY(1);
+}
+.p-connected-overlay-hidden {
+  opacity: 0;
+  transform: scaleY(1);
+  transition: opacity 0.1s linear;
+}
+.p-connected-overlay-enter-from {
+  opacity: 0;
+  transform: scaleY(0.8);
+}
+.p-connected-overlay-leave-to {
+  opacity: 0;
+}
+.p-connected-overlay-enter-active {
+  transition:
+    transform 0.12s cubic-bezier(0, 0, 0.2, 1),
+    opacity 0.12s cubic-bezier(0, 0, 0.2, 1);
+}
+.p-connected-overlay-leave-active {
+  transition: opacity 0.1s linear;
+}
+.p-toggleable-content-enter-from,
+.p-toggleable-content-leave-to {
+  max-height: 0;
+}
+.p-toggleable-content-enter-to,
+.p-toggleable-content-leave-from {
+  max-height: 1000px;
+}
+.p-toggleable-content-leave-active {
+  overflow: hidden;
+  transition: max-height 0.45s cubic-bezier(0, 1, 0, 1);
+}
+.p-toggleable-content-enter-active {
+  overflow: hidden;
+  transition: max-height 1s ease-in-out;
+}
+.p-disabled,
+.p-disabled * {
+  cursor: default;
+  pointer-events: none;
+  user-select: none;
+}
+.p-disabled,
+.p-component:disabled {
+  opacity: var(--test-example-disabled-opacity);
+}
+.pi {
+  font-size: var(--test-example-icon-size);
+}
+.p-icon {
+  width: var(--test-example-icon-size);
+  height: var(--test-example-icon-size);
+}
+.p-overlay-mask {
+  background: var(--test-example-mask-background);
+  color: var(--test-example-mask-color);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.p-overlay-mask-enter {
+  animation: p-overlay-mask-enter-animation
+    var(--test-example-mask-transition-duration) forwards;
+}
+.p-overlay-mask-leave {
+  animation: p-overlay-mask-leave-animation
+    var(--test-example-mask-transition-duration) forwards;
+}
+@keyframes p-overlay-mask-enter-animation {
+  from {
+    background: transparent;
+  }
+  to {
+    background: var(--test-example-mask-background);
+  }
+}
+@keyframes p-overlay-mask-leave-animation {
+  from {
+    background: var(--test-example-mask-background);
+  }
+  to {
+    background: transparent;
+  }
+}
+
+/* ==== app:test-example|test-example-ui | primereact:button-variables ==== */
+:scope {
+  --test-example-button-border-radius: var(
+    --test-example-form-field-border-radius
+  );
+  --test-example-button-rounded-border-radius: 2rem;
+  --test-example-button-gap: 0.5rem;
+  --test-example-button-padding-x: var(--test-example-form-field-padding-x);
+  --test-example-button-padding-y: 0.643rem;
+  --test-example-button-icon-only-width: 2.5rem;
+  --test-example-button-raised-shadow:
+    0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 2px 2px 0 rgba(0, 0, 0, 0.14),
+    0 1px 5px 0 rgba(0, 0, 0, 0.12);
+  --test-example-button-badge-size: 1rem;
+  --test-example-button-transition-duration: var(
+    --test-example-form-field-transition-duration
+  );
+  --test-example-button-focus-ring-width: var(--test-example-focus-ring-width);
+  --test-example-button-focus-ring-style: var(--test-example-focus-ring-style);
+  --test-example-button-focus-ring-offset: var(
+    --test-example-focus-ring-offset
+  );
+  --test-example-button-label-font-weight: 500;
+  --test-example-button-lg-font-size: var(
+    --test-example-form-field-lg-font-size
+  );
+  --test-example-button-lg-padding-x: var(
+    --test-example-form-field-lg-padding-x
+  );
+  --test-example-button-lg-padding-y: var(
+    --test-example-form-field-lg-padding-y
+  );
+  --test-example-button-lg-icon-only-width: 3rem;
+  --test-example-button-sm-font-size: var(
+    --test-example-form-field-sm-font-size
+  );
+  --test-example-button-sm-padding-x: var(
+    --test-example-form-field-sm-padding-x
+  );
+  --test-example-button-sm-padding-y: var(
+    --test-example-form-field-sm-padding-y
+  );
+  --test-example-button-sm-icon-only-width: 2rem;
+  --test-example-button-link-color: var(--test-example-primary-color);
+  --test-example-button-link-hover-color: var(--test-example-primary-color);
+  --test-example-button-link-active-color: var(--test-example-primary-color);
+  --test-example-button-text-plain-hover-background: var(
+    --test-example-surface-50
+  );
+  --test-example-button-text-plain-active-background: var(
+    --test-example-surface-100
+  );
+  --test-example-button-text-plain-color: var(--test-example-surface-700);
+  --test-example-button-text-contrast-hover-background: var(
+    --test-example-surface-50
+  );
+  --test-example-button-text-contrast-active-background: var(
+    --test-example-surface-100
+  );
+  --test-example-button-text-contrast-color: var(--test-example-surface-950);
+  --test-example-button-text-danger-hover-background: var(
+    --test-example-red-50
+  );
+  --test-example-button-text-danger-active-background: var(
+    --test-example-red-100
+  );
+  --test-example-button-text-danger-color: var(--test-example-red-500);
+  --test-example-button-text-help-hover-background: var(
+    --test-example-purple-50
+  );
+  --test-example-button-text-help-active-background: var(
+    --test-example-purple-100
+  );
+  --test-example-button-text-help-color: var(--test-example-purple-500);
+  --test-example-button-text-warn-hover-background: var(
+    --test-example-orange-50
+  );
+  --test-example-button-text-warn-active-background: var(
+    --test-example-orange-100
+  );
+  --test-example-button-text-warn-color: var(--test-example-orange-500);
+  --test-example-button-text-info-hover-background: var(--test-example-sky-50);
+  --test-example-button-text-info-active-background: var(
+    --test-example-sky-100
+  );
+  --test-example-button-text-info-color: var(--test-example-sky-500);
+  --test-example-button-text-success-hover-background: var(
+    --test-example-green-50
+  );
+  --test-example-button-text-success-active-background: var(
+    --test-example-green-100
+  );
+  --test-example-button-text-success-color: var(--test-example-green-500);
+  --test-example-button-text-secondary-hover-background: var(
+    --test-example-surface-50
+  );
+  --test-example-button-text-secondary-active-background: var(
+    --test-example-surface-100
+  );
+  --test-example-button-text-secondary-color: var(--test-example-surface-500);
+  --test-example-button-text-primary-hover-background: var(
+    --test-example-primary-50
+  );
+  --test-example-button-text-primary-active-background: var(
+    --test-example-primary-100
+  );
+  --test-example-button-text-primary-color: var(--test-example-primary-color);
+  --test-example-button-outlined-plain-hover-background: var(
+    --test-example-surface-50
+  );
+  --test-example-button-outlined-plain-active-background: var(
+    --test-example-surface-100
+  );
+  --test-example-button-outlined-plain-border-color: var(
+    --test-example-surface-200
+  );
+  --test-example-button-outlined-plain-color: var(--test-example-surface-700);
+  --test-example-button-outlined-contrast-hover-background: var(
+    --test-example-surface-50
+  );
+  --test-example-button-outlined-contrast-active-background: var(
+    --test-example-surface-100
+  );
+  --test-example-button-outlined-contrast-border-color: var(
+    --test-example-surface-700
+  );
+  --test-example-button-outlined-contrast-color: var(
+    --test-example-surface-950
+  );
+  --test-example-button-outlined-danger-hover-background: var(
+    --test-example-red-50
+  );
+  --test-example-button-outlined-danger-active-background: var(
+    --test-example-red-100
+  );
+  --test-example-button-outlined-danger-border-color: var(
+    --test-example-red-200
+  );
+  --test-example-button-outlined-danger-color: var(--test-example-red-500);
+  --test-example-button-outlined-help-hover-background: var(
+    --test-example-purple-50
+  );
+  --test-example-button-outlined-help-active-background: var(
+    --test-example-purple-100
+  );
+  --test-example-button-outlined-help-border-color: var(
+    --test-example-purple-200
+  );
+  --test-example-button-outlined-help-color: var(--test-example-purple-500);
+  --test-example-button-outlined-warn-hover-background: var(
+    --test-example-orange-50
+  );
+  --test-example-button-outlined-warn-active-background: var(
+    --test-example-orange-100
+  );
+  --test-example-button-outlined-warn-border-color: var(
+    --test-example-orange-200
+  );
+  --test-example-button-outlined-warn-color: var(--test-example-orange-500);
+  --test-example-button-outlined-info-hover-background: var(
+    --test-example-sky-50
+  );
+  --test-example-button-outlined-info-active-background: var(
+    --test-example-sky-100
+  );
+  --test-example-button-outlined-info-border-color: var(--test-example-sky-200);
+  --test-example-button-outlined-info-color: var(--test-example-sky-500);
+  --test-example-button-outlined-success-hover-background: var(
+    --test-example-green-50
+  );
+  --test-example-button-outlined-success-active-background: var(
+    --test-example-green-100
+  );
+  --test-example-button-outlined-success-border-color: var(
+    --test-example-green-200
+  );
+  --test-example-button-outlined-success-color: var(--test-example-green-500);
+  --test-example-button-outlined-secondary-hover-background: var(
+    --test-example-surface-50
+  );
+  --test-example-button-outlined-secondary-active-background: var(
+    --test-example-surface-100
+  );
+  --test-example-button-outlined-secondary-border-color: var(
+    --test-example-surface-200
+  );
+  --test-example-button-outlined-secondary-color: var(
+    --test-example-surface-500
+  );
+  --test-example-button-outlined-primary-hover-background: var(
+    --test-example-primary-50
+  );
+  --test-example-button-outlined-primary-active-background: var(
+    --test-example-primary-100
+  );
+  --test-example-button-outlined-primary-border-color: var(
+    --test-example-primary-200
+  );
+  --test-example-button-outlined-primary-color: var(
+    --test-example-primary-color
+  );
+  --test-example-button-contrast-background: var(--test-example-surface-950);
+  --test-example-button-contrast-hover-background: var(
+    --test-example-surface-900
+  );
+  --test-example-button-contrast-active-background: var(
+    --test-example-surface-800
+  );
+  --test-example-button-contrast-border-color: var(--test-example-surface-950);
+  --test-example-button-contrast-hover-border-color: var(
+    --test-example-surface-900
+  );
+  --test-example-button-contrast-active-border-color: var(
+    --test-example-surface-800
+  );
+  --test-example-button-contrast-color: var(--test-example-surface-0);
+  --test-example-button-contrast-hover-color: var(--test-example-surface-0);
+  --test-example-button-contrast-active-color: var(--test-example-surface-0);
+  --test-example-button-contrast-focus-ring-color: var(
+    --test-example-surface-950
+  );
+  --test-example-button-contrast-focus-ring-shadow: none;
+  --test-example-button-danger-background: var(--test-example-red-500);
+  --test-example-button-danger-hover-background: var(--test-example-red-600);
+  --test-example-button-danger-active-background: var(--test-example-red-700);
+  --test-example-button-danger-border-color: var(--test-example-red-500);
+  --test-example-button-danger-hover-border-color: var(--test-example-red-600);
+  --test-example-button-danger-active-border-color: var(--test-example-red-700);
+  --test-example-button-danger-color: #ffffff;
+  --test-example-button-danger-hover-color: #ffffff;
+  --test-example-button-danger-active-color: #ffffff;
+  --test-example-button-danger-focus-ring-color: var(--test-example-red-500);
+  --test-example-button-danger-focus-ring-shadow: none;
+  --test-example-button-help-background: var(--test-example-purple-500);
+  --test-example-button-help-hover-background: var(--test-example-purple-600);
+  --test-example-button-help-active-background: var(--test-example-purple-700);
+  --test-example-button-help-border-color: var(--test-example-purple-500);
+  --test-example-button-help-hover-border-color: var(--test-example-purple-600);
+  --test-example-button-help-active-border-color: var(
+    --test-example-purple-700
+  );
+  --test-example-button-help-color: #ffffff;
+  --test-example-button-help-hover-color: #ffffff;
+  --test-example-button-help-active-color: #ffffff;
+  --test-example-button-help-focus-ring-color: var(--test-example-purple-500);
+  --test-example-button-help-focus-ring-shadow: none;
+  --test-example-button-warn-background: var(--test-example-orange-500);
+  --test-example-button-warn-hover-background: var(--test-example-orange-600);
+  --test-example-button-warn-active-background: var(--test-example-orange-700);
+  --test-example-button-warn-border-color: var(--test-example-orange-500);
+  --test-example-button-warn-hover-border-color: var(--test-example-orange-600);
+  --test-example-button-warn-active-border-color: var(
+    --test-example-orange-700
+  );
+  --test-example-button-warn-color: #ffffff;
+  --test-example-button-warn-hover-color: #ffffff;
+  --test-example-button-warn-active-color: #ffffff;
+  --test-example-button-warn-focus-ring-color: var(--test-example-orange-500);
+  --test-example-button-warn-focus-ring-shadow: none;
+  --test-example-button-success-background: var(--test-example-green-500);
+  --test-example-button-success-hover-background: var(--test-example-green-600);
+  --test-example-button-success-active-background: var(
+    --test-example-green-700
+  );
+  --test-example-button-success-border-color: var(--test-example-green-500);
+  --test-example-button-success-hover-border-color: var(
+    --test-example-green-600
+  );
+  --test-example-button-success-active-border-color: var(
+    --test-example-green-700
+  );
+  --test-example-button-success-color: #ffffff;
+  --test-example-button-success-hover-color: #ffffff;
+  --test-example-button-success-active-color: #ffffff;
+  --test-example-button-success-focus-ring-color: var(--test-example-green-500);
+  --test-example-button-success-focus-ring-shadow: none;
+  --test-example-button-info-background: var(--test-example-sky-500);
+  --test-example-button-info-hover-background: var(--test-example-sky-600);
+  --test-example-button-info-active-background: var(--test-example-sky-700);
+  --test-example-button-info-border-color: var(--test-example-sky-500);
+  --test-example-button-info-hover-border-color: var(--test-example-sky-600);
+  --test-example-button-info-active-border-color: var(--test-example-sky-700);
+  --test-example-button-info-color: #ffffff;
+  --test-example-button-info-hover-color: #ffffff;
+  --test-example-button-info-active-color: #ffffff;
+  --test-example-button-info-focus-ring-color: var(--test-example-sky-500);
+  --test-example-button-info-focus-ring-shadow: none;
+  --test-example-button-secondary-background: var(--test-example-surface-100);
+  --test-example-button-secondary-hover-background: var(
+    --test-example-surface-200
+  );
+  --test-example-button-secondary-active-background: var(
+    --test-example-surface-300
+  );
+  --test-example-button-secondary-border-color: var(--test-example-surface-100);
+  --test-example-button-secondary-hover-border-color: var(
+    --test-example-surface-200
+  );
+  --test-example-button-secondary-active-border-color: var(
+    --test-example-surface-300
+  );
+  --test-example-button-secondary-color: var(--test-example-surface-600);
+  --test-example-button-secondary-hover-color: var(--test-example-surface-700);
+  --test-example-button-secondary-active-color: var(--test-example-surface-800);
+  --test-example-button-secondary-focus-ring-color: var(
+    --test-example-surface-600
+  );
+  --test-example-button-secondary-focus-ring-shadow: none;
+  --test-example-button-primary-background: var(--test-example-primary-color);
+  --test-example-button-primary-hover-background: var(
+    --test-example-primary-hover-color
+  );
+  --test-example-button-primary-active-background: var(
+    --test-example-primary-active-color
+  );
+  --test-example-button-primary-border-color: var(--test-example-primary-color);
+  --test-example-button-primary-hover-border-color: var(
+    --test-example-primary-hover-color
+  );
+  --test-example-button-primary-active-border-color: var(
+    --test-example-primary-active-color
+  );
+  --test-example-button-primary-color: var(
+    --test-example-primary-contrast-color
+  );
+  --test-example-button-primary-hover-color: var(
+    --test-example-primary-contrast-color
+  );
+  --test-example-button-primary-active-color: var(
+    --test-example-primary-contrast-color
+  );
+  --test-example-button-primary-focus-ring-color: var(
+    --test-example-primary-color
+  );
+  --test-example-button-primary-focus-ring-shadow: none;
+}
+.p-dark {
+  --test-example-button-link-color: var(--test-example-primary-color);
+  --test-example-button-link-hover-color: var(--test-example-primary-color);
+  --test-example-button-link-active-color: var(--test-example-primary-color);
+  --test-example-button-text-plain-hover-background: var(
+    --test-example-surface-800
+  );
+  --test-example-button-text-plain-active-background: var(
+    --test-example-surface-700
+  );
+  --test-example-button-text-plain-color: var(--test-example-surface-0);
+  --test-example-button-text-contrast-hover-background: var(
+    --test-example-surface-800
+  );
+  --test-example-button-text-contrast-active-background: var(
+    --test-example-surface-700
+  );
+  --test-example-button-text-contrast-color: var(--test-example-surface-0);
+  --test-example-button-text-danger-hover-background: color-mix(
+    in srgb,
+    var(--test-example-red-400),
+    transparent 96%
+  );
+  --test-example-button-text-danger-active-background: color-mix(
+    in srgb,
+    var(--test-example-red-400),
+    transparent 84%
+  );
+  --test-example-button-text-danger-color: var(--test-example-red-400);
+  --test-example-button-text-help-hover-background: color-mix(
+    in srgb,
+    var(--test-example-purple-400),
+    transparent 96%
+  );
+  --test-example-button-text-help-active-background: color-mix(
+    in srgb,
+    var(--test-example-purple-400),
+    transparent 84%
+  );
+  --test-example-button-text-help-color: var(--test-example-purple-400);
+  --test-example-button-text-warn-hover-background: color-mix(
+    in srgb,
+    var(--test-example-orange-400),
+    transparent 96%
+  );
+  --test-example-button-text-warn-active-background: color-mix(
+    in srgb,
+    var(--test-example-orange-400),
+    transparent 84%
+  );
+  --test-example-button-text-warn-color: var(--test-example-orange-400);
+  --test-example-button-text-info-hover-background: color-mix(
+    in srgb,
+    var(--test-example-sky-400),
+    transparent 96%
+  );
+  --test-example-button-text-info-active-background: color-mix(
+    in srgb,
+    var(--test-example-sky-400),
+    transparent 84%
+  );
+  --test-example-button-text-info-color: var(--test-example-sky-400);
+  --test-example-button-text-success-hover-background: color-mix(
+    in srgb,
+    var(--test-example-green-400),
+    transparent 96%
+  );
+  --test-example-button-text-success-active-background: color-mix(
+    in srgb,
+    var(--test-example-green-400),
+    transparent 84%
+  );
+  --test-example-button-text-success-color: var(--test-example-green-400);
+  --test-example-button-text-secondary-hover-background: var(
+    --test-example-surface-800
+  );
+  --test-example-button-text-secondary-active-background: var(
+    --test-example-surface-700
+  );
+  --test-example-button-text-secondary-color: var(--test-example-surface-400);
+  --test-example-button-text-primary-hover-background: color-mix(
+    in srgb,
+    var(--test-example-primary-color),
+    transparent 96%
+  );
+  --test-example-button-text-primary-active-background: color-mix(
+    in srgb,
+    var(--test-example-primary-color),
+    transparent 84%
+  );
+  --test-example-button-text-primary-color: var(--test-example-primary-color);
+  --test-example-button-outlined-plain-hover-background: var(
+    --test-example-surface-800
+  );
+  --test-example-button-outlined-plain-active-background: var(
+    --test-example-surface-700
+  );
+  --test-example-button-outlined-plain-border-color: var(
+    --test-example-surface-600
+  );
+  --test-example-button-outlined-plain-color: var(--test-example-surface-0);
+  --test-example-button-outlined-contrast-hover-background: var(
+    --test-example-surface-800
+  );
+  --test-example-button-outlined-contrast-active-background: var(
+    --test-example-surface-700
+  );
+  --test-example-button-outlined-contrast-border-color: var(
+    --test-example-surface-500
+  );
+  --test-example-button-outlined-contrast-color: var(--test-example-surface-0);
+  --test-example-button-outlined-danger-hover-background: color-mix(
+    in srgb,
+    var(--test-example-red-400),
+    transparent 96%
+  );
+  --test-example-button-outlined-danger-active-background: color-mix(
+    in srgb,
+    var(--test-example-red-400),
+    transparent 84%
+  );
+  --test-example-button-outlined-danger-border-color: var(
+    --test-example-red-700
+  );
+  --test-example-button-outlined-danger-color: var(--test-example-red-400);
+  --test-example-button-outlined-help-hover-background: color-mix(
+    in srgb,
+    var(--test-example-purple-400),
+    transparent 96%
+  );
+  --test-example-button-outlined-help-active-background: color-mix(
+    in srgb,
+    var(--test-example-purple-400),
+    transparent 84%
+  );
+  --test-example-button-outlined-help-border-color: var(
+    --test-example-purple-700
+  );
+  --test-example-button-outlined-help-color: var(--test-example-purple-400);
+  --test-example-button-outlined-warn-hover-background: color-mix(
+    in srgb,
+    var(--test-example-orange-400),
+    transparent 96%
+  );
+  --test-example-button-outlined-warn-active-background: color-mix(
+    in srgb,
+    var(--test-example-orange-400),
+    transparent 84%
+  );
+  --test-example-button-outlined-warn-border-color: var(
+    --test-example-orange-700
+  );
+  --test-example-button-outlined-warn-color: var(--test-example-orange-400);
+  --test-example-button-outlined-info-hover-background: color-mix(
+    in srgb,
+    var(--test-example-sky-400),
+    transparent 96%
+  );
+  --test-example-button-outlined-info-active-background: color-mix(
+    in srgb,
+    var(--test-example-sky-400),
+    transparent 84%
+  );
+  --test-example-button-outlined-info-border-color: var(--test-example-sky-700);
+  --test-example-button-outlined-info-color: var(--test-example-sky-400);
+  --test-example-button-outlined-success-hover-background: color-mix(
+    in srgb,
+    var(--test-example-green-400),
+    transparent 96%
+  );
+  --test-example-button-outlined-success-active-background: color-mix(
+    in srgb,
+    var(--test-example-green-400),
+    transparent 84%
+  );
+  --test-example-button-outlined-success-border-color: var(
+    --test-example-green-700
+  );
+  --test-example-button-outlined-success-color: var(--test-example-green-400);
+  --test-example-button-outlined-secondary-hover-background: rgba(
+    255,
+    255,
+    255,
+    0.04
+  );
+  --test-example-button-outlined-secondary-active-background: rgba(
+    255,
+    255,
+    255,
+    0.16
+  );
+  --test-example-button-outlined-secondary-border-color: var(
+    --test-example-surface-700
+  );
+  --test-example-button-outlined-secondary-color: var(
+    --test-example-surface-400
+  );
+  --test-example-button-outlined-primary-hover-background: color-mix(
+    in srgb,
+    var(--test-example-primary-color),
+    transparent 96%
+  );
+  --test-example-button-outlined-primary-active-background: color-mix(
+    in srgb,
+    var(--test-example-primary-color),
+    transparent 84%
+  );
+  --test-example-button-outlined-primary-border-color: var(
+    --test-example-primary-700
+  );
+  --test-example-button-outlined-primary-color: var(
+    --test-example-primary-color
+  );
+  --test-example-button-contrast-background: var(--test-example-surface-0);
+  --test-example-button-contrast-hover-background: var(
+    --test-example-surface-100
+  );
+  --test-example-button-contrast-active-background: var(
+    --test-example-surface-200
+  );
+  --test-example-button-contrast-border-color: var(--test-example-surface-0);
+  --test-example-button-contrast-hover-border-color: var(
+    --test-example-surface-100
+  );
+  --test-example-button-contrast-active-border-color: var(
+    --test-example-surface-200
+  );
+  --test-example-button-contrast-color: var(--test-example-surface-950);
+  --test-example-button-contrast-hover-color: var(--test-example-surface-950);
+  --test-example-button-contrast-active-color: var(--test-example-surface-950);
+  --test-example-button-contrast-focus-ring-color: var(
+    --test-example-surface-0
+  );
+  --test-example-button-contrast-focus-ring-shadow: none;
+  --test-example-button-danger-background: var(--test-example-red-400);
+  --test-example-button-danger-hover-background: var(--test-example-red-300);
+  --test-example-button-danger-active-background: var(--test-example-red-200);
+  --test-example-button-danger-border-color: var(--test-example-red-400);
+  --test-example-button-danger-hover-border-color: var(--test-example-red-300);
+  --test-example-button-danger-active-border-color: var(--test-example-red-200);
+  --test-example-button-danger-color: var(--test-example-red-950);
+  --test-example-button-danger-hover-color: var(--test-example-red-950);
+  --test-example-button-danger-active-color: var(--test-example-red-950);
+  --test-example-button-danger-focus-ring-color: var(--test-example-red-400);
+  --test-example-button-danger-focus-ring-shadow: none;
+  --test-example-button-help-background: var(--test-example-purple-400);
+  --test-example-button-help-hover-background: var(--test-example-purple-300);
+  --test-example-button-help-active-background: var(--test-example-purple-200);
+  --test-example-button-help-border-color: var(--test-example-purple-400);
+  --test-example-button-help-hover-border-color: var(--test-example-purple-300);
+  --test-example-button-help-active-border-color: var(
+    --test-example-purple-200
+  );
+  --test-example-button-help-color: var(--test-example-purple-950);
+  --test-example-button-help-hover-color: var(--test-example-purple-950);
+  --test-example-button-help-active-color: var(--test-example-purple-950);
+  --test-example-button-help-focus-ring-color: var(--test-example-purple-400);
+  --test-example-button-help-focus-ring-shadow: none;
+  --test-example-button-warn-background: var(--test-example-orange-400);
+  --test-example-button-warn-hover-background: var(--test-example-orange-300);
+  --test-example-button-warn-active-background: var(--test-example-orange-200);
+  --test-example-button-warn-border-color: var(--test-example-orange-400);
+  --test-example-button-warn-hover-border-color: var(--test-example-orange-300);
+  --test-example-button-warn-active-border-color: var(
+    --test-example-orange-200
+  );
+  --test-example-button-warn-color: var(--test-example-orange-950);
+  --test-example-button-warn-hover-color: var(--test-example-orange-950);
+  --test-example-button-warn-active-color: var(--test-example-orange-950);
+  --test-example-button-warn-focus-ring-color: var(--test-example-orange-400);
+  --test-example-button-warn-focus-ring-shadow: none;
+  --test-example-button-success-background: var(--test-example-green-400);
+  --test-example-button-success-hover-background: var(--test-example-green-300);
+  --test-example-button-success-active-background: var(
+    --test-example-green-200
+  );
+  --test-example-button-success-border-color: var(--test-example-green-400);
+  --test-example-button-success-hover-border-color: var(
+    --test-example-green-300
+  );
+  --test-example-button-success-active-border-color: var(
+    --test-example-green-200
+  );
+  --test-example-button-success-color: var(--test-example-green-950);
+  --test-example-button-success-hover-color: var(--test-example-green-950);
+  --test-example-button-success-active-color: var(--test-example-green-950);
+  --test-example-button-success-focus-ring-color: var(--test-example-green-400);
+  --test-example-button-success-focus-ring-shadow: none;
+  --test-example-button-info-background: var(--test-example-sky-400);
+  --test-example-button-info-hover-background: var(--test-example-sky-300);
+  --test-example-button-info-active-background: var(--test-example-sky-200);
+  --test-example-button-info-border-color: var(--test-example-sky-400);
+  --test-example-button-info-hover-border-color: var(--test-example-sky-300);
+  --test-example-button-info-active-border-color: var(--test-example-sky-200);
+  --test-example-button-info-color: var(--test-example-sky-950);
+  --test-example-button-info-hover-color: var(--test-example-sky-950);
+  --test-example-button-info-active-color: var(--test-example-sky-950);
+  --test-example-button-info-focus-ring-color: var(--test-example-sky-400);
+  --test-example-button-info-focus-ring-shadow: none;
+  --test-example-button-secondary-background: var(--test-example-surface-800);
+  --test-example-button-secondary-hover-background: var(
+    --test-example-surface-700
+  );
+  --test-example-button-secondary-active-background: var(
+    --test-example-surface-600
+  );
+  --test-example-button-secondary-border-color: var(--test-example-surface-800);
+  --test-example-button-secondary-hover-border-color: var(
+    --test-example-surface-700
+  );
+  --test-example-button-secondary-active-border-color: var(
+    --test-example-surface-600
+  );
+  --test-example-button-secondary-color: var(--test-example-surface-300);
+  --test-example-button-secondary-hover-color: var(--test-example-surface-200);
+  --test-example-button-secondary-active-color: var(--test-example-surface-100);
+  --test-example-button-secondary-focus-ring-color: var(
+    --test-example-surface-300
+  );
+  --test-example-button-secondary-focus-ring-shadow: none;
+  --test-example-button-primary-background: var(--test-example-primary-color);
+  --test-example-button-primary-hover-background: var(
+    --test-example-primary-hover-color
+  );
+  --test-example-button-primary-active-background: var(
+    --test-example-primary-active-color
+  );
+  --test-example-button-primary-border-color: var(--test-example-primary-color);
+  --test-example-button-primary-hover-border-color: var(
+    --test-example-primary-hover-color
+  );
+  --test-example-button-primary-active-border-color: var(
+    --test-example-primary-active-color
+  );
+  --test-example-button-primary-color: var(
+    --test-example-primary-contrast-color
+  );
+  --test-example-button-primary-hover-color: var(
+    --test-example-primary-contrast-color
+  );
+  --test-example-button-primary-active-color: var(
+    --test-example-primary-contrast-color
+  );
+  --test-example-button-primary-focus-ring-color: var(
+    --test-example-primary-color
+  );
+  --test-example-button-primary-focus-ring-shadow: none;
+}
+
+/* ==== app:test-example|test-example-ui | primereact:button-style ==== */
+.p-button {
+  display: inline-flex;
+  cursor: pointer;
+  user-select: none;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  position: relative;
+  color: var(--test-example-button-primary-color);
+  background: var(--test-example-button-primary-background);
+  border: 1px solid var(--test-example-button-primary-border-color);
+  padding: var(--test-example-button-padding-y)
+    var(--test-example-button-padding-x);
+  font-size: 1rem;
+  font-family: inherit;
+  font-feature-settings: inherit;
+  transition:
+    background var(--test-example-button-transition-duration),
+    color var(--test-example-button-transition-duration),
+    border-color var(--test-example-button-transition-duration),
+    outline-color var(--test-example-button-transition-duration),
+    box-shadow var(--test-example-button-transition-duration);
+  border-radius: var(--test-example-button-border-radius);
+  outline-color: transparent;
+  gap: var(--test-example-button-gap);
+}
+.p-button:disabled {
+  cursor: default;
+}
+.p-button-icon-right {
+  order: 1;
+}
+.p-button-icon-right:dir(rtl) {
+  order: -1;
+}
+.p-button:not(.p-button-vertical)
+  .p-button-icon:not(.p-button-icon-right):dir(rtl) {
+  order: 1;
+}
+.p-button-icon-bottom {
+  order: 2;
+}
+.p-button-icon-only {
+  width: var(--test-example-button-icon-only-width);
+  padding-inline-start: 0;
+  padding-inline-end: 0;
+  gap: 0;
+}
+.p-button-icon-only.p-button-rounded {
+  border-radius: 50%;
+  height: var(--test-example-button-icon-only-width);
+}
+.p-button-icon-only .p-button-label {
+  visibility: hidden;
+  width: 0;
+}
+.p-button-icon-only::after {
+  content: 'A0';
+  visibility: hidden;
+  width: 0;
+}
+.p-button-sm {
+  font-size: var(--test-example-button-sm-font-size);
+  padding: var(--test-example-button-sm-padding-y)
+    var(--test-example-button-sm-padding-x);
+}
+.p-button-sm .p-button-icon {
+  font-size: var(--test-example-button-sm-font-size);
+}
+.p-button-sm.p-button-icon-only {
+  width: var(--test-example-button-sm-icon-only-width);
+}
+.p-button-sm.p-button-icon-only.p-button-rounded {
+  height: var(--test-example-button-sm-icon-only-width);
+}
+.p-button-lg {
+  font-size: var(--test-example-button-lg-font-size);
+  padding: var(--test-example-button-lg-padding-y)
+    var(--test-example-button-lg-padding-x);
+}
+.p-button-lg .p-button-icon {
+  font-size: var(--test-example-button-lg-font-size);
+}
+.p-button-lg.p-button-icon-only {
+  width: var(--test-example-button-lg-icon-only-width);
+}
+.p-button-lg.p-button-icon-only.p-button-rounded {
+  height: var(--test-example-button-lg-icon-only-width);
+}
+.p-button-vertical {
+  flex-direction: column;
+}
+.p-button-label {
+  font-weight: var(--test-example-button-label-font-weight);
+}
+.p-button-fluid {
+  width: 100%;
+}
+.p-button-fluid.p-button-icon-only {
+  width: var(--test-example-button-icon-only-width);
+}
+.p-button:not(:disabled):hover {
+  background: var(--test-example-button-primary-hover-background);
+  border: 1px solid var(--test-example-button-primary-hover-border-color);
+  color: var(--test-example-button-primary-hover-color);
+}
+.p-button:not(:disabled):active {
+  background: var(--test-example-button-primary-active-background);
+  border: 1px solid var(--test-example-button-primary-active-border-color);
+  color: var(--test-example-button-primary-active-color);
+}
+.p-button:focus-visible {
+  box-shadow: var(--test-example-button-primary-focus-ring-shadow);
+  outline: var(--test-example-button-focus-ring-width)
+    var(--test-example-button-focus-ring-style)
+    var(--test-example-button-primary-focus-ring-color);
+  outline-offset: var(--test-example-button-focus-ring-offset);
+}
+.p-button .p-badge {
+  min-width: var(--test-example-button-badge-size);
+  height: var(--test-example-button-badge-size);
+  line-height: var(--test-example-button-badge-size);
+}
+.p-button-raised {
+  box-shadow: var(--test-example-button-raised-shadow);
+}
+.p-button-rounded {
+  border-radius: var(--test-example-button-rounded-border-radius);
+}
+.p-button-secondary {
+  background: var(--test-example-button-secondary-background);
+  border: 1px solid var(--test-example-button-secondary-border-color);
+  color: var(--test-example-button-secondary-color);
+}
+.p-button-secondary:not(:disabled):hover {
+  background: var(--test-example-button-secondary-hover-background);
+  border: 1px solid var(--test-example-button-secondary-hover-border-color);
+  color: var(--test-example-button-secondary-hover-color);
+}
+.p-button-secondary:not(:disabled):active {
+  background: var(--test-example-button-secondary-active-background);
+  border: 1px solid var(--test-example-button-secondary-active-border-color);
+  color: var(--test-example-button-secondary-active-color);
+}
+.p-button-secondary:focus-visible {
+  outline-color: var(--test-example-button-secondary-focus-ring-color);
+  box-shadow: var(--test-example-button-secondary-focus-ring-shadow);
+}
+.p-button-success {
+  background: var(--test-example-button-success-background);
+  border: 1px solid var(--test-example-button-success-border-color);
+  color: var(--test-example-button-success-color);
+}
+.p-button-success:not(:disabled):hover {
+  background: var(--test-example-button-success-hover-background);
+  border: 1px solid var(--test-example-button-success-hover-border-color);
+  color: var(--test-example-button-success-hover-color);
+}
+.p-button-success:not(:disabled):active {
+  background: var(--test-example-button-success-active-background);
+  border: 1px solid var(--test-example-button-success-active-border-color);
+  color: var(--test-example-button-success-active-color);
+}
+.p-button-success:focus-visible {
+  outline-color: var(--test-example-button-success-focus-ring-color);
+  box-shadow: var(--test-example-button-success-focus-ring-shadow);
+}
+.p-button-info {
+  background: var(--test-example-button-info-background);
+  border: 1px solid var(--test-example-button-info-border-color);
+  color: var(--test-example-button-info-color);
+}
+.p-button-info:not(:disabled):hover {
+  background: var(--test-example-button-info-hover-background);
+  border: 1px solid var(--test-example-button-info-hover-border-color);
+  color: var(--test-example-button-info-hover-color);
+}
+.p-button-info:not(:disabled):active {
+  background: var(--test-example-button-info-active-background);
+  border: 1px solid var(--test-example-button-info-active-border-color);
+  color: var(--test-example-button-info-active-color);
+}
+.p-button-info:focus-visible {
+  outline-color: var(--test-example-button-info-focus-ring-color);
+  box-shadow: var(--test-example-button-info-focus-ring-shadow);
+}
+.p-button-warn {
+  background: var(--test-example-button-warn-background);
+  border: 1px solid var(--test-example-button-warn-border-color);
+  color: var(--test-example-button-warn-color);
+}
+.p-button-warn:not(:disabled):hover {
+  background: var(--test-example-button-warn-hover-background);
+  border: 1px solid var(--test-example-button-warn-hover-border-color);
+  color: var(--test-example-button-warn-hover-color);
+}
+.p-button-warn:not(:disabled):active {
+  background: var(--test-example-button-warn-active-background);
+  border: 1px solid var(--test-example-button-warn-active-border-color);
+  color: var(--test-example-button-warn-active-color);
+}
+.p-button-warn:focus-visible {
+  outline-color: var(--test-example-button-warn-focus-ring-color);
+  box-shadow: var(--test-example-button-warn-focus-ring-shadow);
+}
+.p-button-help {
+  background: var(--test-example-button-help-background);
+  border: 1px solid var(--test-example-button-help-border-color);
+  color: var(--test-example-button-help-color);
+}
+.p-button-help:not(:disabled):hover {
+  background: var(--test-example-button-help-hover-background);
+  border: 1px solid var(--test-example-button-help-hover-border-color);
+  color: var(--test-example-button-help-hover-color);
+}
+.p-button-help:not(:disabled):active {
+  background: var(--test-example-button-help-active-background);
+  border: 1px solid var(--test-example-button-help-active-border-color);
+  color: var(--test-example-button-help-active-color);
+}
+.p-button-help:focus-visible {
+  outline-color: var(--test-example-button-help-focus-ring-color);
+  box-shadow: var(--test-example-button-help-focus-ring-shadow);
+}
+.p-button-danger {
+  background: var(--test-example-button-danger-background);
+  border: 1px solid var(--test-example-button-danger-border-color);
+  color: var(--test-example-button-danger-color);
+}
+.p-button-danger:not(:disabled):hover {
+  background: var(--test-example-button-danger-hover-background);
+  border: 1px solid var(--test-example-button-danger-hover-border-color);
+  color: var(--test-example-button-danger-hover-color);
+}
+.p-button-danger:not(:disabled):active {
+  background: var(--test-example-button-danger-active-background);
+  border: 1px solid var(--test-example-button-danger-active-border-color);
+  color: var(--test-example-button-danger-active-color);
+}
+.p-button-danger:focus-visible {
+  outline-color: var(--test-example-button-danger-focus-ring-color);
+  box-shadow: var(--test-example-button-danger-focus-ring-shadow);
+}
+.p-button-contrast {
+  background: var(--test-example-button-contrast-background);
+  border: 1px solid var(--test-example-button-contrast-border-color);
+  color: var(--test-example-button-contrast-color);
+}
+.p-button-contrast:not(:disabled):hover {
+  background: var(--test-example-button-contrast-hover-background);
+  border: 1px solid var(--test-example-button-contrast-hover-border-color);
+  color: var(--test-example-button-contrast-hover-color);
+}
+.p-button-contrast:not(:disabled):active {
+  background: var(--test-example-button-contrast-active-background);
+  border: 1px solid var(--test-example-button-contrast-active-border-color);
+  color: var(--test-example-button-contrast-active-color);
+}
+.p-button-contrast:focus-visible {
+  outline-color: var(--test-example-button-contrast-focus-ring-color);
+  box-shadow: var(--test-example-button-contrast-focus-ring-shadow);
+}
+.p-button-outlined {
+  background: transparent;
+  border-color: var(--test-example-button-outlined-primary-border-color);
+  color: var(--test-example-button-outlined-primary-color);
+}
+.p-button-outlined:not(:disabled):hover {
+  background: var(--test-example-button-outlined-primary-hover-background);
+  border-color: var(--test-example-button-outlined-primary-border-color);
+  color: var(--test-example-button-outlined-primary-color);
+}
+.p-button-outlined:not(:disabled):active {
+  background: var(--test-example-button-outlined-primary-active-background);
+  border-color: var(--test-example-button-outlined-primary-border-color);
+  color: var(--test-example-button-outlined-primary-color);
+}

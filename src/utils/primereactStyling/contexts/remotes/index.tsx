@@ -20,7 +20,7 @@ export const PrimeReactStyleProvider = ({
     const detach = attachPrimeReactScoper({
       id: remoteId,
       scopeRootSelector: `[data-style-id="${remoteId}"]`,
-      bootstrapExisting: false,
+      bootstrapExisting: true,
       blockFurtherUpdatesForCapturedIds: true,
       dataPrimereactStyleName: 'remote',
     });

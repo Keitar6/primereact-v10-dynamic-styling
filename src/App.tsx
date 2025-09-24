@@ -1,7 +1,7 @@
-import './App.css';
-import { PRODUCT_NAME } from './onecxIntegration/utils/globals';
 import { Button } from 'primereact/button';
+import { PRODUCT_NAME } from './onecxIntegration/utils/globals';
 import { withApp } from './utils/Hocs';
+// import './styles/styles.css';
 
 function App() {
   return (
