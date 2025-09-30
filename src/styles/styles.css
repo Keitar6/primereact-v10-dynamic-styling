@@ -666,7 +666,7 @@
   --test-example-primary-200: #bde1f5;
   --test-example-primary-300: #89adc1;
   --test-example-primary-400: #3b5f73;
-  --test-example-primary-500: #274b5f;
+  --test-example-primary-500: #f06d06;
   --test-example-primary-600: #0e3246;
   --test-example-primary-700: #000a1e;
   --test-example-primary-800: #00000f;
@@ -924,18 +924,7 @@
     --test-example-text-color,
     rgba(0, 0, 0, 0.87)
   );
-  --test-example-primary-50: #f9ffff;
-  --test-example-primary-100: #eaffff;
-  --test-example-primary-200: #bde1f5;
-  --test-example-primary-300: #89adc1;
-  --test-example-primary-400: #3b5f73;
-  --test-example-primary-500: #274b5f;
-  --test-example-primary-600: #0e3246;
-  --test-example-primary-700: #000a1e;
-  --test-example-primary-800: #00000f;
-  --test-example-primary-900: #000000;
-  --test-example-primary-950: #000000;
-  --test-example-primary-color: var(--test-example-primary-500, #274b5f);
+  --test-example-primary-color: var(--test-example-primary-500, #f06d06);
   --test-example-primary-contrast-color: #ffffff;
   --test-example-primary-hover-color: var(
     --test-example-onecx-button-hover-bg,
@@ -1495,7 +1484,7 @@
   --test-example-button-secondary-focus-ring-shadow: none;
   --test-example-button-primary-background: var(
     --test-example-primary-color,
-    #274b5f
+    #f06d06
   );
   --test-example-button-primary-hover-background: var(
     --test-example-primary-hover-color,
@@ -2330,7 +2319,7 @@
   --test-example-button-secondary-focus-ring-shadow: none;
   --test-example-button-primary-background: var(
     --test-example-primary-color,
-    #274b5f
+    #f06d06
   );
   --test-example-button-primary-hover-background: var(
     --test-example-primary-hover-color,
@@ -2505,9 +2494,9 @@
   justify-content: center;
   overflow: hidden;
   position: relative;
-  color: var(--test-example-button-primary-color, #ffffff);
-  background: var(--test-example-button-primary-background, #274b5f);
-  border: 1px solid var(--test-example-button-primary-border-color, #274b5f);
+  color: var(--test-example-button-primary-color);
+  background: var(--test-example-button-primary-background);
+  border: 1px solid var(--test-example-button-primary-border-color);
   padding: var(--test-example-button-padding-y, 0.643rem) var(--test-example-button-padding-x, 0.75rem);
   font-size: 1rem;
   font-family: inherit;
