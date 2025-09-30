@@ -45,6 +45,26 @@ export default defineConfig(({ mode }) => {
         },
       },
 
+      {
+        name: 'scss-to-css-processor',
+        async buildStart() {
+          // Process SCSS file and resolve imports during build
+          const sass = await import('sass');
+          const result = sass.compile(
+            path.resolve(__dirname, './src/styles/styles.scss'),
+            {
+              loadPaths: [path.resolve(__dirname, './src/styles')],
+              style: 'expanded',
+            },
+          );
+
+          // Write the compiled CSS to the styles directory
+          writeFileSync(
+            path.resolve(__dirname, './src/styles/styles.css'),
+            result.css,
+          );
+        },
+      },
       viteStaticCopy({
         targets: [
           {

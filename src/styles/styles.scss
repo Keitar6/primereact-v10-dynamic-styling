@@ -6,6 +6,8 @@
    @import '../node_modules/@onecx/portal-layout-styles/src/styles/primeng/theme-light.scss';
 */
 
+@import './prime-base-theme.scss';
+
 .p-menuitem-text {
   font:
     normal 700 var(--font-size-title-1, calc(var(--font-size) * 0.875)) siemens
