@@ -1,9 +1,54 @@
+import { useRef } from 'react';
+import { Toast } from 'primereact/toast';
 import { Button } from 'primereact/button';
-import { PRODUCT_NAME } from './onecxIntegration/utils/globals';
-import { withApp } from './utils/Hocs';
-// import './styles/styles.css';
+import { confirmPopup, ConfirmPopup } from 'primereact/confirmpopup';
+import { PRODUCT_NAME } from './utils/constants/globals';
+import { withApp } from './utils/Hocs/withApp';
 
 function App() {
+  const toast = useRef<Toast>(null);
+
+  const accept = () => {
+    toast.current.show({
+      severity: 'info',
+      summary: 'Confirmed',
+      detail: 'You have accepted',
+      life: 3000,
+    });
+  };
+
+  const reject = () => {
+    toast.current.show({
+      severity: 'warn',
+      summary: 'Rejected',
+      detail: 'You have rejected',
+      life: 3000,
+    });
+  };
+
+  const confirm1 = (event) => {
+    confirmPopup({
+      target: event.currentTarget,
+      message: 'Are you sure you want to proceed?',
+      icon: 'pi pi-exclamation-triangle',
+      defaultFocus: 'accept',
+      accept,
+      reject,
+    });
+  };
+
+  const confirm2 = (event) => {
+    confirmPopup({
+      target: event.currentTarget,
+      message: 'Do you want to go to event mgmt?',
+      icon: 'pi pi-info-circle',
+      defaultFocus: 'reject',
+      acceptClassName: 'p-button-danger',
+      accept,
+      reject,
+    });
+  };
+
   return (
     <div className={PRODUCT_NAME}>
       <header>
@@ -11,8 +56,10 @@ function App() {
       </header>
 
       <h1>Home Page</h1>
-      <Button>About page</Button>
-      <Button>Event management</Button>
+      <Toast ref={toast} />
+      <ConfirmPopup />
+      <Button onClick={confirm1} icon="pi pi-check" label="About page" />
+      <Button onClick={confirm2} icon="pi pi-times" label="Event management" />
     </div>
   );
 }

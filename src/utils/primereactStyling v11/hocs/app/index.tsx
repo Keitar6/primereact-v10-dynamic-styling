@@ -1,6 +1,6 @@
 import { ComponentType } from 'react';
 import { PrimeReactStyleProvider } from '../../contexts/app';
-import { PRODUCT_NAME } from '../../../../onecxIntegration/utils/globals';
+import { PRODUCT_NAME } from '../../../constants/globals';
 
 const appName = 'test-main';
 const appId = `${PRODUCT_NAME}|${appName}`;

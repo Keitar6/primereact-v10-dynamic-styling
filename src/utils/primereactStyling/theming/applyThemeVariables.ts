@@ -1,11 +1,4 @@
-import { ReactNode, useEffect } from 'react';
-import { CurrentThemeTopic } from '@onecx/integration-interface';
-import { PrimeReactProvider } from 'primereact/api';
-import { APP_NAME, PRODUCT_NAME } from '../constants/globals';
-
-type Props = Readonly<{
-  children?: ReactNode;
-}>;
+import { APP_NAME, PRODUCT_NAME } from '../../constants/globals';
 
 function flattenThemeProperties(properties: any): Record<string, string> {
   const flattened: Record<string, string> = {};
@@ -35,13 +28,12 @@ function mapThemeToCSSVariables(
   return cssVariables;
 }
 
-function applyThemeVariables(theme: any) {
+export default function applyThemeVariables(theme: any) {
   if (!theme || !theme.properties) {
     return;
   }
 
   const cssVariables = mapThemeToCSSVariables(theme.properties);
-  console.log('Applying CSS Variables:', cssVariables);
 
   const styleId = `${PRODUCT_NAME}|${APP_NAME}`;
   const scopedElement = document.querySelector(
@@ -99,27 +91,4 @@ function applyThemeVariables(theme: any) {
   }
 
   scopedElement.textContent = currentContent;
-}
-
-export default function StyleRegistry({ children }: Props) {
-  useEffect(() => {
-    const themeSubscription = new CurrentThemeTopic().subscribe((theme) => {
-      console.log('Received theme update:', theme);
-      applyThemeVariables(theme);
-    });
-
-    return () => {
-      themeSubscription.unsubscribe();
-    };
-  }, []);
-
-  return (
-    <PrimeReactProvider
-      value={{
-        unstyled: false,
-      }}
-    >
-      {children}
-    </PrimeReactProvider>
-  );
 }

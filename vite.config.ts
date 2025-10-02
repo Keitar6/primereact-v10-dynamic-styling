@@ -6,7 +6,7 @@ import react from '@vitejs/plugin-react';
 import { federation } from '@module-federation/vite';
 import { viteStaticCopy } from 'vite-plugin-static-copy';
 import cssInjectedByJsPlugin from 'vite-plugin-css-injected-by-js';
-import { APP_NAME, PRODUCT_NAME } from './src/onecxIntegration/utils/globals';
+import { APP_NAME, PRODUCT_NAME } from './src/utils/constants/globals';
 
 /// <reference types='ModuleFederationOptions' />
 const mfConfig = {

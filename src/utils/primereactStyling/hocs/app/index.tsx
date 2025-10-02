@@ -1,9 +1,8 @@
 import { ComponentType } from 'react';
 import { PrimeReactStyleProvider } from '../../contexts/app';
-import { PRODUCT_NAME } from '../../../../onecxIntegration/utils/globals';
+import { APP_NAME, PRODUCT_NAME } from '../../../constants/globals';
 
-const appName = 'test-main';
-const appId = `${PRODUCT_NAME}|${appName}`;
+const appId = `${PRODUCT_NAME}|${APP_NAME}`;
 
 export function withAppPrimereactStylesIsolation<P extends object>(
   RemoteComponent: ComponentType<P>,

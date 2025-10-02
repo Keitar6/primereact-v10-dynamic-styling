@@ -1,7 +1,6 @@
 import { FC } from 'react';
 import { Button } from 'primereact/button';
-import { withRemote } from '../../utils/Hocs';
-import '../../styles/styles.css';
+import { withRemote } from '../../utils/Hocs/withRemote';
 
 type Props = {
   location: {

@@ -1,6 +1,6 @@
 import { init } from '@module-federation/runtime/.';
 import { createViteAppWebComponent } from '@onecx/react-webcomponents';
-import { APP_NAME } from './onecxIntegration/utils/globals';
+import { APP_NAME } from './utils/constants/globals';
 import App from './App';
 
 init({

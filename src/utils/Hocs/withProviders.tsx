@@ -3,18 +3,18 @@ import {
   AppStateProvider,
   ConfigurationProvider,
 } from '@onecx/react-integration-interface';
-import StyleRegistry from '../primereactStyling/registry';
+import StyleRegistry from '../primereactStyling/theming/registry';
 
 export function withProviders<P extends object>(
   RemoteComponent: ComponentType<P>,
 ): ComponentType<P> {
   return (props: P) => (
-    <AppStateProvider>
-      <ConfigurationProvider>
-        <StyleRegistry>
+    <StyleRegistry>
+      <AppStateProvider>
+        <ConfigurationProvider>
           <RemoteComponent {...props} />
-        </StyleRegistry>
-      </ConfigurationProvider>
-    </AppStateProvider>
+        </ConfigurationProvider>
+      </AppStateProvider>
+    </StyleRegistry>
   );
 }

@@ -14,6 +14,7 @@ import {
  *
  * Returns a disposer to disconnect the observer (it does not remove the app style tag).
  */
+
 export function attachPrimeReactScoper({
   id,
   scopeRootSelector,
@@ -46,6 +47,7 @@ export function attachPrimeReactScoper({
 
   const writeChunk = (styleId: string, scopedCss: string) => {
     const banner = `/* ==== app:${id} | primereact:${styleId} ==== */\n`;
+
     if (mode === 'replace-per-styleId') {
       const existing = chunkById.get(styleId);
       if (existing) {
@@ -90,6 +92,7 @@ export function attachPrimeReactScoper({
       styleEl.getAttribute('data-primereact-style-id') ||
       styleEl.id ||
       'unknown';
+
     upsertScopedBlock(styleId, styleEl.textContent || '');
   };
 

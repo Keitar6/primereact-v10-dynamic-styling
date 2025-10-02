@@ -1,4 +1,4 @@
-import { PRODUCT_NAME } from '../../onecxIntegration/utils/globals';
+import { PRODUCT_NAME } from '../constants/globals';
 import customPreset from './preset/custom-preset';
 import type { AppConfig } from './types/app.types';
 

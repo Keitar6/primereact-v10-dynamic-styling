@@ -87,7 +87,7 @@ function processKey(result: Record<string, any>, key: string, value: any) {
 function insertNestedValue(
   result: Record<string, any>,
   decomposedKey: string[],
-  value: any
+  value: any,
 ) {
   let current = result;
 
