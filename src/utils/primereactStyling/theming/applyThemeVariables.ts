@@ -1,5 +1,3 @@
-import { APP_NAME, PRODUCT_NAME } from '../../constants/globals';
-
 function flattenThemeProperties(properties: any): Record<string, string> {
   const flattened: Record<string, string> = {};
   for (const category of Object.keys(properties)) {
@@ -28,14 +26,14 @@ function mapThemeToCSSVariables(
   return cssVariables;
 }
 
-export default function applyThemeVariables(theme: any) {
+export default function applyThemeVariables(theme: any, themeStyleId: string) {
   if (!theme || !theme.properties) {
     return;
   }
 
   const cssVariables = mapThemeToCSSVariables(theme.properties);
 
-  const styleId = `${PRODUCT_NAME}|${APP_NAME}`;
+  const styleId = themeStyleId;
   const scopedElement = document.querySelector(
     `style[data-app-styles="${styleId}"]`,
   );

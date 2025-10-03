@@ -41,7 +41,6 @@ function applyThemeVariables(theme: any) {
   }
 
   const cssVariables = mapThemeToCSSVariables(theme.properties);
-  console.log('Applying CSS Variables:', cssVariables);
 
   const styleId = `${PRODUCT_NAME}|${APP_NAME}`;
   const scopedElement = document.querySelector(

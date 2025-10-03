@@ -1,6 +1,7 @@
 import { ComponentType } from 'react';
 import { PrimeReactStyleProvider } from '../../contexts/remotes';
 import { PRODUCT_NAME } from '../../../constants/globals';
+import '../../primereactDynamicOverwrite/';
 
 const remoteName = 'test-remote';
 const remoteId = `${PRODUCT_NAME}|${remoteName}`;

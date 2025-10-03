@@ -1,36 +1,29 @@
 import { ReactNode, useState, useLayoutEffect } from 'react';
-import { CurrentThemeTopic } from '@onecx/integration-interface';
 import { PrimeReactProvider } from 'primereact/api';
+import { CurrentThemeTopic } from '@onecx/integration-interface';
 import applyThemeVariables from './applyThemeVariables';
 
 type Props = Readonly<{
   children?: ReactNode;
+  themeStyleId?: string;
 }>;
 
-export default function StyleRegistry({ children }: Props) {
-  const [isReady, setIsReady] = useState(false);
+export default function StyleRegistry({ children, themeStyleId }: Props) {
+  const [isThemed, setIsThemed] = useState(false);
 
   useLayoutEffect(() => {
     const themeSubscription = new CurrentThemeTopic().subscribe((theme) => {
       console.log('THEME_UPDATE:', theme);
-      applyThemeVariables(theme);
-      setIsReady(true);
+      applyThemeVariables(theme, themeStyleId);
+      setIsThemed(true);
     });
 
-    const fallbackTimer = setTimeout(() => {
-      console.warn(
-        'No theme received within 50ms, showing content with defaults',
-      );
-      setIsReady(true);
-    }, 50);
-
     return () => {
-      clearTimeout(fallbackTimer);
       themeSubscription.unsubscribe();
     };
   }, []);
 
-  if (!isReady) {
+  if (!isThemed) {
     return null; // Can be spinner or skeleton here
   }
 
@@ -38,6 +31,7 @@ export default function StyleRegistry({ children }: Props) {
     <PrimeReactProvider
       value={{
         unstyled: false,
+        appendTo: 'self',
       }}
     >
       {children}

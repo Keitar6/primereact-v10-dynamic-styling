@@ -1,4 +1,11 @@
-import { createContext, useEffect, useRef, ReactNode } from 'react';
+import {
+  createContext,
+  useEffect,
+  useRef,
+  ReactNode,
+  RefObject,
+  useState,
+} from 'react';
 import { attachPrimeReactScoper } from '../../mutationObservers';
 
 interface PrimeReactStyleProviderProps {
@@ -7,13 +14,15 @@ interface PrimeReactStyleProviderProps {
 }
 
 const PrimeReactStyleContext = createContext<
-  { rootRef: React.RefObject<HTMLDivElement> } | undefined
+  { rootRef: RefObject<HTMLDivElement> } | undefined
 >(undefined);
 
 export const PrimeReactStyleProvider = ({
   remoteId,
   children,
 }: PrimeReactStyleProviderProps) => {
+  const [isScoped, setIsScoped] = useState(false);
+
   const rootRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -23,10 +32,13 @@ export const PrimeReactStyleProvider = ({
       bootstrapExisting: true,
       blockFurtherUpdatesForCapturedIds: true,
       dataPrimereactStyleName: 'remote',
+      freezeAfterFirstUpdate: true,
     });
-
+    setIsScoped(true);
     return () => detach();
   }, [remoteId]);
+
+  if (!isScoped) return null; // spinner or smthing
 
   return (
     <PrimeReactStyleContext.Provider value={{ rootRef }}>

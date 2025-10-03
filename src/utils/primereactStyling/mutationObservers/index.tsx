@@ -6,6 +6,7 @@ import {
   shouldInclude,
   scopeCss,
 } from './utils/helpers';
+import { APP_NAME, PRODUCT_NAME } from '../../../utils/constants/globals';
 
 /**
  * Attaches a per-app MutationObserver that writes scoped copies of
@@ -30,6 +31,23 @@ export function attachPrimeReactScoper({
   blockFurtherUpdatesForCapturedIds = false,
   dataPrimereactStyleName = 'app',
 }: PrimeReactScoperOptions) {
+  /**
+   * Changes the data-style-id in @scope selector to match the current app's scope
+   * @param css - CSS content that may contain @scope wrapper
+   * @returns CSS content with updated scope selector
+   */
+  const adjustScopeIdToRemote = (css: string): string => {
+    const scopeRegex = /@scope\(\[data-style-id="[^"]+"\]/g;
+    const newScopeSelector = `@scope([data-style-id="${id}"]`;
+
+    const cssWithScopedCorrectly = css.replace(scopeRegex, newScopeSelector);
+
+    if (cssWithScopedCorrectly !== css) return cssWithScopedCorrectly;
+
+    console.log('⚠️ No @scope data-style-id found to update');
+    return css;
+  };
+
   const styleTag = document.createElement('style');
   styleTag.setAttribute('type', 'text/css');
   styleTag.setAttribute(`data-${dataPrimereactStyleName}-primereact-style`, id);
@@ -82,7 +100,18 @@ export function attachPrimeReactScoper({
     if (!shouldInclude(styleId, rawCss, alwaysIncludeStyleIds, prefixFilter))
       return;
 
-    const scoped = scopeCss(rawCss, scopeRootSelector, scopeLimitSelector);
+    // Skip additional scoping if CSS already has @scope wrapper
+    const hasExistingScope = rawCss.includes('@scope');
+    const scoped = hasExistingScope
+      ? rawCss
+      : scopeCss(rawCss, scopeRootSelector, scopeLimitSelector);
+
+    if (hasExistingScope) {
+      console.log(
+        '⚡ Skipping additional scoping - CSS already has @scope wrapper',
+      );
+    }
+
     writeChunk(styleId, scoped);
     lastHashById.set(styleId, h);
   };
@@ -94,6 +123,16 @@ export function attachPrimeReactScoper({
       'unknown';
 
     upsertScopedBlock(styleId, styleEl.textContent || '');
+  };
+
+  const processAppStyleElement = (styleEl: HTMLStyleElement) => {
+    const attrName = 'data-app-styles';
+    const styleId = styleEl.getAttribute(attrName) || styleEl.id || 'unknown';
+    let cssContent = styleEl.textContent || '';
+
+    if (cssContent) cssContent = adjustScopeIdToRemote(cssContent);
+
+    upsertScopedBlock(styleId, cssContent);
   };
 
   const observer = new MutationObserver((records) => {
@@ -119,9 +158,9 @@ export function attachPrimeReactScoper({
   if (bootstrapExisting) {
     document.head
       .querySelectorAll(
-        'style[data-primereact-style-id], style[id^="primereact_"]',
+        `style[data-app-styles], style[id^="${PRODUCT_NAME}|${APP_NAME}"]`,
       )
-      .forEach((el) => processStyleElement(el as HTMLStyleElement));
+      .forEach((el) => processAppStyleElement(el as HTMLStyleElement));
   }
 
   return () => {
