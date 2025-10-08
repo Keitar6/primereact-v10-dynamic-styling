@@ -1,6 +1,9 @@
 import { FC } from 'react';
 import { Button } from 'primereact/button';
-import { withRemote } from '../../utils/Hocs/withRemote';
+import {
+  useSyncedLocation,
+  withRemote,
+} from '../../react-integration-functionalitiesV10';
 
 type Props = {
   location: {
@@ -8,7 +11,9 @@ type Props = {
   };
 };
 
-const Remote: FC<Props> = ({ location }) => {
+const Remote: FC<Props> = () => {
+  const location = useSyncedLocation();
+
   return (
     <>
       <h5 className="testyStylessy">test remote</h5>
