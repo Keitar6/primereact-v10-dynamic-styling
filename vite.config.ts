@@ -6,11 +6,11 @@ import react from '@vitejs/plugin-react';
 import { federation } from '@module-federation/vite';
 import { viteStaticCopy } from 'vite-plugin-static-copy';
 import cssInjectedByJsPlugin from 'vite-plugin-css-injected-by-js';
-import { APP_NAME, PRODUCT_NAME } from './src/utils/constants/globals';
+import { APP_GLOBALS } from './src/utils/constants/globals';
 
 /// <reference types='ModuleFederationOptions' />
 const mfConfig = {
-  name: APP_NAME,
+  name: APP_GLOBALS.APP_NAME,
   filename: 'remoteEntry.js',
   exposes: {
     './TestWebcomponent': './src/bootstrap.ts',
@@ -23,7 +23,7 @@ export default defineConfig(({ mode }) => {
 
   return {
     root: __dirname,
-    base: mode === 'production' ? `/mfe/${PRODUCT_NAME}-ui/` : '/',
+    base: mode === 'production' ? `/mfe/${APP_GLOBALS.PRODUCT_NAME}-ui/` : '/',
     cacheDir: './node_modules/.vite/apps/test-webcomponent',
     server: {
       port: 4200,

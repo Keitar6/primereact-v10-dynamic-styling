@@ -1,14 +1,11 @@
 import { ComponentType } from 'react';
 import StyleRegistry from '../../theme/StyleRegistry';
-import { APP_GLOBALS } from '../../../../../utils/constants/globals';
 
 export function withRemoteStyles<P extends object>(
-  RemoteComponent: ComponentType<P>,
+  RemoteComponent: ComponentType<P>
 ): ComponentType<P> {
   return (props: P) => (
-    <StyleRegistry
-      themeStyleId={`${APP_GLOBALS.PRODUCT_NAME}|${APP_GLOBALS.APP_NAME}`}
-    >
+    <StyleRegistry>
       <RemoteComponent {...props} />
     </StyleRegistry>
   );

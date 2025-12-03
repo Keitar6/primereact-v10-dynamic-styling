@@ -1,15 +1,11 @@
 import { ComponentType } from 'react';
 import { PrimeReactStyleProvider } from '../../contexts/app';
-import { APP_GLOBALS } from '../../../../../utils/constants/globals';
-
-const appName = 'test-main';
-const appId = `${APP_GLOBALS.PRODUCT_NAME}|${appName}`;
 
 export function withAppPrimereactStylesIsolation<P extends object>(
-  RemoteComponent: ComponentType<P>,
+  RemoteComponent: ComponentType<P>
 ): ComponentType<P> {
   return (props: P) => (
-    <PrimeReactStyleProvider appId={appId}>
+    <PrimeReactStyleProvider>
       <RemoteComponent {...props} />
     </PrimeReactStyleProvider>
   );

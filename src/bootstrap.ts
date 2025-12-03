@@ -1,10 +1,10 @@
 import { init } from '@module-federation/runtime/.';
 import { createViteAppWebComponent } from '@onecx/react-webcomponents';
-import { APP_NAME } from './utils/constants/globals';
+import { APP_GLOBALS } from './utils/constants/globals';
 import App from './App';
 
 init({
-  name: APP_NAME,
+  name: APP_GLOBALS.APP_NAME,
   remotes: [],
   shared: {
     react: {},
@@ -20,4 +20,4 @@ init({
   },
 });
 
-createViteAppWebComponent(App, `${APP_NAME}-entrypoint`);
+createViteAppWebComponent(App, `${APP_GLOBALS.APP_NAME}-entrypoint`);

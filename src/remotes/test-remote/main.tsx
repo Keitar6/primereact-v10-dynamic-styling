@@ -3,7 +3,8 @@ import { Button } from 'primereact/button';
 import {
   useSyncedLocation,
   withRemote,
-} from '../../react-integration-functionalitiesV10';
+} from '../../react-integration-functionalities-test/src';
+import { APP_GLOBALS } from '../../utils/constants/globals';
 
 type Props = {
   location: {
@@ -24,4 +25,4 @@ const Remote: FC<Props> = () => {
   );
 };
 
-export default withRemote(Remote);
+export default withRemote(Remote, APP_GLOBALS);

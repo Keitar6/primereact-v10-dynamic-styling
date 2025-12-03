@@ -2,8 +2,8 @@ import { useRef } from 'react';
 import { Toast } from 'primereact/toast';
 import { Button } from 'primereact/button';
 import { confirmPopup, ConfirmPopup } from 'primereact/confirmpopup';
-import { PRODUCT_NAME } from './utils/constants/globals';
-import { withApp } from './react-integration-functionalitiesV10';
+import { APP_GLOBALS } from './utils/constants/globals';
+import { withApp } from './react-integration-functionalities-test/src';
 
 function App() {
   const toast = useRef<Toast>(null);
@@ -50,7 +50,7 @@ function App() {
   };
 
   return (
-    <div className={PRODUCT_NAME}>
+    <div className={APP_GLOBALS.PRODUCT_NAME}>
       <header>
         <div>Learn React</div>
       </header>
@@ -64,4 +64,4 @@ function App() {
   );
 }
 
-export default withApp(App);
+export default withApp(App, APP_GLOBALS);

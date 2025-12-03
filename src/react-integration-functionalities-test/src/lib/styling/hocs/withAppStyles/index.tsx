@@ -1,14 +1,11 @@
 import { ComponentType } from 'react';
 import StyleRegistry from '../../theme/StyleRegistry';
-import { APP_GLOBALS } from '../../../../../utils/constants/globals';
 
 export function withAppStyles<P extends object>(
-  Component: ComponentType<P>,
+  Component: ComponentType<P>
 ): ComponentType<P> {
   return (props: P) => (
-    <StyleRegistry
-      themeStyleId={`${APP_GLOBALS.PRODUCT_NAME}|${APP_GLOBALS.APP_NAME}`}
-    >
+    <StyleRegistry>
       <Component {...props} />
     </StyleRegistry>
   );

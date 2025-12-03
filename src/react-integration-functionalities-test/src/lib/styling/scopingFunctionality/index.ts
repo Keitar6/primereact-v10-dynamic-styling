@@ -6,7 +6,6 @@ import {
   shouldInclude,
   scopeCss,
 } from './functions';
-import { APP_GLOBALS } from '../../../../utils/constants/globals';
 
 /**
  * Attaches a per-app MutationObserver that writes scoped copies of
@@ -30,6 +29,7 @@ export function attachPrimeReactScoper({
   normalizeBeforeHash = true,
   blockFurtherUpdatesForCapturedIds = false,
   dataPrimereactStyleName = 'app',
+  productName,
 }: PrimeReactScoperOptions) {
   /**
    * Changes the data-style-id in @scope selector to match the current app's scope
@@ -108,7 +108,7 @@ export function attachPrimeReactScoper({
 
     if (hasExistingScope) {
       console.log(
-        '⚡ Skipping additional scoping - CSS already has @scope wrapper',
+        '⚡ Skipping additional scoping - CSS already has @scope wrapper'
       );
     }
 
@@ -118,7 +118,7 @@ export function attachPrimeReactScoper({
 
   const processStyleElement = (
     styleEl: HTMLStyleElement,
-    attrName: string = 'data-primereact-style-id',
+    attrName = 'data-primereact-style-id'
   ) => {
     const styleId = styleEl.getAttribute(attrName) || styleEl.id || 'unknown';
     let cssContent = styleEl.textContent || '';
@@ -154,7 +154,7 @@ export function attachPrimeReactScoper({
 
     document.head
       .querySelectorAll(
-        `style[${attrName}], style[id^="${APP_GLOBALS.PRODUCT_NAME}|${APP_GLOBALS.APP_NAME}"]`,
+        `style[${attrName}], style[id^="${productName}|${productName}-ui"]`
       )
       .forEach((el) => processStyleElement(el as HTMLStyleElement, attrName));
   }
