@@ -34,7 +34,6 @@ export const withAppGlobals = <P extends object>(
 
 export const useAppGlobals = () => {
   const context = useContext(AppGlobalsContext);
-  console.log('useAppGlobals - context:', context);
   if (context === null) {
     throw new Error('useAppGlobals must be used within an AppGlobalsProvider');
   }
